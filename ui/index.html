@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIS SP-21 — Bureau of Indian Standards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Global Nav ── -->
+  <nav class="global-nav" role="navigation" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="nav-emblem" href="#" aria-label="Bureau of Indian Standards home">
+        <svg class="emblem-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="18" cy="18" r="16" stroke="#FF9933" stroke-width="2.5"/>
+          <circle cx="18" cy="18" r="6" fill="#FF9933"/>
+          <path d="M18 4v4M18 28v4M4 18h4M28 18h4" stroke="#FF9933" stroke-width="2" stroke-linecap="round"/>
+          <path d="M8.7 8.7l2.8 2.8M24.5 24.5l2.8 2.8M8.7 27.3l2.8-2.8M24.5 11.5l2.8-2.8" stroke="#FF9933" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="nav-brand">BIS SP‑21</span>
+      </a>
+      <div class="nav-links" role="list">
+        <a class="nav-link" href="#standards" role="listitem">Standards</a>
+        <a class="nav-link" href="#categories" role="listitem">Categories</a>
+        <a class="nav-link" href="#about" role="listitem">About</a>
+        <a class="nav-link" href="https://www.bis.gov.in" target="_blank" rel="noopener" role="listitem">BIS Portal ↗</a>
+      </div>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Mobile Menu ── -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a class="mobile-link" href="#standards">Standards</a>
+    <a class="mobile-link" href="#categories">Categories</a>
+    <a class="mobile-link" href="#about">About</a>
+    <a class="mobile-link" href="https://www.bis.gov.in" target="_blank" rel="noopener">BIS Portal ↗</a>
+  </div>
+
+  <!-- ── Hero Tile ── -->
+  <section class="tile tile-dark hero-tile" aria-labelledby="hero-heading">
+    <div class="tile-inner tile-center">
+      <p class="tile-eyebrow">Special Publication 21 · 2005</p>
+      <h1 class="hero-display" id="hero-heading">
+        Handbook of<br>Building Materials
+      </h1>
+      <p class="lead">
+        573 Indian Standards across 25 material categories —<br class="desktop-only">
+        searchable, categorised, and ready to reference.
+      </p>
+      <div class="cta-row">
+        <a class="btn-primary" href="#search-section">Search Standards</a>
+        <a class="btn-ghost-dark" href="#categories">Browse Categories</a>
+      </div>
+      <div class="hero-stats" aria-label="Key statistics">
+        <div class="stat">
+          <span class="stat-num">573</span>
+          <span class="stat-label">IS Standards</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">25</span>
+          <span class="stat-label">Material Categories</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">929</span>
+          <span class="stat-label">Pages Indexed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Search Tile ── -->
+  <section class="tile tile-parchment" id="search-section" aria-labelledby="search-heading">
+    <div class="tile-inner tile-center">
+      <h2 class="display-lg" id="search-heading">Find an IS Standard</h2>
+      <p class="lead-sub">Search by standard number, title, material, or keyword.</p>
+      <form class="search-form" role="search" aria-label="Standards search" id="search-form">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M14 14l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <input
+            class="search-input"
+            type="search"
+            id="search-input"
+            name="q"
+            placeholder="e.g. Ordinary Portland Cement, IS 269, aggregates…"
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Search standards"
+          />
+          <button class="search-clear" type="button" id="search-clear" aria-label="Clear search" hidden>✕</button>
+        </div>
+        <div class="filter-row" role="group" aria-label="Filter by category">
+          <select class="category-filter" id="category-filter" aria-label="Filter by category">
+            <option value="">All Categories</option>
+          </select>
+          <button class="btn-primary search-btn" type="submit">Search</button>
+        </div>
+      </form>
+
+      <!-- Results -->
+      <div class="results-shell" id="results-shell" aria-live="polite" aria-atomic="false">
+        <div class="results-meta" id="results-meta" hidden></div>
+        <div class="results-grid" id="results-grid"></div>
+        <div class="results-empty" id="results-empty" hidden>
+          <p class="empty-title">No standards found</p>
+          <p class="empty-sub">Try a different keyword or clear the category filter.</p>
+        </div>
+        <div class="results-initial" id="results-initial">
+          <p>Start typing to search, or <a href="#categories" class="inline-link">browse by category</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Category Tile ── -->
+  <section class="tile tile-light" id="categories" aria-labelledby="categories-heading">
+    <div class="tile-inner">
+      <div class="section-header">
+        <h2 class="display-lg" id="categories-heading">25 Material Categories</h2>
+        <p class="lead-sub">Every building material section from SP‑21, indexed and searchable.</p>
+      </div>
+      <div class="category-grid" id="category-grid" role="list" aria-label="Material categories"></div>
+    </div>
+  </section>
+
+  <!-- ── Feature / About Tile ── -->
+  <section class="tile tile-dark-2" id="about" aria-labelledby="about-heading">
+    <div class="tile-inner">
+      <div class="feature-cols">
+        <div class="feature-text">
+          <p class="tile-eyebrow">About SP‑21</p>
+          <h2 class="display-md" id="about-heading">India's Reference for Building Material Standards</h2>
+          <p class="body-copy">
+            BIS Special Publication 21 consolidates all Indian Standards relevant to building and construction
+            materials — from Portland cement to wire ropes, sanitary fittings to structural steels. Published
+            by the Bureau of Indian Standards, it is the authoritative handbook used by architects, structural
+            engineers, contractors, and quality inspectors across the country.
+          </p>
+          <p class="body-copy">
+            This portal indexes the 2005 edition (929 pages) into 573 discrete IS standards with full-text
+            search, keyword extraction, and section-level retrieval — making the handbook accessible without
+            manual page-turning.
+          </p>
+          <a class="btn-primary-on-dark" href="https://www.bis.gov.in" target="_blank" rel="noopener">
+            Visit BIS Portal ↗
+          </a>
+        </div>
+        <div class="feature-pillars" role="list" aria-label="Features">
+          <div class="pillar" role="listitem">
+            <span class="pillar-icon" aria-hidden="true">⚡</span>
+            <h3 class="pillar-title">Instant Retrieval</h3>
+            <p class="pillar-body">Full-text search across all 573 standards with ranked results.</p>
+          </div>
+          <div class="pillar" role="listitem">
+            <span class="pillar-icon" aria-hidden="true">📐</span>
+            <h3 class="pillar-title">Section-Level Detail</h3>
+            <p class="pillar-body">Scope, requirements, delivery conditions — all structured fields.</p>
+          </div>
+          <div class="pillar" role="listitem">
+            <span class="pillar-icon" aria-hidden="true">🗂</span>
+            <h3 class="pillar-title">25 Categories</h3>
+            <p class="pillar-body">Organised by BIS material sections, mirroring SP‑21's own structure.</p>
+          </div>
+          <div class="pillar" role="listitem">
+            <span class="pillar-icon" aria-hidden="true">🔒</span>
+            <h3 class="pillar-title">Official Source</h3>
+            <p class="pillar-body">Parsed directly from the BIS SP‑21 : 2005 authoritative edition.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Standard Detail Modal ── -->
+  <div class="modal-backdrop" id="modal-backdrop" hidden aria-hidden="true">
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+      <div class="modal-header">
+        <div>
+          <span class="modal-eyebrow" id="modal-category"></span>
+          <h2 class="modal-title" id="modal-title"></h2>
+          <span class="modal-id" id="modal-id"></span>
+        </div>
+        <button class="modal-close" id="modal-close" aria-label="Close standard detail">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+        <div class="footer-col">
+          <p class="footer-brand">BIS SP‑21</p>
+          <p class="footer-tagline">Handbook on Building Materials<br>Special Publication 21 : 2005</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Standards</p>
+          <a class="footer-link" href="#search-section">Search</a>
+          <a class="footer-link" href="#categories">Categories</a>
+          <a class="footer-link" href="#about">About</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Bureau of Indian Standards</p>
+          <a class="footer-link" href="https://www.bis.gov.in" target="_blank" rel="noopener">BIS Official Website</a>
+          <a class="footer-link" href="https://www.manakonline.in" target="_blank" rel="noopener">Manak Online</a>
+          <a class="footer-link" href="https://standardsbis.bsbedge.com" target="_blank" rel="noopener">Standards Portal</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Ministry</p>
+          <a class="footer-link" href="https://dpiit.gov.in" target="_blank" rel="noopener">DPIIT</a>
+          <a class="footer-link" href="https://www.india.gov.in" target="_blank" rel="noopener">National Portal</a>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>© Bureau of Indian Standards, Ministry of Commerce & Industry, Government of India. All rights reserved.</p>
+        <p>Content sourced from BIS Special Publication 21 : 2005. For official standards, refer to <a href="https://www.bis.gov.in" target="_blank" rel="noopener" class="legal-link">bis.gov.in</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
