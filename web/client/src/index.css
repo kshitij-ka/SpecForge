@@ -1,0 +1,254 @@
+/* ── BIS SP-21 Design Tokens ── */
+:root {
+  --accent:          #d4530a;
+  --accent-hover:    #b8460a;
+  --accent-dark:     #ff8c3a;
+  --accent-focus:    #e05a0f;
+
+  --navy:            #003380;
+
+  --canvas:          #ffffff;
+  --parchment:       #f4f4f2;
+  --pearl:           #fafaf8;
+  --tile-dark-1:     #1a2230;
+  --tile-dark-2:     #1e2838;
+  --tile-dark-3:     #161d28;
+  --surface-black:   #0d1117;
+
+  --ink:             #1c1c1e;
+  --ink-80:          #2d2d30;
+  --ink-48:          #6e6e73;
+  --on-dark:         #ffffff;
+  --on-dark-muted:   #b8c0cc;
+  --body-muted:      #8a8a8f;
+
+  --hairline:        #d8d8dc;
+  --divider:         #ebebed;
+
+  --chip-bg:         rgba(212, 83, 10, 0.08);
+  --chip-text:       #b8460a;
+
+  --font-display: "SF Pro Display", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-text:    "SF Pro Text",    ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --r-xs:   4px;
+  --r-sm:   8px;
+  --r-md:   12px;
+  --r-lg:   18px;
+  --r-pill: 9999px;
+
+  --sp-xxs: 4px;
+  --sp-xs:  8px;
+  --sp-sm:  12px;
+  --sp-md:  18px;
+  --sp-lg:  24px;
+  --sp-xl:  32px;
+  --sp-xxl: 48px;
+  --sp-sec: 80px;
+
+  --nav-h: 48px;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-text);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.47;
+  letter-spacing: -0.374px;
+  color: var(--ink);
+  background: var(--canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Tiles (global) ── */
+.tile { width: 100%; padding: var(--sp-sec) 0; }
+.tile-light     { background: var(--canvas); }
+.tile-parchment { background: var(--parchment); }
+.tile-dark      { background: var(--tile-dark-1); }
+.tile-dark-2    { background: var(--tile-dark-2); }
+
+.tile-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.tile-center { text-align: center; }
+
+/* ── Typography (global) ── */
+.hero-display {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 600;
+  line-height: 1.07;
+  letter-spacing: -0.5px;
+  color: var(--on-dark);
+  margin: 12px 0 20px;
+}
+.tile-eyebrow {
+  font-family: var(--font-text);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  margin-bottom: 8px;
+}
+.display-lg {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.3px;
+  color: var(--ink);
+}
+.tile-dark  .display-lg,
+.tile-dark-2 .display-lg { color: var(--on-dark); }
+
+.display-md {
+  font-family: var(--font-text);
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.374px;
+  color: var(--on-dark);
+  margin-bottom: 20px;
+}
+.lead {
+  font-family: var(--font-display);
+  font-size: clamp(17px, 2.5vw, 24px);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--on-dark-muted);
+  margin-bottom: 32px;
+}
+.lead-sub {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.47;
+  letter-spacing: -0.374px;
+  color: var(--ink-48);
+  margin: 8px 0 28px;
+}
+.body-copy {
+  font-size: 17px;
+  line-height: 1.6;
+  letter-spacing: -0.374px;
+  color: var(--on-dark-muted);
+  margin-bottom: 16px;
+}
+
+/* ── Buttons (global) ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-text);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.374px;
+  text-decoration: none;
+  padding: 11px 24px;
+  border-radius: var(--r-pill);
+  border: none;
+  cursor: pointer;
+  transition: background .15s, transform .1s;
+  white-space: nowrap;
+}
+.btn-primary:hover  { background: var(--accent-hover); }
+.btn-primary:active { transform: scale(.96); }
+.btn-primary:focus-visible { outline: 2px solid var(--accent-focus); outline-offset: 2px; }
+
+.btn-ghost-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--accent-dark);
+  font-family: var(--font-text);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: var(--r-pill);
+  border: 1.5px solid var(--accent-dark);
+  cursor: pointer;
+  transition: background .15s, transform .1s;
+}
+.btn-ghost-dark:hover  { background: rgba(255,140,58,0.1); }
+.btn-ghost-dark:active { transform: scale(.96); }
+
+.btn-primary-on-dark {
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent-dark);
+  color: var(--surface-black);
+  font-family: var(--font-text);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 11px 24px;
+  border-radius: var(--r-pill);
+  border: none;
+  cursor: pointer;
+  transition: background .15s, transform .1s;
+  margin-top: 8px;
+}
+.btn-primary-on-dark:hover  { background: #ffaa5c; }
+.btn-primary-on-dark:active { transform: scale(.96); }
+
+/* Hero stats */
+.hero-stats {
+  display: inline-flex;
+  align-items: center;
+  gap: 32px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--r-lg);
+  padding: 20px 36px;
+  margin-top: 8px;
+}
+.stat { text-align: center; }
+.stat-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--accent-dark);
+  line-height: 1;
+}
+.stat-label {
+  display: block;
+  font-size: 12px;
+  color: var(--on-dark-muted);
+  margin-top: 4px;
+}
+.stat-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.12); }
+.desktop-only { display: inline; }
+
+/* Focus */
+*:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ── Responsive ── */
+@media (max-width: 833px) {
+  :root { --sp-sec: 56px; }
+  .hero-stats { gap: 20px; padding: 16px 24px; }
+  .stat-num { font-size: 22px; }
+  .desktop-only { display: none; }
+}
+@media (max-width: 640px) {
+  :root { --sp-sec: 48px; }
+  .tile-inner { padding: 0 20px; }
+  .hero-stats { flex-direction: column; gap: 12px; padding: 16px 20px; }
+  .stat-divider { width: 40px; height: 1px; }
+}

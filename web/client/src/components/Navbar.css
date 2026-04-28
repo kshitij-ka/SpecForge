@@ -1,0 +1,99 @@
+.global-nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--surface-black);
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.nav-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-lg);
+}
+.nav-emblem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.emblem-icon { width: 28px; height: 28px; }
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: var(--on-dark);
+  white-space: nowrap;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+.nav-link {
+  font-family: var(--font-text);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.12px;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: var(--r-pill);
+  transition: color .15s, background .15s;
+}
+.nav-link:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-link.active { color: #fff; }
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  margin-left: auto;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--on-dark);
+  border-radius: 2px;
+}
+.mobile-menu {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 190;
+  background: var(--tile-dark-3);
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.mobile-link {
+  display: block;
+  padding: 14px 32px;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: background .15s;
+}
+.mobile-link:hover { background: rgba(255,255,255,0.05); }
+
+@media (max-width: 833px) {
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+}
+@media (max-width: 640px) {
+  .nav-inner { padding: 0 20px; }
+}
