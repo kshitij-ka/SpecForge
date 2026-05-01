@@ -1,13 +1,17 @@
 import { useEffect, useState, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
 import { fetchStandards, fetchCategories } from "../api/standards";
-import { useDebounce } from "../hooks/useDebounce";
 import StandardCard from "../components/StandardCard";
 import StandardModal from "../components/StandardModal";
 import "./Standards.css";
 
 const PAGE_SIZE = 18;
 
+/**
+ * Standards search page with pagination.
+ * Uses URL search params for query/category state.
+ * Loads standards on mount and handles user interactions.
+ */
 export default function Standards() {
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -22,12 +26,6 @@ export default function Standards() {
   const [error, setError] = useState(null);
   const [selected, setSelected] = useState(null);
 
-  const debouncedQuery = useDebounce(query, 300);
-
-  useEffect(() => {
-    fetchCategories().then(setCategories).catch(() => {});
-  }, []);
-
   const load = useCallback(async (q, cat, pg) => {
     setLoading(true);
     setError(null);
@@ -35,6 +33,7 @@ export default function Standards() {
       const data = await fetchStandards({ q, category: cat, page: pg, limit: PAGE_SIZE });
       setResults(data.data);
       setMeta(data.meta);
+      setPage(pg);
     } catch {
       setError("Could not load standards. Is the server running?");
     } finally {
@@ -43,18 +42,32 @@ export default function Standards() {
   }, []);
 
   useEffect(() => {
-    setPage(1);
+    fetchCategories().then(setCategories).catch(() => {});
+    load(query, category, 1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
     const params = {};
-    if (debouncedQuery) params.q = debouncedQuery;
+    if (query) params.q = query;
     if (category) params.category = category;
     setSearchParams(params, { replace: true });
-    load(debouncedQuery, category, 1);
-  }, [debouncedQuery, category, load, setSearchParams]);
+  }, [query, category, setSearchParams]);
+
+  const handleCategoryChange = (value) => {
+    setCategory(value);
+    load(query, value, 1);
+  };
 
   const handlePageChange = (pg) => {
-    setPage(pg);
-    load(debouncedQuery, category, pg);
+    load(query, category, pg);
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleClearSearch = () => {
+    setQuery("");
+    setCategory("");
+    load("", "", 1);
   };
 
   return (
@@ -64,11 +77,7 @@ export default function Standards() {
           <h1 className="display-lg" id="search-heading">Find an IS Standard</h1>
           <p className="lead-sub">Search by standard number, title, material, or keyword.</p>
 
-          <form
-            className="search-form"
-            role="search"
-            onSubmit={(e) => e.preventDefault()}
-          >
+          <form className="search-form" role="search" onSubmit={(e) => e.preventDefault()}>
             <div className="search-wrap">
               <SearchIcon />
               <input
@@ -83,7 +92,7 @@ export default function Standards() {
                 <button
                   className="search-clear"
                   type="button"
-                  onClick={() => setQuery("")}
+                  onClick={handleClearSearch}
                   aria-label="Clear search"
                 >
                   ✕
@@ -94,7 +103,7 @@ export default function Standards() {
               <select
                 className="category-filter"
                 value={category}
-                onChange={(e) => setCategory(e.target.value)}
+                onChange={(e) => handleCategoryChange(e.target.value)}
                 aria-label="Filter by category"
               >
                 <option value="">All Categories</option>

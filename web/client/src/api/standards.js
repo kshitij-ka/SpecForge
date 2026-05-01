@@ -1,14 +1,21 @@
 const BASE = "/api";
 
-// Safe fetch: always reads body as text first, then parses JSON.
-// If the server returns HTML (e.g. 404 from a stale process or proxy miss),
-// this surfaces a clear error instead of "Unexpected token '<'".
+/**
+ * Safely fetches JSON from the server, handling edge cases where the server
+ * may return HTML/plain text (e.g., proxy errors, stale process 404s).
+ * @param {string} url - The endpoint URL.
+ * @param {RequestInit} [options={}] - Fetch options.
+ * @returns {Promise<Object>} Parsed JSON response.
+ * @throws {Error} On network failure or non-OK responses.
+ */
 async function safeFetch(url, options = {}) {
   let res;
   try {
     res = await fetch(url, options);
   } catch (networkErr) {
-    throw new Error(`Network error — is the server running? (${networkErr.message})`);
+    const err = new Error(`Network error — is the server running? (${networkErr.message})`);
+    err.cause = networkErr;
+    throw err;
   }
 
   const text = await res.text();
@@ -33,23 +40,52 @@ async function safeFetch(url, options = {}) {
   return data;
 }
 
+/**
+ * Fetches a paginated list of standards with optional filtering.
+ * @param {Object} [params={}] - Query parameters.
+ * @param {string} [params.q=""] - Search query.
+ * @param {string} [params.category=""] - Category filter.
+ * @param {number} [params.page=1] - Page number.
+ * @param {number} [params.limit=18] - Results per page.
+ * @returns {{data: Object[], meta: {total: number, page: number, limit: number, totalPages: number}}}
+ */
 export async function fetchStandards({ q = "", category = "", page = 1, limit = 18 } = {}) {
   const params = new URLSearchParams({ q, category, page, limit });
   return safeFetch(`${BASE}/standards?${params}`);
 }
 
+/**
+ * Fetches a single standard by its IS identifier.
+ * @param {string} id - The standard IS ID (e.g., "IS 269").
+ * @returns {Promise<Object>} The standard object.
+ */
 export async function fetchStandard(id) {
   return safeFetch(`${BASE}/standards/${encodeURIComponent(id)}`);
 }
 
+/**
+ * Fetches all material categories.
+ * @returns {Promise<Array<{name: string, count: number}>>}
+ */
 export async function fetchCategories() {
   return safeFetch(`${BASE}/categories`);
 }
 
+/**
+ * Fetches portal statistics.
+ * @returns {{totalStandards: number, totalCategories: number, totalChunks: number}}
+ */
 export async function fetchStats() {
   return safeFetch(`${BASE}/stats`);
 }
 
+/**
+ * Asks a conversational question about a specific standard.
+ * @param {Object} params - Parameters.
+ * @param {string} params.standard_id - The standard IS ID.
+ * @param {string} params.question - The question.
+ * @returns {{answer: string}}
+ */
 export async function askQuestion({ standard_id, question }) {
   return safeFetch(`${BASE}/chat`, {
     method: "POST",
@@ -58,7 +94,15 @@ export async function askQuestion({ standard_id, question }) {
   });
 }
 
-// POST /api/recommend — hybrid retrieval + LLM explanations
+/**
+ * Hybrid retrieval with AI explanations.
+ * Uses FAISS + BM25 for retrieval, then Groq LLM for explanations.
+ * @param {Object} [params={}] - Query parameters.
+ * @param {string} params.query - Natural language query.
+ * @param {number} [params.top_n=5] - Number of results.
+ * @param {boolean} [params.rewrite=false] - Whether to rewrite the query with AI.
+ * @returns {{query: string, standards: Object[], latency: {retrieval_ms: number, llm_ms: number, total_ms: number}}}
+ */
 export async function recommend({ query, top_n = 5, rewrite = false } = {}) {
   return safeFetch(`${BASE}/recommend`, {
     method: "POST",
@@ -67,7 +111,13 @@ export async function recommend({ query, top_n = 5, rewrite = false } = {}) {
   });
 }
 
-// POST /api/ask — chunk-grounded QA for a specific standard
+/**
+ * Chunk-grounded QA for a specific standard.
+ * @param {Object} [params={}] - Parameters.
+ * @param {string} params.standard_id - The standard IS ID.
+ * @param {string} params.question - The question.
+ * @returns {{answer: string, source: {standard_id: string, section: string, chunk_id: string}, latency: {llm_ms: number, total_ms: number}}}
+ */
 export async function askGrounded({ standard_id, question } = {}) {
   return safeFetch(`${BASE}/ask`, {
     method: "POST",
