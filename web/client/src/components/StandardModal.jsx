@@ -86,9 +86,7 @@ export default function StandardModal({ standard, onClose }) {
             ref={closeBtnRef}
             onClick={onClose}
             aria-label={t("modal.closeLabel")}
-          >
-            ✕
-          </button>
+          />
         </div>
 
         {/* Standard detail */}
@@ -128,7 +126,6 @@ export default function StandardModal({ standard, onClose }) {
           {/* AI chat panel */}
           <div className="modal-section ai-panel" aria-label={t("modal.askAI")}>
             <p className="modal-section-title">
-              <span className="ai-label-icon" aria-hidden="true">✦</span>
               {t("modal.askAI")}
             </p>
 
@@ -136,15 +133,11 @@ export default function StandardModal({ standard, onClose }) {
               <div className="chat-log" aria-live="polite" aria-label={t("modal.conversation")}>
                 {messages.map((m, i) => (
                   <div key={i} className={`chat-bubble chat-bubble--${m.role}`}>
-                    {m.role === "ai" && (
-                      <span className="bubble-label" aria-label={t("modal.aiResponse")}>✦</span>
-                    )}
                     <p className="bubble-text">{m.text}</p>
                   </div>
                 ))}
                 {asking && (
                   <div className="chat-bubble chat-bubble--ai chat-bubble--loading" aria-label={t("modal.aiThinking")}>
-                    <span className="bubble-label" aria-hidden="true">✦</span>
                     <span className="typing-dots">
                       <span /><span /><span />
                     </span>

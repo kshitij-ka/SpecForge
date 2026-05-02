@@ -23,10 +23,10 @@ export default function Home() {
   };
 
   const PILLARS = [
-    { icon: "⚡", titleKey: "home.pillar_instantRetrieval_title", bodyKey: "home.pillar_instantRetrieval_body" },
-    { icon: "📐", titleKey: "home.pillar_sectionDetail_title",    bodyKey: "home.pillar_sectionDetail_body" },
-    { icon: "🗂",  titleKey: "home.pillar_categories_title",       bodyKey: "home.pillar_categories_body" },
-    { icon: "🔒", titleKey: "home.pillar_officialSource_title",   bodyKey: "home.pillar_officialSource_body" },
+    { titleKey: "home.pillar_instantRetrieval_title", bodyKey: "home.pillar_instantRetrieval_body" },
+    { titleKey: "home.pillar_sectionDetail_title",    bodyKey: "home.pillar_sectionDetail_body" },
+    { titleKey: "home.pillar_categories_title",       bodyKey: "home.pillar_categories_body" },
+    { titleKey: "home.pillar_officialSource_title",   bodyKey: "home.pillar_officialSource_body" },
   ];
 
   return (
@@ -116,9 +116,8 @@ export default function Home() {
               </a>
             </div>
             <div className="feature-pillars" role="list">
-              {PILLARS.map(({ icon, titleKey, bodyKey }) => (
+              {PILLARS.map(({ titleKey, bodyKey }) => (
                 <div className="pillar" role="listitem" key={titleKey}>
-                  <span className="pillar-icon" aria-hidden="true">{icon}</span>
                   <h3 className="pillar-title">{t(titleKey)}</h3>
                   <p className="pillar-body">{t(bodyKey)}</p>
                 </div>

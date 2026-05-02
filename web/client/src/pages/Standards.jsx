@@ -98,9 +98,7 @@ export default function Standards() {
                   type="button"
                   onClick={handleClearSearch}
                   aria-label={t("standards.clearSearch")}
-                >
-                  ✕
-                </button>
+                />
               )}
             </div>
             <div className="filter-row">
@@ -131,7 +129,7 @@ export default function Standards() {
               {loading
                 ? t("standards.searching")
                 : t("standards.found", { count: meta.total })}
-              {!loading && meta.total > 0 && ` — ${t("standards.page", { page: meta.page, total: meta.totalPages })}`}
+              {!loading && meta.total > 0 && ` -- ${t("standards.page", { page: meta.page, total: meta.totalPages })}`}
             </p>
           )}
 
