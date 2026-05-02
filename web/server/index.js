@@ -11,10 +11,11 @@ const { generateExplanation, answerQuestion, rewriteQuery } = require("./service
 const { retrieve } = require("./services/retrieverService");
 
 const app  = express();
+
+/** @type {number} - HTTP port, defaults to 5000. */
 const PORT = process.env.PORT || 5000;
 
-// ── Startup checks ──────────────────────────────────────────────────────────
-
+// Warn early when the Groq key is absent so AI degradation is visible at boot.
 if (!process.env.GROQ_API_KEY) {
   console.warn(
     "[WARN] GROQ_API_KEY is not set. AI features will return fallback values.\n" +
@@ -22,12 +23,12 @@ if (!process.env.GROQ_API_KEY) {
   );
 }
 
-// ── Security headers ─────────────────────────────────────────────────────────
-
 app.use(helmet());
 
-// ── CORS — restrict to configured origin or localhost dev ────────────────────
-
+/**
+ * @type {string[]} - Allowed CORS origins; reads CORS_ORIGIN env var (comma-separated) or
+ *   falls back to localhost dev/preview ports.
+ */
 const ALLOWED_ORIGINS = process.env.CORS_ORIGIN
   ? process.env.CORS_ORIGIN.split(",").map((o) => o.trim())
   : ["http://localhost:5173", "http://localhost:4173", `http://localhost:${PORT}`];
@@ -42,8 +43,7 @@ app.use(cors({
   allowedHeaders: ["Content-Type"],
 }));
 
-// ── Rate limiting ─────────────────────────────────────────────────────────────
-
+/** @type {import('express-rate-limit').RateLimitRequestHandler} - 60 req/min applied to all /api/ routes. */
 const apiLimiter = rateLimit({
   windowMs: 60 * 1000,
   max: 60,
@@ -52,6 +52,7 @@ const apiLimiter = rateLimit({
   message: { error: "Too many requests. Please wait a moment and try again." },
 });
 
+/** @type {import('express-rate-limit').RateLimitRequestHandler} - 20 req/min applied to LLM-backed endpoints. */
 const llmLimiter = rateLimit({
   windowMs: 60 * 1000,
   max: 20,
@@ -67,8 +68,7 @@ app.use("/api/chat",      llmLimiter);
 
 app.use(express.json({ limit: "16kb" }));
 
-// ── Load data ───────────────────────────────────────────────────────────────
-
+/** @type {string} - Absolute path to the processed data directory. */
 const DATA_DIR = path.join(__dirname, "../../data/processed");
 
 let standards = [];
@@ -84,7 +84,7 @@ try {
 
 // Pre-build lookups
 const standardsById  = {};
-const chunksByStd    = {};   // standard_id → [chunk, …]
+const chunksByStd    = {};   // standard_id: [chunk, ...]
 const byCategory     = {};
 const categories     = new Set();
 
@@ -99,34 +99,59 @@ for (const c of chunks) {
   chunksByStd[c.standard_id].push(c);
 }
 
-// ── Input sanitization ────────────────────────────────────────────────────────
-
+/** @type {RegExp} - Matches ASCII control characters that should be stripped from user input. */
 const CONTROL_CHAR_RE = /[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g;
 
+/**
+ * Strips control characters and truncates a string to a safe length.
+ * Returns an empty string if the value is not a string.
+ * @param {*} value
+ * @param {number} [maxLen=500]
+ * @returns {string}
+ */
 function sanitizeText(value, maxLen = 500) {
   if (typeof value !== "string") return "";
   return value.replace(CONTROL_CHAR_RE, "").slice(0, maxLen).trim();
 }
 
-// standard_id must match IS identifier pattern: letters/digits/spaces/colons/parens/dots/hyphens
+/** @type {RegExp} - Accepts IS standard IDs: letters, digits, spaces, colons, parens, dots, hyphens, slashes. */
 const STANDARD_ID_RE = /^[A-Za-z0-9 :()./-]{1,60}$/;
+
+/**
+ * Returns true if the value is a well-formed IS standard identifier.
+ * @param {*} id
+ * @returns {boolean}
+ */
 function isValidStandardId(id) {
   return typeof id === "string" && STANDARD_ID_RE.test(id.trim());
 }
 
-// ── Structured logger ───────────────────────────────────────────────────────
-
+/**
+ * Writes a structured JSON log line to stdout with a UTC timestamp.
+ * @param {string} endpoint - Route label, e.g. "POST /api/recommend".
+ * @param {object} data - Arbitrary key/value pairs to include in the log entry.
+ */
 function log(endpoint, data) {
   const ts = new Date().toISOString();
   console.log(`[${ts}] ${endpoint} |`, JSON.stringify(data));
 }
 
-// ── Keyword-based search helper (unchanged from original) ───────────────────
-
+/**
+ * Normalises a string to lowercase alphanumeric tokens for keyword matching.
+ * @param {string} str
+ * @returns {string}
+ */
 function normalize(str) {
   return str.toLowerCase().replace(/[^a-z0-9]/g, " ").replace(/\s+/g, " ").trim();
 }
 
+/**
+ * Scores a standard against a query using weighted keyword matching across id, title,
+ * keywords, summary, and category fields.
+ * @param {object} standard - A standards.json record.
+ * @param {string} query - Raw search query string.
+ * @returns {number} Relevance score; higher is more relevant.
+ */
 function scoreStandard(standard, query) {
   const q       = normalize(query);
   const qTokens = q.split(" ").filter(Boolean);
@@ -150,8 +175,13 @@ function scoreStandard(standard, query) {
   return s;
 }
 
-// ── Best chunk selector ─────────────────────────────────────────────────────
-
+/**
+ * Returns the chunk from a standard that best matches the given question via token overlap.
+ * Falls back to the first chunk if no tokens produce a positive score.
+ * @param {string} standardId - IS standard identifier key into chunksByStd.
+ * @param {string} question - User question used for token matching.
+ * @returns {{ text: string, section: string, chunk_id: string, standard_id: string } | null}
+ */
 function bestChunk(standardId, question) {
   const stdChunks = chunksByStd[standardId] || [];
   if (!stdChunks.length) return null;
@@ -168,11 +198,13 @@ function bestChunk(standardId, question) {
   return best;
 }
 
-// ═══════════════════════════════════════════════════════════════════════════
 // Routes
-// ═══════════════════════════════════════════════════════════════════════════
 
-// ── GET /api/standards ──────────────────────────────────────────────────────
+/**
+ * GET /api/standards
+ * Returns a paginated, optionally filtered and keyword-scored list of standards.
+ * Query params: q (search string), category, page, limit.
+ */
 app.get("/api/standards", (req, res) => {
   const q        = sanitizeText(req.query.q || "", 200);
   const category = sanitizeText(req.query.category || "", 100);
@@ -197,7 +229,10 @@ app.get("/api/standards", (req, res) => {
   res.json({ data: paginated, meta: { total, page: pageNum, limit: limitNum, totalPages } });
 });
 
-// ── GET /api/standards/:id ──────────────────────────────────────────────────
+/**
+ * GET /api/standards/:id
+ * Returns a single standard by its IS identifier; 404 if not found, 400 if the id is malformed.
+ */
 app.get("/api/standards/:id", (req, res) => {
   const raw = decodeURIComponent(req.params.id);
   if (!isValidStandardId(raw)) {
@@ -208,7 +243,10 @@ app.get("/api/standards/:id", (req, res) => {
   res.json(standard);
 });
 
-// ── GET /api/categories ─────────────────────────────────────────────────────
+/**
+ * GET /api/categories
+ * Returns all categories sorted alphabetically, each with its standard count.
+ */
 app.get("/api/categories", (req, res) => {
   const result = [...categories].sort().map((cat) => ({
     name:  cat,
@@ -217,7 +255,10 @@ app.get("/api/categories", (req, res) => {
   res.json(result);
 });
 
-// ── GET /api/stats ──────────────────────────────────────────────────────────
+/**
+ * GET /api/stats
+ * Returns aggregate counts of standards, categories, and chunks loaded in memory.
+ */
 app.get("/api/stats", (req, res) => {
   res.json({
     totalStandards:  standards.length,
@@ -226,16 +267,13 @@ app.get("/api/stats", (req, res) => {
   });
 });
 
-// ── POST /api/recommend ─────────────────────────────────────────────────────
 /**
- * Input:  { query: string, top_n?: number, rewrite?: boolean }
- * Flow:
- *   1. Optionally rewrite query with LLM (parallel, non-blocking on failure)
- *   2. Call Python inference.py via bridge (retrieval logic untouched)
- *   3. Enrich each result with LLM explanation (Promise.allSettled — no blocking)
- *   4. Return standards + explanations + timing breakdown
+ * POST /api/recommend
+ * Hybrid retrieval endpoint: optionally rewrites the query, calls the Python daemon,
+ * then attaches parallel LLM explanations to each result.
  *
- * Output: { standards, latency: { retrieval_ms, llm_ms, total_ms } }
+ * @param {{ query: string, top_n?: number, rewrite?: boolean }} req.body
+ * @returns {{ query: string, standards: Array, latency: { retrieval_ms: number, llm_ms: number, total_ms: number } }}
  */
 app.post("/api/recommend", async (req, res) => {
   const rawQuery = req.body?.query;
@@ -249,13 +287,13 @@ app.post("/api/recommend", async (req, res) => {
 
   const t0 = Date.now();
 
-  // Step 1 — Optional query rewrite (fires concurrently, falls back silently)
+  // Step 1 - Optional query rewrite (fires concurrently, falls back silently)
   let effectiveQuery = query;
   if (rewrite && process.env.GROQ_API_KEY) {
     effectiveQuery = await rewriteQuery(query.trim()); // never throws
   }
 
-  // Step 2 — Python retrieval (inference.py untouched)
+  // Step 2 - Python retrieval (inference.py untouched)
   let retrievalResult;
   const tRetStart = Date.now();
   try {
@@ -268,7 +306,7 @@ app.post("/api/recommend", async (req, res) => {
 
   const { results: retrieved, latency_seconds: pyLatency } = retrievalResult;
 
-  // Step 3 — LLM explanations fired in parallel (allSettled — never blocks on failure)
+  // Step 3 - LLM explanations fired in parallel (allSettled - never blocks on failure)
   const tLlmStart = Date.now();
   const explanationJobs = retrieved.map((r) => {
     const std = standardsById[r.standard_id];
@@ -281,7 +319,7 @@ app.post("/api/recommend", async (req, res) => {
   const explanations = await Promise.all(explanationJobs);
   const llmMs = Date.now() - tLlmStart;
 
-  // Step 4 — Assemble response
+  // Step 4 - Assemble response
   const standardsOut = retrieved.map((r, i) => {
     const std = standardsById[r.standard_id] || {};
     return {
@@ -316,15 +354,12 @@ app.post("/api/recommend", async (req, res) => {
   });
 });
 
-// ── POST /api/ask ───────────────────────────────────────────────────────────
 /**
- * Input:  { question: string, standard_id: string }
- * Flow:
- *   1. Find best matching chunk for the question within the standard
- *   2. Pass chunk text to answerQuestion() — strictly grounded
- *   3. Return answer + chunk source info
+ * POST /api/ask
+ * Answers a question grounded in the best-matching chunk of a specific standard.
  *
- * Output: { answer, source: { standard_id, section, chunk_id } }
+ * @param {{ question: string, standard_id: string }} req.body
+ * @returns {{ answer: string, source: { standard_id: string, section: string, chunk_id: string }, latency: object }}
  */
 app.post("/api/ask", async (req, res) => {
   const question    = sanitizeText(req.body?.question, 500);
@@ -367,10 +402,12 @@ app.post("/api/ask", async (req, res) => {
   });
 });
 
-// ── POST /api/chat ──────────────────────────────────────────────────────────
 /**
- * Conversational QA grounded in a standard's full text.
- * Uses answerQuestion() from llmService — key never leaves server.
+ * POST /api/chat
+ * Conversational QA grounded in a standard's full text; 503 if GROQ_API_KEY is absent.
+ *
+ * @param {{ question: string, standard_id?: string }} req.body
+ * @returns {{ answer: string }}
  */
 app.post("/api/chat", async (req, res) => {
   if (!process.env.GROQ_API_KEY) {
@@ -408,7 +445,6 @@ app.post("/api/chat", async (req, res) => {
   res.json({ answer });
 });
 
-// ── Start ───────────────────────────────────────────────────────────────────
 const server = app.listen(PORT, () => {
   console.log(`[init] BIS API running on http://localhost:${PORT}`);
 });

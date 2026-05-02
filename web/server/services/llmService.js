@@ -2,21 +2,25 @@
 /**
  * llmService.js
  * All Groq LLM calls live here. Three functions:
- *   generateExplanation(standard)  — 2-3 sentence plain-English summary
- *   answerQuestion(question, chunk) — grounded QA, strict context-only
- *   rewriteQuery(query)            — optional query expansion
+ *   generateExplanation(standard)  - 2-3 sentence plain-English summary
+ *   answerQuestion(question, chunk) - grounded QA, strict context-only
+ *   rewriteQuery(query)            - optional query expansion
  *
  * Key rules enforced here:
  *  - GROQ_API_KEY never leaves this file toward the client
  *  - max_tokens kept short to minimise latency (<400 tokens each)
- *  - Every function returns a fallback value on failure — callers never throw
+ *  - Every function returns a fallback value on failure - callers never throw
  */
 
 const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
 const MODEL = "llama-3.1-8b-instant";
 
-// ── Core fetch wrapper ──────────────────────────────────────────────────────
-
+/**
+ * Sends a single chat-completion request to the Groq API.
+ * @param {{ systemPrompt: string, userMessage: string, maxTokens?: number, temperature?: number }} options
+ * @returns {Promise<string>} Trimmed text content from the first choice.
+ * @throws {Error} If the API key is missing or the response is non-2xx.
+ */
 async function _groqCall({ systemPrompt, userMessage, maxTokens = 256, temperature = 0.2 }) {
   const key = process.env.GROQ_API_KEY;
   if (!key) throw new Error("GROQ_API_KEY not set");
@@ -47,11 +51,9 @@ async function _groqCall({ systemPrompt, userMessage, maxTokens = 256, temperatu
   return data.choices?.[0]?.message?.content?.trim() ?? "";
 }
 
-// ── 1. generateExplanation ──────────────────────────────────────────────────
-
 /**
  * Produces a 2-3 sentence plain-English explanation of a standard.
- * Falls back to the standard's own summary on failure — never throws.
+ * Falls back to the standard's own summary on failure - never throws.
  *
  * @param {{ standard_id: string, title: string, summary?: string, content?: string, key_sections?: object }} standard
  * @returns {Promise<string>}
@@ -64,7 +66,7 @@ async function generateExplanation(standard) {
       systemPrompt:
         "You are a technical writer for the Bureau of Indian Standards (BIS). " +
         "Explain building material standards in simple English for engineers and contractors. " +
-        "Use ONLY the provided standard text — do not add, invent, or infer anything not explicitly stated. " +
+        "Use ONLY the provided standard text -- do not add, invent, or infer anything not explicitly stated. " +
         "Write exactly 2-3 sentences. No bullet points. No headings.",
       userMessage:
         `Explain this BIS standard in simple terms using ONLY the provided information:\n\n${context}`,
@@ -72,12 +74,10 @@ async function generateExplanation(standard) {
       temperature: 0.2,
     });
   } catch (err) {
-    // Graceful fallback — retrieval is unaffected
+    // Graceful fallback -- retrieval is unaffected
     return standard.summary || standard.title || "";
   }
 }
-
-// ── 2. answerQuestion ───────────────────────────────────────────────────────
 
 /**
  * Answers a user question strictly from a chunk of standard text.
@@ -85,7 +85,7 @@ async function generateExplanation(standard) {
  * Never throws.
  *
  * @param {string} question
- * @param {string} chunkText  — raw chunk text from standards_chunks.json
+ * @param {string} chunkText  -- raw chunk text from standards_chunks.json
  * @returns {Promise<string>}
  */
 async function answerQuestion(question, chunkText) {
@@ -111,11 +111,9 @@ async function answerQuestion(question, chunkText) {
   }
 }
 
-// ── 3. rewriteQuery (optional) ──────────────────────────────────────────────
-
 /**
  * Rewrites a vague natural-language query into precise IS-standard keywords.
- * Falls back to the original query on failure — retrieval is never blocked.
+ * Falls back to the original query on failure -- retrieval is never blocked.
  *
  * @param {string} query
  * @returns {Promise<string>}
@@ -129,12 +127,12 @@ async function rewriteQuery(query) {
         "You are a search query optimizer for the BIS SP-21 building materials standards database. " +
         "Convert the user's natural-language query into 3-6 precise technical keywords " +
         "suitable for searching Indian Standards (IS) documents. " +
-        "Output ONLY the keywords separated by spaces — no explanation, no punctuation.",
+        "Output ONLY the keywords separated by spaces -- no explanation, no punctuation.",
       userMessage: query.trim(),
       maxTokens: 40,
       temperature: 0.1,
     });
-    // Sanity check — if rewrite is too long or garbled, fall back
+    // Sanity check -- if rewrite is too long or garbled, fall back
     const words = rewritten.trim().split(/\s+/);
     if (words.length >= 2 && words.length <= 10) return rewritten.trim();
     return query;
@@ -143,10 +141,14 @@ async function rewriteQuery(query) {
   }
 }
 
-// ── Helpers ─────────────────────────────────────────────────────────────────
-
+/**
+ * Assembles a compact text block from a standard's fields for use as LLM context.
+ * Caps each key section at 300 characters to keep token count low.
+ * @param {{ standard_id: string, title: string, category?: string, summary?: string, key_sections?: object }} standard
+ * @returns {string}
+ */
 function buildStandardContext(standard) {
-  const parts = [`Standard: ${standard.standard_id} — ${standard.title}`];
+  const parts = [`Standard: ${standard.standard_id} -- ${standard.title}`];
   if (standard.category) parts.push(`Category: ${standard.category}`);
   if (standard.summary)  parts.push(`Summary: ${standard.summary}`);
 

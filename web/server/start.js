@@ -1,5 +1,5 @@
 /**
- * start.js — safe server launcher
+ * start.js - safe server launcher
  * Kills any process already on PORT before starting index.js.
  * Run with: node web/server/start.js
  */
@@ -24,7 +24,7 @@ function killPort(port) {
       execSync(`fuser -k ${port}/tcp`, { stdio: "ignore" });
     }
   } catch {
-    // No process on that port — fine
+    // No process on that port -- fine
   }
 }
 

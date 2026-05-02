@@ -1,6 +1,6 @@
 "use strict";
 /**
- * retrieverService.js — persistent Python daemon.
+ * retrieverService.js -- persistent Python daemon.
  *
  * Spawns retrieve.py ONCE when the Node server starts. The Python process
  * loads the FAISS index and BM25 index once, then serves queries via
@@ -17,12 +17,17 @@ const path       = require("path");
 const readline   = require("readline");
 const { EventEmitter } = require("events");
 
+/** @type {string} - Absolute path to bridge/retrieve.py. */
 const BRIDGE  = path.join(__dirname, "../bridge/retrieve.py");
+/** @type {string} - Repository root, used as cwd for the Python subprocess. */
 const ROOT    = path.join(__dirname, "../../..");
+/** @type {string} - Python executable; override with PYTHON_BIN env var. */
 const PYTHON  = process.env.PYTHON_BIN || "python";
 
-const BOOT_TIMEOUT_MS  = 90_000;   // Python cold-start budget
-const QUERY_TIMEOUT_MS = 10_000;   // per-query budget once warm
+/** @type {number} - Maximum milliseconds to wait for the daemon to signal ready on cold start. */
+const BOOT_TIMEOUT_MS  = 90_000;
+/** @type {number} - Maximum milliseconds to wait for a single query response once the daemon is warm. */
+const QUERY_TIMEOUT_MS = 10_000;
 
 class PythonRetriever extends EventEmitter {
   constructor() {
@@ -40,7 +45,7 @@ class PythonRetriever extends EventEmitter {
     this._ready = false;
     this._error = null;
 
-    console.log("[retriever] Starting Python daemon (first boot ~20s)…");
+    console.log("[retriever] Starting Python daemon (first boot ~20s)...");
 
     this._proc = spawn(PYTHON, [BRIDGE], {
       cwd: ROOT,
@@ -98,11 +103,11 @@ class PythonRetriever extends EventEmitter {
     try { msg = JSON.parse(raw); }
     catch { return; }  // ignore non-JSON (e.g. sentence-transformers progress bars)
 
-    // ── Startup handshake ──
+    // Startup handshake: wait for {"ready":true} before flushing the queue.
     if (!this._ready) {
       if (msg.ready) {
         this._ready = true;
-        console.log(`[retriever] Ready — flushing ${this._queue.length} queued request(s).`);
+        console.log(`[retriever] Ready -- flushing ${this._queue.length} queued request(s).`);
         // Send all queued requests in order
         for (const item of this._queue) {
           this._pending.push(item);
@@ -118,7 +123,7 @@ class PythonRetriever extends EventEmitter {
       return;
     }
 
-    // ── Query response — FIFO ──
+    // Query response -- resolve/reject the oldest in-flight request (FIFO).
     const item = this._pending.shift();
     if (!item) return;
     clearTimeout(item.timer);
@@ -178,7 +183,7 @@ class PythonRetriever extends EventEmitter {
   }
 }
 
-// Singleton — one daemon for the lifetime of the Node process
+// Singleton -- one daemon for the lifetime of the Node process
 const retriever = new PythonRetriever();
 
 module.exports = { retrieve: (q, n) => retriever.retrieve(q, n) };

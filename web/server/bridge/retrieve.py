@@ -6,9 +6,9 @@ from stdin and writes newline-delimited JSON responses to stdout forever.
 Protocol (one line each direction):
   <- {"query": "...", "top_n": 5}
   -> {"results": [...], "latency_seconds": 0.15}
-  -> {"error": "..."}          (on failure — process stays alive)
+  -> {"error": "..."}          (on failure -- process stays alive)
 
-inference.py is imported as a module — zero lines of it are modified.
+inference.py is imported as a module -- zero lines of it are modified.
 """
 import sys
 import json
@@ -21,7 +21,7 @@ os.chdir(ROOT)
 import inference  # noqa: E402
 
 def main():
-    # Load once — this is the expensive step (~18s cold, ~0s warm)
+    # Load once -- this is the expensive step (~18s cold, ~0s warm)
     try:
         _, retriever = inference.load_or_build(force_rebuild=False)
     except Exception as exc:
