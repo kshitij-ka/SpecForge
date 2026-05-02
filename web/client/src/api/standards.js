@@ -13,7 +13,7 @@ async function safeFetch(url, options = {}) {
   try {
     res = await fetch(url, options);
   } catch (networkErr) {
-    const err = new Error(`Network error - is the server running? (${networkErr.message})`);
+    const err = new Error(`Network error — is the server running? (${networkErr.message})`);
     err.cause = networkErr;
     throw err;
   }

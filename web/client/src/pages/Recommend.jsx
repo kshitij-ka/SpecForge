@@ -128,8 +128,8 @@ export default function Recommend() {
             {loading && (
               <div className="loading-state" aria-label={t("common.loading")}>
                 <div className="loading-steps">
-                  <LoadingStep label={t("recommend.loadingRetrieval")} />
-                  <LoadingStep label={t("recommend.loadingAI")} delay />
+                  <LoadingStep icon="🔍" label={t("recommend.loadingRetrieval")} />
+                  <LoadingStep icon="✦"  label={t("recommend.loadingAI")} delay />
                 </div>
               </div>
             )}
@@ -232,9 +232,10 @@ function LatencyBadge({ label, ms, accent, bold }) {
   );
 }
 
-function LoadingStep({ label, delay }) {
+function LoadingStep({ icon, label, delay }) {
   return (
     <div className={`loading-step${delay ? " loading-step--delay" : ""}`}>
+      <span className="loading-step-icon" aria-hidden="true">{icon}</span>
       <span>{label}</span>
     </div>
   );
@@ -250,7 +251,7 @@ function SearchIcon() {
 }
 
 function SpinIcon() {
-  return <span className="spin-icon" aria-hidden="true" />;
+  return <span className="spin-icon" aria-hidden="true">⟳</span>;
 }
 
 function standardsFullRecord(s) {
