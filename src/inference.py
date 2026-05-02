@@ -267,7 +267,7 @@ class Retriever:
                 "standard_id": sid,
                 "title": std_rec.get("title", std_chunk_repr[sid].get("title", "")),
                 "category": std_rec.get("category", std_chunk_repr[sid].get("category", "")),
-                "score": round(score, 4),
+                "score": round(float(score), 4),
                 "matched_section": std_chunk_repr[sid].get("section", ""),
             })
 
@@ -303,14 +303,23 @@ def load_or_build(force_rebuild: bool = False) -> tuple[RetrievalIndex, Retrieve
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
-def _format_result(query_id: str, query: str, results: list[dict], latency: float) -> dict:
-    return {
+def _format_result(
+    query_id: str,
+    query: str,
+    results: list[dict],
+    latency: float,
+    expected_standards: list[str] | None = None,
+) -> dict:
+    out: dict[str, Any] = {
         "id": query_id,
         "query": query,
         "retrieved_standards": [r["standard_id"] for r in results],
         "details": results,
         "latency_seconds": round(latency, 4),
     }
+    if expected_standards is not None:
+        out["expected_standards"] = expected_standards
+    return out
 
 
 def main() -> None:
@@ -348,9 +357,9 @@ def main() -> None:
             qtext = q.get("query", "")
             results, latency = retriever.retrieve(qtext)
             latencies.append(latency)
-            out = _format_result(qid, qtext, results, latency)
-            all_results.append(out)
             expected = q.get("expected_standards", [])
+            out = _format_result(qid, qtext, results, latency, expected_standards=expected or None)
+            all_results.append(out)
             hit = any(r["standard_id"] in expected for r in results)
             print(f"[{qid}] latency={latency:.3f}s  hit={hit}  retrieved={[r['standard_id'] for r in results]}")
 
