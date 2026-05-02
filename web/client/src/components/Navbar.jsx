@@ -9,6 +9,9 @@ const NAV_LINKS = [
   { label: "About", to: "/about" },
 ];
 
+/**
+ * Site navigation bar with responsive menu.
+ */
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();

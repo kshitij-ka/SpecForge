@@ -7,6 +7,10 @@ import Categories from "./pages/Categories";
 import About from "./pages/About";
 import Recommend from "./pages/Recommend";
 
+/**
+ * Main application router.
+ * Renders layout with Navbar/Footer and routes to pages.
+ */
 export default function App() {
   return (
     <>
