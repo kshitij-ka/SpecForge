@@ -98,7 +98,7 @@
         "matched_section": "Scope"
       }
     ],
-    "latency_seconds": 0.0187,
+    "latency_seconds": 0.0168,
     "expected_standards": [
       "IS 383: 1970"
     ]
@@ -150,7 +150,7 @@
         "matched_section": "Tests"
       }
     ],
-    "latency_seconds": 0.0177,
+    "latency_seconds": 0.0165,
     "expected_standards": [
       "IS 458: 2003"
     ]
@@ -202,7 +202,7 @@
         "matched_section": "Scope"
       }
     ],
-    "latency_seconds": 0.0187,
+    "latency_seconds": 0.0161,
     "expected_standards": [
       "IS 2185 (Part 2): 1983"
     ]
@@ -254,7 +254,7 @@
         "matched_section": "Scope"
       }
     ],
-    "latency_seconds": 0.0211,
+    "latency_seconds": 0.0154,
     "expected_standards": [
       "IS 459: 1992"
     ]
@@ -306,7 +306,7 @@
         "matched_section": "Scope"
       }
     ],
-    "latency_seconds": 0.021,
+    "latency_seconds": 0.0152,
     "expected_standards": [
       "IS 455: 1989"
     ]
@@ -358,7 +358,7 @@
         "matched_section": "Physical Requirements"
       }
     ],
-    "latency_seconds": 0.028,
+    "latency_seconds": 0.0174,
     "expected_standards": [
       "IS 1489 (Part 2): 1991"
     ]
@@ -410,7 +410,7 @@
         "matched_section": "Classification"
       }
     ],
-    "latency_seconds": 0.0225,
+    "latency_seconds": 0.0167,
     "expected_standards": [
       "IS 3466: 1988"
     ]
@@ -462,7 +462,7 @@
         "matched_section": "Design And Manufacture"
       }
     ],
-    "latency_seconds": 0.0303,
+    "latency_seconds": 0.0178,
     "expected_standards": [
       "IS 6909: 1990"
     ]
@@ -514,7 +514,7 @@
         "matched_section": "Delivery"
       }
     ],
-    "latency_seconds": 0.023,
+    "latency_seconds": 0.0156,
     "expected_standards": [
       "IS 8042: 1989"
     ]
