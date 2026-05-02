@@ -1,14 +1,16 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { askQuestion } from "../api/standards";
 import "./StandardModal.css";
 
 export default function StandardModal({ standard, onClose }) {
+  const { t } = useTranslation();
   const modalRef = useRef(null);
   const closeBtnRef = useRef(null);
   const inputRef = useRef(null);
 
   const [question, setQuestion] = useState("");
-  const [messages, setMessages] = useState([]); // [{role, text}]
+  const [messages, setMessages] = useState([]);
   const [asking, setAsking] = useState(false);
   const [aiError, setAiError] = useState(null);
   const chatEndRef = useRef(null);
@@ -46,7 +48,7 @@ export default function StandardModal({ standard, onClose }) {
       const { answer } = await askQuestion({ standard_id: standard.standard_id, question: q });
       setMessages((prev) => [...prev, { role: "ai", text: answer }]);
     } catch (err) {
-      setAiError(err.message || "Something went wrong. Please try again.");
+      setAiError(err.message || t("common.serverError"));
     } finally {
       setAsking(false);
       setTimeout(() => inputRef.current?.focus(), 50);
@@ -69,6 +71,7 @@ export default function StandardModal({ standard, onClose }) {
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"
+        aria-describedby="modal-summary"
         tabIndex={-1}
       >
         {/* Header */}
@@ -82,7 +85,7 @@ export default function StandardModal({ standard, onClose }) {
             className="modal-close"
             ref={closeBtnRef}
             onClick={onClose}
-            aria-label="Close standard detail"
+            aria-label={t("modal.closeLabel")}
           >
             ✕
           </button>
@@ -91,15 +94,15 @@ export default function StandardModal({ standard, onClose }) {
         {/* Standard detail */}
         <div className="modal-body">
           {standard.summary && (
-            <div className="modal-section">
-              <p className="modal-section-title">Summary</p>
+            <div className="modal-section" id="modal-summary">
+              <p className="modal-section-title">{t("modal.summary")}</p>
               <p className="modal-section-body">{standard.summary}</p>
             </div>
           )}
 
           {standard.keywords?.length > 0 && (
             <div className="modal-section">
-              <p className="modal-section-title">Keywords</p>
+              <p className="modal-section-title">{t("modal.keywords")}</p>
               <div className="modal-keywords">
                 {standard.keywords.map((kw) => (
                   <span className="modal-keyword" key={kw}>{kw}</span>
@@ -110,7 +113,7 @@ export default function StandardModal({ standard, onClose }) {
 
           {sections.length > 0 && (
             <div className="modal-section">
-              <p className="modal-section-title">Key Sections</p>
+              <p className="modal-section-title">{t("modal.keySections")}</p>
               <div className="modal-key-sections">
                 {sections.map(([name, text]) => (
                   <div className="key-section-item" key={name}>
@@ -123,24 +126,24 @@ export default function StandardModal({ standard, onClose }) {
           )}
 
           {/* AI chat panel */}
-          <div className="modal-section ai-panel" aria-label="Ask AI about this standard">
+          <div className="modal-section ai-panel" aria-label={t("modal.askAI")}>
             <p className="modal-section-title">
               <span className="ai-label-icon" aria-hidden="true">✦</span>
-              Ask AI about this standard
+              {t("modal.askAI")}
             </p>
 
             {messages.length > 0 && (
-              <div className="chat-log" aria-live="polite" aria-label="Conversation">
+              <div className="chat-log" aria-live="polite" aria-label={t("modal.conversation")}>
                 {messages.map((m, i) => (
                   <div key={i} className={`chat-bubble chat-bubble--${m.role}`}>
                     {m.role === "ai" && (
-                      <span className="bubble-label" aria-label="AI response">✦</span>
+                      <span className="bubble-label" aria-label={t("modal.aiResponse")}>✦</span>
                     )}
                     <p className="bubble-text">{m.text}</p>
                   </div>
                 ))}
                 {asking && (
-                  <div className="chat-bubble chat-bubble--ai chat-bubble--loading" aria-label="AI is thinking">
+                  <div className="chat-bubble chat-bubble--ai chat-bubble--loading" aria-label={t("modal.aiThinking")}>
                     <span className="bubble-label" aria-hidden="true">✦</span>
                     <span className="typing-dots">
                       <span /><span /><span />
@@ -155,8 +158,8 @@ export default function StandardModal({ standard, onClose }) {
             )}
 
             {messages.length === 0 && !asking && (
-              <div className="chat-suggestions" aria-label="Suggested questions">
-                {getSuggestions(standard).map((s) => (
+              <div className="chat-suggestions" aria-label={t("modal.suggestionsLabel")}>
+                {getSuggestions(standard, t).map((s) => (
                   <button
                     key={s}
                     className="suggestion-chip"
@@ -171,25 +174,25 @@ export default function StandardModal({ standard, onClose }) {
               </div>
             )}
 
-            <form className="chat-form" onSubmit={handleAsk} aria-label="Ask a question">
+            <form className="chat-form" onSubmit={handleAsk} aria-label={t("modal.askAI")}>
               <input
                 ref={inputRef}
                 className="chat-input"
                 type="text"
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
-                placeholder="Ask a question about this standard…"
+                placeholder={t("modal.chatPlaceholder")}
                 maxLength={500}
                 disabled={asking}
-                aria-label="Your question"
+                aria-label={t("modal.questionLabel")}
               />
               <button
                 className="chat-send"
                 type="submit"
                 disabled={!question.trim() || asking}
-                aria-label="Send question"
+                aria-label={t("modal.sendLabel")}
               >
-                {asking ? "…" : "Ask"}
+                {asking ? t("modal.sending") : t("modal.askBtn")}
               </button>
             </form>
           </div>
@@ -199,17 +202,17 @@ export default function StandardModal({ standard, onClose }) {
   );
 }
 
-function getSuggestions(standard) {
+function getSuggestions(standard, t) {
   const base = [
-    `What are the key requirements of ${standard.standard_id}?`,
-    "What materials or tests are specified?",
-    "What are the delivery or packaging specifications?",
+    t("modal.suggestion_keyReq", { id: standard.standard_id }),
+    t("modal.suggestion_materials"),
+    t("modal.suggestion_delivery"),
   ];
   if (standard.key_sections?.["Chemical Requirements"]) {
-    base.splice(1, 0, "Summarise the chemical requirements.");
+    base.splice(1, 0, t("modal.suggestion_chemical"));
   }
   if (standard.key_sections?.["Physical Requirements"] || standard.key_sections?.["Physical Requirement"]) {
-    base.splice(1, 0, "What are the physical requirements?");
+    base.splice(1, 0, t("modal.suggestion_physical"));
   }
   return base.slice(0, 3);
 }

@@ -1,9 +1,11 @@
 import { useState, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { recommend } from "../api/standards";
 import StandardModal from "../components/StandardModal";
 import "./Recommend.css";
 
 export default function Recommend() {
+  const { t } = useTranslation();
   const [query, setQuery]         = useState("");
   const [rewrite, setRewrite]     = useState(false);
   const [results, setResults]     = useState(null);
@@ -25,7 +27,7 @@ export default function Recommend() {
       const data = await recommend({ query: q, top_n: 5, rewrite });
       setResults(data);
     } catch (err) {
-      setError(err.message || "Something went wrong. Is the server running?");
+      setError(err.message || t("common.serverError"));
     } finally {
       setLoading(false);
     }
@@ -40,22 +42,17 @@ export default function Recommend() {
 
   return (
     <main className="recommend-page">
-      {/* Header tile */}
       <section className="tile tile-dark rec-hero" aria-labelledby="rec-heading">
         <div className="tile-inner tile-center">
-          <p className="tile-eyebrow">Hybrid Retrieval · AI Explanation</p>
-          <h1 className="hero-display" id="rec-heading">Find & Understand Standards</h1>
-          <p className="lead">
-            Ask a natural language question — the system retrieves the most relevant
-            IS standards using dense + sparse search, then explains each in plain English.
-          </p>
+          <p className="tile-eyebrow">{t("recommend.eyebrow")}</p>
+          <h1 className="hero-display" id="rec-heading">{t("recommend.heading")}</h1>
+          <p className="lead">{t("recommend.lead")}</p>
         </div>
       </section>
 
-      {/* Search tile */}
-      <section className="tile tile-parchment" aria-label="Recommendation search">
+      <section className="tile tile-parchment" aria-label={t("recommend.eyebrow")}>
         <div className="tile-inner">
-          <form onSubmit={handleSubmit} role="search" aria-label="Recommend standards">
+          <form onSubmit={handleSubmit} role="search" aria-label={t("recommend.heading")}>
             <div className="rec-search-wrap">
               <SearchIcon />
               <input
@@ -64,8 +61,8 @@ export default function Recommend() {
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="e.g. What standard covers tensile strength of structural steel?"
-                aria-label="Search query"
+                placeholder={t("recommend.searchPlaceholder")}
+                aria-label={t("recommend.searchLabel")}
                 maxLength={500}
                 disabled={loading}
               />
@@ -74,36 +71,35 @@ export default function Recommend() {
                   type="button"
                   className="rec-clear"
                   onClick={() => { setQuery(""); setResults(null); inputRef.current?.focus(); }}
-                  aria-label="Clear"
+                  aria-label={t("recommend.clearBtn")}
                 >✕</button>
               )}
             </div>
 
             <div className="rec-options-row">
-              <label className="rewrite-toggle" title="Let the AI rephrase your query into precise IS keywords before searching">
+              <label className="rewrite-toggle" title={t("recommend.rewriteHint")}>
                 <input
                   type="checkbox"
                   checked={rewrite}
                   onChange={(e) => setRewrite(e.target.checked)}
                   disabled={loading}
                 />
-                <span>Smart query rewrite</span>
-                <span className="rewrite-hint">AI refines your query before searching</span>
+                <span>{t("recommend.rewriteLabel")}</span>
+                <span className="rewrite-hint">{t("recommend.rewriteHint")}</span>
               </label>
               <button
                 className="btn-primary rec-submit"
                 type="submit"
                 disabled={!query.trim() || loading}
               >
-                {loading ? <><SpinIcon /> Searching…</> : "Find Standards"}
+                {loading ? <><SpinIcon /> {t("recommend.submitting")}</> : t("recommend.submitBtn")}
               </button>
             </div>
           </form>
 
-          {/* Example queries */}
           {!results && !loading && (
-            <div className="example-queries" aria-label="Example queries">
-              <p className="example-label">Try an example:</p>
+            <div className="example-queries" aria-label={t("recommend.exampleLabel")}>
+              <p className="example-label">{t("recommend.exampleLabel")}</p>
               <div className="example-chips">
                 {EXAMPLE_QUERIES.map((q) => (
                   <button
@@ -120,21 +116,20 @@ export default function Recommend() {
         </div>
       </section>
 
-      {/* Results tile */}
       {(loading || results || error) && (
-        <section className="tile tile-light results-section" aria-live="polite" aria-label="Results">
+        <section className="tile tile-light results-section" aria-live="polite" aria-label={t("recommend.heading")}>
           <div className="tile-inner">
             {error && (
               <div className="error-banner" role="alert">
-                <strong>Error:</strong> {error}
+                <strong>{t("recommend.error_prefix")}</strong> {error}
               </div>
             )}
 
             {loading && (
-              <div className="loading-state" aria-label="Loading results">
+              <div className="loading-state" aria-label={t("common.loading")}>
                 <div className="loading-steps">
-                  <LoadingStep icon="🔍" label="Running hybrid retrieval (FAISS + BM25)…" />
-                  <LoadingStep icon="✦"  label="Generating AI explanations…" delay />
+                  <LoadingStep icon="🔍" label={t("recommend.loadingRetrieval")} />
+                  <LoadingStep icon="✦"  label={t("recommend.loadingAI")} delay />
                 </div>
               </div>
             )}
@@ -144,14 +139,14 @@ export default function Recommend() {
                 <div className="results-header">
                   <div>
                     <h2 className="results-title">
-                      {results.standards.length} Standard{results.standards.length !== 1 ? "s" : ""} Found
+                      {t("recommend.resultsFound", { count: results.standards.length })}
                     </h2>
-                    <p className="results-query">for: <em>{results.query}</em></p>
+                    <p className="results-query">{t("recommend.resultsFor")} <em>{results.query}</em></p>
                   </div>
-                  <div className="latency-badge" aria-label="Timing breakdown">
-                    <LatencyBadge label="Retrieval" ms={results.latency.retrieval_ms} />
-                    <LatencyBadge label="AI" ms={results.latency.llm_ms} accent />
-                    <LatencyBadge label="Total" ms={results.latency.total_ms} bold />
+                  <div className="latency-badge" aria-label={t("recommend.timingLabel")}>
+                    <LatencyBadge label={t("recommend.retrieval")} ms={results.latency.retrieval_ms} />
+                    <LatencyBadge label={t("recommend.ai")}        ms={results.latency.llm_ms}       accent />
+                    <LatencyBadge label={t("recommend.total")}     ms={results.latency.total_ms}     bold />
                   </div>
                 </div>
 
@@ -162,6 +157,7 @@ export default function Recommend() {
                       standard={s}
                       rank={i + 1}
                       onOpen={() => setSelected(standardsFullRecord(s))}
+                      t={t}
                     />
                   ))}
                 </div>
@@ -178,9 +174,7 @@ export default function Recommend() {
   );
 }
 
-// ── Sub-components ──────────────────────────────────────────────────────────
-
-function RecommendCard({ standard, rank, onOpen }) {
+function RecommendCard({ standard, rank, onOpen, t }) {
   return (
     <article
       className="rec-card"
@@ -188,7 +182,7 @@ function RecommendCard({ standard, rank, onOpen }) {
       onClick={onOpen}
       onKeyDown={(e) => e.key === "Enter" && onOpen()}
       tabIndex={0}
-      aria-label={`Rank ${rank}: ${standard.standard_id}`}
+      aria-label={t("recommend.rankLabel", { rank, id: standard.standard_id })}
     >
       <div className="rec-card-rank" aria-hidden="true">{rank}</div>
 
@@ -197,21 +191,21 @@ function RecommendCard({ standard, rank, onOpen }) {
           <span className="card-cat">{standard.category}</span>
           <span className="card-id">{standard.standard_id}</span>
           {standard.matched_section && (
-            <span className="rec-card-section">§ {standard.matched_section}</span>
+            <span className="rec-card-section">{t("recommend.section", { section: standard.matched_section })}</span>
           )}
         </div>
 
         <h3 className="rec-card-title">{standard.title}</h3>
 
         {standard.explanation && (
-          <div className="rec-card-explanation" aria-label="AI explanation">
+          <div className="rec-card-explanation" aria-label={t("recommend.aiExplanation")}>
             <span className="explanation-icon" aria-hidden="true">✦</span>
             <p className="explanation-text">{standard.explanation}</p>
           </div>
         )}
 
         {standard.keywords?.length > 0 && (
-          <div className="card-keywords" aria-label="Keywords">
+          <div className="card-keywords" aria-label={t("recommend.keywords")}>
             {standard.keywords.slice(0, 5).map((kw) => (
               <span className="keyword-chip" key={kw}>{kw}</span>
             ))}
@@ -219,7 +213,7 @@ function RecommendCard({ standard, rank, onOpen }) {
         )}
       </div>
 
-      <div className="rec-card-score" aria-label={`Relevance score ${standard.score}`}>
+      <div className="rec-card-score" aria-label={t("recommend.relevanceScore", { score: standard.score })}>
         <span className="score-num">{(standard.score * 100).toFixed(0)}</span>
         <span className="score-label">score</span>
       </div>
@@ -260,7 +254,6 @@ function SpinIcon() {
   return <span className="spin-icon" aria-hidden="true">⟳</span>;
 }
 
-// Merge recommendation result with full standard record for the modal
 function standardsFullRecord(s) {
   return {
     standard_id:  s.standard_id,

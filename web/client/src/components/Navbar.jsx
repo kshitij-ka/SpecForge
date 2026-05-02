@@ -1,28 +1,31 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./Navbar.css";
 
-const NAV_LINKS = [
-  { label: "Standards", to: "/standards" },
-  { label: "Categories", to: "/categories" },
-  { label: "✦ AI Recommend", to: "/recommend" },
-  { label: "About", to: "/about" },
-];
-
-/**
- * Site navigation bar with responsive menu.
- */
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
+  const { t, i18n } = useTranslation();
+
+  const NAV_LINKS = [
+    { label: t("nav.standards"), to: "/standards" },
+    { label: t("nav.categories"), to: "/categories" },
+    { label: t("nav.recommend"), to: "/recommend" },
+    { label: t("nav.about"), to: "/about" },
+  ];
+
+  const toggleLang = () => {
+    i18n.changeLanguage(i18n.language === "en" ? "hi" : "en");
+  };
 
   return (
     <>
-      <nav className="global-nav" role="navigation" aria-label="Primary navigation">
+      <nav className="global-nav" role="navigation" aria-label={t("nav.brand") + " primary navigation"}>
         <div className="nav-inner">
-          <Link className="nav-emblem" to="/" aria-label="BIS SP-21 home" onClick={() => setOpen(false)}>
+          <Link className="nav-emblem" to="/" aria-label={t("nav.brand") + " home"} onClick={() => setOpen(false)}>
             <BISIcon />
-            <span className="nav-brand">BIS SP‑21</span>
+            <span className="nav-brand">{t("nav.brand")}</span>
           </Link>
 
           <div className="nav-links" role="list">
@@ -43,13 +46,21 @@ export default function Navbar() {
               rel="noopener noreferrer"
               role="listitem"
             >
-              BIS Portal ↗
+              {t("nav.bisPortal")}
             </a>
+            <button
+              className="nav-link nav-lang-btn"
+              onClick={toggleLang}
+              aria-label={t("lang.switchTo")}
+              title={t("lang.switchTo")}
+            >
+              {i18n.language === "en" ? t("lang.hi") : t("lang.en")}
+            </button>
           </div>
 
           <button
             className="nav-hamburger"
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? t("nav.closeMenu") : t("nav.openMenu")}
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((o) => !o)}
@@ -80,8 +91,15 @@ export default function Navbar() {
             role="menuitem"
             onClick={() => setOpen(false)}
           >
-            BIS Portal ↗
+            {t("nav.bisPortal")}
           </a>
+          <button
+            className="mobile-link nav-lang-btn"
+            onClick={() => { toggleLang(); setOpen(false); }}
+            role="menuitem"
+          >
+            {i18n.language === "en" ? t("lang.hi") : t("lang.en")}
+          </button>
         </div>
       )}
     </>

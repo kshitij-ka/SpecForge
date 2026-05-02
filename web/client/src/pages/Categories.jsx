@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { fetchCategories } from "../api/standards";
 import "./Categories.css";
 
@@ -32,6 +33,7 @@ const CATEGORY_ICONS = {
 };
 
 export default function Categories() {
+  const { t } = useTranslation();
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
@@ -49,15 +51,15 @@ export default function Categories() {
     <main>
       <section className="tile tile-dark cat-hero" aria-labelledby="cat-page-heading">
         <div className="tile-inner tile-center">
-          <p className="tile-eyebrow">SP‑21 : 2005</p>
-          <h1 className="hero-display" id="cat-page-heading">Material Categories</h1>
+          <p className="tile-eyebrow">{t("categories.eyebrow")}</p>
+          <h1 className="hero-display" id="cat-page-heading">{t("categories.heading")}</h1>
           <p className="lead">
-            {total} standards across {categories.length} building material sections.
+            {t("categories.lead", { count: categories.length, total })}
           </p>
         </div>
       </section>
 
-      <section className="tile tile-light" aria-label="All categories">
+      <section className="tile tile-light" aria-label={t("categories.allLabel")}>
         <div className="tile-inner">
           {loading ? (
             <div className="cat-skeleton">
@@ -78,7 +80,7 @@ export default function Categories() {
                     {CATEGORY_ICONS[cat.name] || "📋"}
                   </span>
                   <span className="cat-page-name">{cat.name}</span>
-                  <span className="cat-page-count">{cat.count} standards</span>
+                  <span className="cat-page-count">{t("categories.standardCount", { count: cat.count })}</span>
                   <span className="cat-page-arrow" aria-hidden="true">→</span>
                 </button>
               ))}

@@ -90,6 +90,20 @@
 }
 .mobile-link:hover { background: rgba(255,255,255,0.05); }
 
+.nav-lang-btn {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 4px;
+  padding: 3px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.nav-lang-btn:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.45);
+}
+
 @media (max-width: 833px) {
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }

@@ -1,21 +1,20 @@
 import { useEffect, useState, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { fetchStandards, fetchCategories } from "../api/standards";
 import StandardCard from "../components/StandardCard";
 import StandardModal from "../components/StandardModal";
+import { useDebounce } from "../hooks/useDebounce";
 import "./Standards.css";
 
 const PAGE_SIZE = 18;
 
-/**
- * Standards search page with pagination.
- * Uses URL search params for query/category state.
- * Loads standards on mount and handles user interactions.
- */
 export default function Standards() {
+  const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [query, setQuery] = useState(searchParams.get("q") || "");
+  const debouncedQuery = useDebounce(query, 350);
   const [category, setCategory] = useState(searchParams.get("category") || "");
   const [page, setPage] = useState(1);
 
@@ -35,32 +34,37 @@ export default function Standards() {
       setMeta(data.meta);
       setPage(pg);
     } catch {
-      setError("Could not load standards. Is the server running?");
+      setError(t("standards.serverError"));
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [t]);
 
   useEffect(() => {
     fetchCategories().then(setCategories).catch(() => {});
-    load(query, category, 1);
+    load(debouncedQuery, category, 1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
+    load(debouncedQuery, category, 1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [debouncedQuery]);
+
+  useEffect(() => {
     const params = {};
-    if (query) params.q = query;
+    if (debouncedQuery) params.q = debouncedQuery;
     if (category) params.category = category;
     setSearchParams(params, { replace: true });
-  }, [query, category, setSearchParams]);
+  }, [debouncedQuery, category, setSearchParams]);
 
   const handleCategoryChange = (value) => {
     setCategory(value);
-    load(query, value, 1);
+    load(debouncedQuery, value, 1);
   };
 
   const handlePageChange = (pg) => {
-    load(query, category, pg);
+    load(debouncedQuery, category, pg);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -74,8 +78,8 @@ export default function Standards() {
     <main className="standards-page">
       <section className="tile tile-parchment search-tile" aria-labelledby="search-heading">
         <div className="tile-inner">
-          <h1 className="display-lg" id="search-heading">Find an IS Standard</h1>
-          <p className="lead-sub">Search by standard number, title, material, or keyword.</p>
+          <h1 className="display-lg" id="search-heading">{t("standards.heading")}</h1>
+          <p className="lead-sub">{t("standards.lead")}</p>
 
           <form className="search-form" role="search" onSubmit={(e) => e.preventDefault()}>
             <div className="search-wrap">
@@ -85,15 +89,15 @@ export default function Standards() {
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="e.g. Ordinary Portland Cement, IS 269, aggregates…"
-                aria-label="Search standards"
+                placeholder={t("standards.searchPlaceholder")}
+                aria-label={t("standards.searchLabel")}
               />
               {query && (
                 <button
                   className="search-clear"
                   type="button"
                   onClick={handleClearSearch}
-                  aria-label="Clear search"
+                  aria-label={t("standards.clearSearch")}
                 >
                   ✕
                 </button>
@@ -104,9 +108,9 @@ export default function Standards() {
                 className="category-filter"
                 value={category}
                 onChange={(e) => handleCategoryChange(e.target.value)}
-                aria-label="Filter by category"
+                aria-label={t("standards.categoryFilter")}
               >
-                <option value="">All Categories</option>
+                <option value="">{t("standards.allCategories")}</option>
                 {categories.map((c) => (
                   <option key={c.name} value={c.name}>
                     {c.name} ({c.count})
@@ -124,8 +128,10 @@ export default function Standards() {
 
           {!error && meta && (
             <p className="results-meta">
-              {loading ? "Searching…" : `${meta.total} standard${meta.total !== 1 ? "s" : ""} found`}
-              {meta.total > 0 && ` — page ${meta.page} of ${meta.totalPages}`}
+              {loading
+                ? t("standards.searching")
+                : t("standards.found", { count: meta.total })}
+              {!loading && meta.total > 0 && ` — ${t("standards.page", { page: meta.page, total: meta.totalPages })}`}
             </p>
           )}
 
@@ -139,8 +145,8 @@ export default function Standards() {
 
           {!loading && results.length === 0 && !error && (
             <div className="results-empty">
-              <p className="empty-title">No standards found</p>
-              <p className="empty-sub">Try a different keyword or clear the category filter.</p>
+              <p className="empty-title">{t("standards.noResultsTitle")}</p>
+              <p className="empty-sub">{t("standards.noResultsSub")}</p>
             </div>
           )}
 
@@ -157,14 +163,14 @@ export default function Standards() {
           )}
 
           {meta && meta.totalPages > 1 && (
-            <nav className="pagination" aria-label="Results pagination">
+            <nav className="pagination" aria-label={t("standards.pagination")}>
               <button
                 className="page-btn"
                 disabled={page <= 1}
                 onClick={() => handlePageChange(page - 1)}
-                aria-label="Previous page"
+                aria-label={t("standards.prevPage")}
               >
-                ← Prev
+                ← {t("standards.prevPage")}
               </button>
               <div className="page-numbers">
                 {buildPageRange(page, meta.totalPages).map((p, i) =>
@@ -175,7 +181,7 @@ export default function Standards() {
                       key={p}
                       className={`page-btn${p === page ? " active" : ""}`}
                       onClick={() => handlePageChange(p)}
-                      aria-label={`Page ${p}`}
+                      aria-label={t("standards.pageLabel", { page: p })}
                       aria-current={p === page ? "page" : undefined}
                     >
                       {p}
@@ -187,9 +193,9 @@ export default function Standards() {
                 className="page-btn"
                 disabled={page >= meta.totalPages}
                 onClick={() => handlePageChange(page + 1)}
-                aria-label="Next page"
+                aria-label={t("standards.nextPage")}
               >
-                Next →
+                {t("standards.nextPage")} →
               </button>
             </nav>
           )}
