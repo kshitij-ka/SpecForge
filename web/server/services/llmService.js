@@ -21,26 +21,37 @@ const MODEL = "llama-3.1-8b-instant";
  * @returns {Promise<string>} Trimmed text content from the first choice.
  * @throws {Error} If the API key is missing or the response is non-2xx.
  */
+const GROQ_TIMEOUT_MS = 8_000;
+
 async function _groqCall({ systemPrompt, userMessage, maxTokens = 256, temperature = 0.2 }) {
   const key = process.env.GROQ_API_KEY;
   if (!key) throw new Error("GROQ_API_KEY not set");
 
-  const res = await fetch(GROQ_API_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${key}`,
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user",   content: userMessage },
-      ],
-      max_tokens: maxTokens,
-      temperature,
-    }),
-  });
+  const ctrl = new AbortController();
+  const tid = setTimeout(() => ctrl.abort(), GROQ_TIMEOUT_MS);
+
+  let res;
+  try {
+    res = await fetch(GROQ_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${key}`,
+      },
+      body: JSON.stringify({
+        model: MODEL,
+        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user",   content: userMessage },
+        ],
+        max_tokens: maxTokens,
+        temperature,
+      }),
+      signal: ctrl.signal,
+    });
+  } finally {
+    clearTimeout(tid);
+  }
 
   if (!res.ok) {
     const body = await res.json().catch(() => ({}));
