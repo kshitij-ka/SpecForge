@@ -77,9 +77,13 @@ let chunks    = [];
 try {
   standards = JSON.parse(fs.readFileSync(path.join(DATA_DIR, "standards.json"),        "utf-8"));
   chunks    = JSON.parse(fs.readFileSync(path.join(DATA_DIR, "standards_chunks.json"), "utf-8"));
+  if (!Array.isArray(standards) || !Array.isArray(chunks)) {
+    throw new Error("standards.json or standards_chunks.json is not a JSON array");
+  }
   console.log(`[init] Loaded ${standards.length} standards, ${chunks.length} chunks`);
 } catch (e) {
   console.error("[init] Failed to load data:", e.message);
+  console.error("[init] API will return empty results. Run the data pipeline first.");
 }
 
 // Pre-build lookups
@@ -198,6 +202,12 @@ function bestChunk(standardId, question) {
   return best;
 }
 
+// Serve React production build when NODE_ENV=production
+const CLIENT_DIST = path.join(__dirname, "../client/dist");
+if (process.env.NODE_ENV === "production" && fs.existsSync(CLIENT_DIST)) {
+  app.use(express.static(CLIENT_DIST));
+}
+
 // Routes
 
 /**
@@ -208,8 +218,8 @@ function bestChunk(standardId, question) {
 app.get("/api/standards", (req, res) => {
   const q        = sanitizeText(req.query.q || "", 200);
   const category = sanitizeText(req.query.category || "", 100);
-  const pageNum  = Math.max(1, parseInt(req.query.page) || 1);
-  const limitNum = Math.min(100, Math.max(1, parseInt(req.query.limit) || 20));
+  const pageNum  = Math.max(1, parseInt(req.query.page,  10) || 1);
+  const limitNum = Math.min(100, Math.max(1, parseInt(req.query.limit, 10) || 20));
 
   let results = standards;
   if (category) results = results.filter((s) => s.category === category);
@@ -234,7 +244,7 @@ app.get("/api/standards", (req, res) => {
  * Returns a single standard by its IS identifier; 404 if not found, 400 if the id is malformed.
  */
 app.get("/api/standards/:id", (req, res) => {
-  const raw = decodeURIComponent(req.params.id);
+  const raw = req.params.id;
   if (!isValidStandardId(raw)) {
     return res.status(400).json({ error: "Invalid standard ID format." });
   }
@@ -277,7 +287,7 @@ app.get("/api/stats", (req, res) => {
  */
 app.post("/api/recommend", async (req, res) => {
   const rawQuery = req.body?.query;
-  const top_n    = Math.min(10, Math.max(1, parseInt(req.body?.top_n) || 5));
+  const top_n    = Math.min(10, Math.max(1, parseInt(req.body?.top_n, 10) || 5));
   const rewrite  = req.body?.rewrite === true;
 
   const query = sanitizeText(rawQuery, 500);
@@ -443,6 +453,22 @@ app.post("/api/chat", async (req, res) => {
 
   log("POST /api/chat", { standard_id, llm_ms: totalMs });
   res.json({ answer });
+});
+
+// SPA fallback: serve index.html for all non-API routes in production
+if (process.env.NODE_ENV === "production" && fs.existsSync(CLIENT_DIST)) {
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(CLIENT_DIST, "index.html"));
+  });
+}
+
+process.on("unhandledRejection", (reason) => {
+  console.error("[ERROR] Unhandled promise rejection:", reason);
+});
+
+process.on("uncaughtException", (err) => {
+  console.error("[ERROR] Uncaught exception:", err.message);
+  process.exit(1);
 });
 
 const server = app.listen(PORT, () => {
