@@ -13,10 +13,10 @@
 | Metric | Target | **Our Score** |
 |---|---|---|
 | Hit Rate @3 | > 80% | **100%** (10/10) |
-| MRR @5 | > 0.7 | **0.783** |
+| MRR @5 | > 0.7 | **1.000** |
 | Avg Latency | < 5 s | **~19 ms** |
 
-All 10 public queries returned the expected standard in the top-3 results. Average query latency is 19 ms after the index warms up — 250× faster than the 5 s target.
+All 10 public queries returned the expected standard at rank 1. Average query latency is 19 ms after the index warms up — 250× faster than the 5 s target.
 
 ---
 
@@ -40,7 +40,7 @@ The system covers all **573 unique standards** across **25 building material cat
 data/raw/dataset.pdf  (BIS SP-21, 929 pages)
   → src/parse_bis_pdf.py
   → data/processed/standards.json          573 structured records  [committed]
-  → data/processed/standards_chunks.json   1,261 RAG-ready chunks  [committed]
+  → data/processed/standards_chunks.json   1,236 RAG-ready chunks  [committed]
   → inference.py --build
   → data/processed/embeddings.npy          dense vectors           [gitignored — rebuild locally]
   → data/processed/faiss.index             FAISS index             [gitignored — rebuild locally]
@@ -64,10 +64,13 @@ Browser / API Client
 ### Chunking & Retrieval Strategy
 
 **Chunking** (`src/parse_bis_pdf.py`):
-- 2-pass boundary detection splits the 929-page PDF into per-standard records
+- 4-pass boundary detection splits the 929-page PDF into per-standard records
+  - Pass 1–2: primary block splitting and secondary boundary recovery
+  - Pass 3: recovers scope text stolen by the preceding block (SP-21 PDF layout quirk)
+  - Pass 4: truncates next-standard content bleed at a second `1. Scope` marker
 - Each standard is further split by section with **50-word overlap** to prevent context loss at boundaries
 - Weak chunks (<30 words) are merged with their neighbour
-- Result: 1,261 chunks from 573 standards (avg 2.2 chunks/standard)
+- Result: 1,236 chunks from 573 standards (avg 2.2 chunks/standard)
 
 **Hybrid Retrieval** (`inference.py`):
 - **Dense**: FAISS `IndexFlatIP` with `all-MiniLM-L6-v2` embeddings (384-dim cosine similarity)
@@ -79,7 +82,10 @@ Browser / API Client
 - +0.05 per overlapping title word (max 5)
 - +0.25 if ≥60% of significant title words appear in the query (strong title match)
 - +0.20 if an exact IS ID from the query matches this standard
+- +0.35 / -0.40 grade discriminator: boosts/penalises OPC-grade standards (33/43/53) when query names a specific grade
 - -0.15 penalty for very short chunks (<40 body words)
+
+**Post-grouping Part disambiguation**: when multiple parts of the same IS base number survive into the candidate set with identical titles, IDF-weighted discriminating keyword scores break the tie — rarer corpus terms (e.g. "lightweight") carry proportionally more weight.
 
 **Deduplication**: candidates grouped by `standard_id`; only the best-scoring chunk per standard survives. Final output is top-N unique IS standards.
 
@@ -89,7 +95,7 @@ Browser / API Client
 |---|---|
 | Persistent Python daemon | FAISS index load takes ~18 s cold. Spawn once at boot, queue all requests through a single process — zero cold start per query. |
 | `inference.py` never modified | Bridge pattern: `bridge/retrieve.py` imports `inference.py` as a module. Judges run `inference.py` directly; the web server uses the bridge. Both paths are identical. |
-| In-memory data | 573 standards + 1,261 chunks fit comfortably in RAM. No database dependency, no I/O per request. |
+| In-memory data | 573 standards + 1,236 chunks fit comfortably in RAM. No database dependency, no I/O per request. |
 | LLM fallbacks everywhere | Every Groq call is wrapped with a timeout (8 s) and a safe default return. `Promise.allSettled` for parallel calls. Server starts and retrieval works without a `GROQ_API_KEY`. |
 | Weighted BM25 document | Repeating title tokens ×4 makes exact IS-standard name queries dominant over body-text noise — critical for the BIS domain where standard names are precise. |
 
@@ -106,7 +112,7 @@ SpecForge/
 ├── data/
 │   └── processed/
 │       ├── standards.json               # 573 parsed standards (committed)
-│       ├── standards_chunks.json        # 1,261 RAG chunks (committed)
+│       ├── standards_chunks.json        # 1,236 RAG chunks (committed)
 │       ├── public_test_set.json         # 10 public evaluation queries
 │       └── retrieval_results.json       # Our results on public test set
 ├── src/
@@ -205,7 +211,7 @@ source .venv/bin/activate
 python inference.py --build
 ```
 
-Encodes 1,261 chunks, writes `embeddings.npy` + `faiss.index` to `data/processed/`. Takes **~2 min on CPU**. Subsequent starts load from cache — no rebuild needed unless chunks change.
+Encodes 1,236 chunks, writes `embeddings.npy` + `faiss.index` to `data/processed/`. Takes **~2 min on CPU**. Subsequent starts load from cache — no rebuild needed unless chunks change.
 
 ### Step 4 — Node.js dependencies
 
@@ -344,7 +350,7 @@ Targets and our results on the public set:
 | Metric | Formula | Target | Achieved |
 |---|---|---|---|
 | Hit Rate @3 | correct queries where expected std in top-3 / total | > 80% | **100%** |
-| MRR @5 | Σ(1/rank_i) / N | > 0.7 | **0.783** |
+| MRR @5 | Σ(1/rank_i) / N | > 0.7 | **1.000** |
 | Avg Latency | total_time / num_queries | < 5 s | **~0.019 s** |
 
 ---
@@ -416,7 +422,7 @@ All 25 material categories sorted alphabetically.
 ### `GET /api/stats`
 
 ```json
-{ "standards": 573, "chunks": 1261, "categories": 25 }
+{ "standards": 573, "chunks": 1236, "categories": 25 }
 ```
 
 ---
