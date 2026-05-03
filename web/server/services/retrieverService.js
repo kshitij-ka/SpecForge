@@ -48,8 +48,10 @@ class PythonRetriever extends EventEmitter {
   }
 
   _start() {
-    this._ready = false;
-    this._error = null;
+    this._ready  = false;
+    this._error  = null;
+    this._queue  = [];
+    this._pending = [];
 
     console.log("[retriever] Starting Python daemon (first boot ~20s)...");
 
