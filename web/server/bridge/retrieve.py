@@ -42,6 +42,14 @@ def main():
         try:
             req = json.loads(raw_line)
             query = req.get("query", "")
+            if not isinstance(query, str):
+                query = str(query)
+            query = query.strip()
+            if not query:
+                response = {"error": "query must be a non-empty string"}
+                sys.stdout.write(json.dumps(response) + "\n")
+                sys.stdout.flush()
+                continue
             top_n = max(1, min(int(req.get("top_n", 5)), 20))
             results, latency = retriever.retrieve(query, top_n=top_n)
             response = {"results": results, "latency_seconds": round(latency, 4)}
