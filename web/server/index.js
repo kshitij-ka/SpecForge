@@ -99,8 +99,8 @@ for (const c of chunks) {
   chunksByStd[c.standard_id].push(c);
 }
 
-/** @type {RegExp} - Matches ASCII control characters that should be stripped from user input. */
-const CONTROL_CHAR_RE = /[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g;
+/** @type {RegExp} - Matches ASCII control characters and Unicode BiDi override characters that should be stripped from user input. */
+const CONTROL_CHAR_RE = /[\x00-\x08\x0B\x0C\x0E-\x1F\x7F\u202A-\u202E\u2066-\u2069]/g;
 
 /**
  * Strips control characters and truncates a string to a safe length.
@@ -114,8 +114,8 @@ function sanitizeText(value, maxLen = 500) {
   return value.replace(CONTROL_CHAR_RE, "").slice(0, maxLen).trim();
 }
 
-/** @type {RegExp} - Accepts IS standard IDs: letters, digits, spaces, colons, parens, dots, hyphens, slashes. */
-const STANDARD_ID_RE = /^[A-Za-z0-9 :()./-]{1,60}$/;
+/** @type {RegExp} - Accepts IS standard IDs: letters, digits, spaces, colons, parens, dots, hyphens. */
+const STANDARD_ID_RE = /^[A-Za-z0-9 :().-]{1,60}$/;
 
 /**
  * Returns true if the value is a well-formed IS standard identifier.
@@ -336,7 +336,7 @@ app.post("/api/recommend", async (req, res) => {
   const totalMs = Date.now() - t0;
 
   log("POST /api/recommend", {
-    query: effectiveQuery,
+    query: sanitizeText(effectiveQuery, 200),
     results: retrieved.length,
     retrieval_ms: retrievalMs,
     llm_ms: llmMs,

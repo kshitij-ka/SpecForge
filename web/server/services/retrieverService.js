@@ -21,8 +21,14 @@ const { EventEmitter } = require("events");
 const BRIDGE  = path.join(__dirname, "../bridge/retrieve.py");
 /** @type {string} - Repository root, used as cwd for the Python subprocess. */
 const ROOT    = path.join(__dirname, "../../..");
-/** @type {string} - Python executable; override with PYTHON_BIN env var. */
-const PYTHON  = process.env.PYTHON_BIN || "python";
+/** @type {string} - Python executable; override with PYTHON_BIN env var (must be "python", "python3", or an absolute path to a Python interpreter). */
+const _pythonRaw = process.env.PYTHON_BIN || "python";
+const _PYTHON_ALLOWLIST = /^(python[23]?|\/[^\0]+)$/;
+if (!_PYTHON_ALLOWLIST.test(_pythonRaw)) {
+  console.error(`[retriever] Invalid PYTHON_BIN value: ${JSON.stringify(_pythonRaw)}. Must be "python", "python3", or an absolute path.`);
+  process.exit(1);
+}
+const PYTHON = _pythonRaw;
 
 /** @type {number} - Maximum milliseconds to wait for the daemon to signal ready on cold start. */
 const BOOT_TIMEOUT_MS  = 90_000;
@@ -131,9 +137,17 @@ class PythonRetriever extends EventEmitter {
     if (msg.error) {
       item.reject(new Error(msg.error));
     } else {
+      const raw = Array.isArray(msg.results) ? msg.results : [];
+      const ALLOWED = new Set(["standard_id", "title", "category", "matched_section", "score"]);
+      const results = raw.map((r) => {
+        if (typeof r !== "object" || r === null) return null;
+        const safe = {};
+        for (const k of ALLOWED) if (k in r) safe[k] = r[k];
+        return safe;
+      }).filter(Boolean);
       item.resolve({
-        results:          msg.results        || [],
-        latency_seconds:  msg.latency_seconds ?? 0,
+        results,
+        latency_seconds: typeof msg.latency_seconds === "number" ? msg.latency_seconds : 0,
       });
     }
   }

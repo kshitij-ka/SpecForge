@@ -3,8 +3,14 @@
  * Kills any process already on PORT before starting index.js.
  * Run with: node web/server/start.js
  */
-const { execSync, spawn } = require("child_process");
-const PORT = process.env.PORT || 5000;
+const { execSync, spawnSync, spawn } = require("child_process");
+
+const rawPort = process.env.PORT || "5000";
+const PORT = parseInt(rawPort, 10);
+if (!Number.isInteger(PORT) || PORT < 1 || PORT > 65535) {
+  console.error(`[start] Invalid PORT value: ${JSON.stringify(rawPort)}`);
+  process.exit(1);
+}
 
 function killPort(port) {
   try {
@@ -18,10 +24,10 @@ function killPort(port) {
       }
       for (const pid of pids) {
         console.log(`[start] Killing stale process PID ${pid} on port ${port}`);
-        execSync(`taskkill /PID ${pid} /F`, { stdio: "ignore" });
+        spawnSync("taskkill", ["/PID", pid, "/F"], { stdio: "ignore" });
       }
     } else {
-      execSync(`fuser -k ${port}/tcp`, { stdio: "ignore" });
+      spawnSync("fuser", [`${port}/tcp`, "-k"], { stdio: "ignore" });
     }
   } catch {
     // No process on that port -- fine
