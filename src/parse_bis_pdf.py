@@ -86,6 +86,17 @@ SECTION_CATEGORIES = {
 }
 
 # Sub-category headings that appear inside sections (e.g. "CEMENT", "AGGREGATES")
+# Block-parsing patterns used in split_into_standards Pass 3 / Pass 4
+_SCOPE_START_RE = re.compile(r"1\s*[\.\)]\s*Scope", re.IGNORECASE)
+_BODY_SECTION_RE = re.compile(r"[2-9]\s*[\.\)]\s+[A-Z]")
+_SCOPE2_RE = re.compile(r"\n\s*1\s*[\.\)]\s*Scope", re.IGNORECASE)
+
+# Minimum chars that must precede a second "1. Scope" marker before it is
+# considered bleed from the next standard (not a duplicate heading).
+_SCOPE_BLEED_MIN_OFFSET = 100
+# How far back (chars) to search the previous block for a stolen scope.
+_SCOPE_TAIL_WINDOW = 900
+
 SUB_CATEGORY_RE = re.compile(
     r"^(?:AGGREGATES|CEMENT|LIME|STONE|TIMBER|BITUMEN|GYPSUM|PIPE|WIRE|STEEL|"
     r"ASBESTOS|CONCRETE|MASONRY|CERAMIC|GLASS|PLASTIC|RUBBER|METAL|WOOD|"
@@ -355,6 +366,82 @@ def split_into_standards(full_text: str) -> list[dict]:
         len(all_blocks),
         split_count,
     )
+
+    # --- Pass 3: recover scope text stolen by previous block ---
+    # The SP-21 PDF sometimes prints a standard's scope content on the same page
+    # as the preceding "SUMMARY OF IS N+1" header — so after PDF text extraction
+    # the scope ends up at the tail of block N instead of the head of block N+1.
+    # Detect: block N+1 body opens at section 2+ with no preceding 1. Scope.
+    # Remedy: find the last "1. Scope" occurrence in block N's tail and move
+    # everything from that point to the start of block N+1's body.
+    recovered = 0
+    for i in range(1, len(all_blocks)):
+        cur = all_blocks[i]
+        cur_lines = cur.strip().split("\n")
+        # Gather the full body text (everything after the first line, which is the IS ID).
+        full_body = "\n".join(cur_lines[1:])
+
+        scope_m = _SCOPE_START_RE.search(full_body)
+        sec2_m = _BODY_SECTION_RE.search(full_body)
+
+        # A real scope precedes section 2; if so, no repair needed.
+        if scope_m and (sec2_m is None or scope_m.start() < sec2_m.start()):
+            continue
+        if sec2_m is None:
+            continue
+
+        prev = all_blocks[i - 1]
+        search_tail = prev[-_SCOPE_TAIL_WINDOW:]
+        scope_m = _SCOPE_START_RE.search(search_tail)
+        if not scope_m:
+            continue
+
+        abs_scope_pos = len(prev) - _SCOPE_TAIL_WINDOW + scope_m.start()
+        # rfind to start of line so we grab the full scope heading
+        newline_pos = prev.rfind("\n", 0, abs_scope_pos)
+        cut_pos = newline_pos + 1 if newline_pos != -1 else abs_scope_pos
+
+        stolen = prev[cut_pos:].strip()
+        trimmed_prev = prev[:cut_pos].rstrip()
+
+        header_line = cur_lines[0]
+        all_blocks[i] = f"{header_line}\n{stolen}\n{full_body}".strip()
+        all_blocks[i - 1] = trimmed_prev
+        recovered += 1
+        log.info(
+            "Pass 3: recovered stolen scope for block %d (%s…) from block %d",
+            i, header_line[:50], i - 1,
+        )
+
+    if recovered:
+        log.info("Pass 3: recovered scope for %d block(s)", recovered)
+
+    # --- Pass 4: truncate next-standard bleed ---
+    # Some blocks have the scope/sections of the FOLLOWING standard appended at
+    # the end (the mirror of the Pass 3 problem).  If a body contains a second
+    # "1. Scope" marker after _SCOPE_BLEED_MIN_OFFSET characters, everything
+    # from that point belongs to the next standard and is removed.
+    trimmed_bleed = 0
+    for i, block in enumerate(all_blocks):
+        lines = block.strip().split("\n", 1)
+        if len(lines) < 2:
+            continue
+        header_line, body_text = lines[0], lines[1]
+        first_scope = _SCOPE_START_RE.search(body_text)
+        if first_scope is None:
+            continue
+        search_from = first_scope.end()
+        second_scope = _SCOPE2_RE.search(body_text, search_from)
+        if second_scope and second_scope.start() > _SCOPE_BLEED_MIN_OFFSET:
+            trimmed = body_text[: second_scope.start()].rstrip()
+            all_blocks[i] = f"{header_line}\n{trimmed}"
+            trimmed_bleed += 1
+            log.info(
+                "Pass 4: trimmed next-standard bleed from block %d (%s…) at pos %d",
+                i, header_line[:50], second_scope.start(),
+            )
+    if trimmed_bleed:
+        log.info("Pass 4: trimmed bleed from %d block(s)", trimmed_bleed)
 
     # --- Parse each block + validate ---
     standards: list[dict] = []
