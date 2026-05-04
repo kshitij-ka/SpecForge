@@ -21,21 +21,21 @@
         "standard_id": "IS 12269: 1987",
         "title": "53 Grade Ordinary Portland Cement",
         "category": "Cement and Concrete",
-        "score": 1.0935,
+        "score": 1.0934,
         "matched_section": "Chemical Requirements"
       },
       {
         "standard_id": "IS 8112: 1989",
         "title": "43 Grade Ordinary Portland Cement",
         "category": "Cement and Concrete",
-        "score": 1.0367,
+        "score": 1.0366,
         "matched_section": "Chemical Requirements"
       },
       {
         "standard_id": "IS 8042: 1989",
         "title": "White Portland Cement",
         "category": "Cement and Concrete",
-        "score": 0.8675,
+        "score": 0.8674,
         "matched_section": "Degree Of Whiteness"
       },
       {
@@ -46,7 +46,7 @@
         "matched_section": "Chemical Requirements"
       }
     ],
-    "latency_seconds": 0.0228,
+    "latency_seconds": 0.0227,
     "expected_standards": [
       "IS 269: 1989"
     ]
@@ -73,7 +73,7 @@
         "standard_id": "IS 2686: 1977",
         "title": "Cinder As Fine Aggregates For Use In Lime Concrete",
         "category": "Cement and Concrete",
-        "score": 0.9146,
+        "score": 0.9147,
         "matched_section": "Scope"
       },
       {
@@ -87,18 +87,18 @@
         "standard_id": "IS 3068: 1986",
         "title": "Broken Brick (Burnt Clay) Coarse Aggregate For Use In Lime Concrete",
         "category": "Building Limes",
-        "score": 0.8346,
+        "score": 0.8345,
         "matched_section": "General"
       },
       {
         "standard_id": "IS 1195: 2002",
         "title": "Bitumen Mastic For Flooring",
         "category": "Floor, Wall, Roof Coverings and Finishes",
-        "score": 0.5437,
+        "score": 0.5438,
         "matched_section": "Grades"
       }
     ],
-    "latency_seconds": 0.0205,
+    "latency_seconds": 0.0197,
     "expected_standards": [
       "IS 383: 1970"
     ]
@@ -132,25 +132,25 @@
         "standard_id": "IS 13990: 1994",
         "title": "Precast Reinforced Concrete Planks And Joists For Roofing And Flooring",
         "category": "Cement and Concrete",
-        "score": 0.5658,
+        "score": 0.5657,
         "matched_section": "Tests"
       },
       {
         "standard_id": "IS 9893: 1981",
         "title": "Precast Concrete Blocks For Lintels And Sills",
         "category": "Cement and Concrete",
-        "score": 0.5298,
+        "score": 0.5297,
         "matched_section": "General"
       },
       {
         "standard_id": "IS 12709: 1994",
         "title": "Glass Fibre Reinforced Plastics (Grp) Pipes, Joints And Fittings For Use For Potable Water Supply",
         "category": "Sanitary Appliances and Water Fittings",
-        "score": 0.5013,
+        "score": 0.5012,
         "matched_section": "Workmanship"
       }
     ],
-    "latency_seconds": 0.0178,
+    "latency_seconds": 0.0172,
     "expected_standards": [
       "IS 458: 2003"
     ]
@@ -160,49 +160,49 @@
     "query": "Our company is shifting to manufacturing hollow and solid lightweight concrete masonry blocks. What standard outlines the dimensions and physical requirements?",
     "retrieved_standards": [
       "IS 2185 (Part 1): 1979",
+      "IS 2185 (Part 2): 1983",
       "IS 12440: 1988",
       "IS 3115: 1992",
-      "IS 9142: 1979",
-      "IS 2849: 1983"
+      "IS 2185 (Part 3): 1984"
     ],
     "details": [
       {
         "standard_id": "IS 2185 (Part 1): 1979",
-        "title": "Concrete Masonry Units",
+        "title": "Concrete Masonry Units (Hollow And Solid Normal Weight)",
         "category": "Cement and Concrete",
-        "score": 2.5342,
+        "score": 1.4444,
+        "matched_section": "Scope"
+      },
+      {
+        "standard_id": "IS 2185 (Part 2): 1983",
+        "title": "Concrete Masonry Units (Hollow And Solid Lightweight)",
+        "category": "Cement and Concrete",
+        "score": 1.3121,
         "matched_section": "Scope"
       },
       {
         "standard_id": "IS 12440: 1988",
         "title": "Precast Concrete Stone Masonry Blocks",
         "category": "Cement and Concrete",
-        "score": 0.9578,
+        "score": 0.9444,
         "matched_section": "Classification"
       },
       {
         "standard_id": "IS 3115: 1992",
         "title": "Lime Based Blocks",
         "category": "Building Limes",
-        "score": 0.6687,
+        "score": 0.6509,
         "matched_section": "Scope"
       },
       {
-        "standard_id": "IS 9142: 1979",
-        "title": "Artificial Lightweight Aggregates For Concrete Masonry Units",
+        "standard_id": "IS 2185 (Part 3): 1984",
+        "title": "Concrete Masonry Units",
         "category": "Cement and Concrete",
-        "score": 0.5128,
+        "score": 0.584,
         "matched_section": "Scope"
-      },
-      {
-        "standard_id": "IS 2849: 1983",
-        "title": "Non-Load Bearing Gypsum Partition Blocks (Solid And Hollow Types)",
-        "category": "Gypsum Building Materials",
-        "score": 0.4828,
-        "matched_section": "Visual Appearance"
       }
     ],
-    "latency_seconds": 0.0186,
+    "latency_seconds": 0.0183,
     "expected_standards": [
       "IS 2185 (Part 2): 1983"
     ]
@@ -215,28 +215,28 @@
       "IS 13008: 1990",
       "IS 15476: 2004",
       "IS 1626: 1984",
-      "IS 10388: 1982"
+      "IS 1626 (Part 1): 1994"
     ],
     "details": [
       {
         "standard_id": "IS 459: 1992",
         "title": "Corrugated And Semi-Corrugated Asbestos",
         "category": "Cement and Concrete",
-        "score": 1.48,
+        "score": 1.4797,
         "matched_section": "Scope"
       },
       {
         "standard_id": "IS 13008: 1990",
         "title": "Shallow Corrugated Asbestos",
         "category": "Cement and Concrete",
-        "score": 1.3082,
+        "score": 1.3076,
         "matched_section": "Scope"
       },
       {
         "standard_id": "IS 15476: 2004",
         "title": "Bamboo Mat Corrugated Roofing Sheets",
         "category": "Wood Products for Building",
-        "score": 0.8507,
+        "score": 0.8487,
         "matched_section": "Scope"
       },
       {
@@ -247,14 +247,14 @@
         "matched_section": "General"
       },
       {
-        "standard_id": "IS 10388: 1982",
-        "title": "Corrugated Coir, Woodwool,",
+        "standard_id": "IS 1626 (Part 1): 1994",
+        "title": "Asbestos Cement Building Pipes And Pipe Fittings, Gutters, And Gutter Fittings",
         "category": "Cement and Concrete",
-        "score": 0.577,
-        "matched_section": "Scope"
+        "score": 0.6673,
+        "matched_section": "General"
       }
     ],
-    "latency_seconds": 0.0171,
+    "latency_seconds": 0.0167,
     "expected_standards": [
       "IS 459: 1992"
     ]
@@ -295,18 +295,18 @@
         "standard_id": "IS 8042: 1989",
         "title": "White Portland Cement",
         "category": "Cement and Concrete",
-        "score": 0.7748,
+        "score": 0.7747,
         "matched_section": "Degree Of Whiteness"
       },
       {
         "standard_id": "IS 1489 (Part 1): 1991",
         "title": "Portland Pozzolana Cement",
         "category": "Cement and Concrete",
-        "score": 0.713,
+        "score": 0.7129,
         "matched_section": "Scope"
       }
     ],
-    "latency_seconds": 0.0176,
+    "latency_seconds": 0.0167,
     "expected_standards": [
       "IS 455: 1989"
     ]
@@ -326,7 +326,7 @@
         "standard_id": "IS 1489 (Part 2): 1991",
         "title": "Portland Pozzolana Cement",
         "category": "Cement and Concrete",
-        "score": 3.9013,
+        "score": 3.9032,
         "matched_section": "Chemical Requirements"
       },
       {
@@ -347,7 +347,7 @@
         "standard_id": "IS 8041: 1990",
         "title": "Rapid Hardening Portland Cement",
         "category": "Cement and Concrete",
-        "score": 0.4879,
+        "score": 0.488,
         "matched_section": "Chemical Requirements"
       },
       {
@@ -358,7 +358,7 @@
         "matched_section": "Chemical Requirements"
       }
     ],
-    "latency_seconds": 0.0187,
+    "latency_seconds": 0.018,
     "expected_standards": [
       "IS 1489 (Part 2): 1991"
     ]
@@ -368,10 +368,10 @@
     "query": "Which standard applies to masonry cement used for general purposes where mortars for masonry are required, but not intended for structural concrete?",
     "retrieved_standards": [
       "IS 3466: 1988",
-      "IS 2185 (Part 2): 1983",
-      "IS 2185 (Part 1): 1979",
       "IS 2116: 1980",
-      "IS 2185 (Part 3): 1984"
+      "IS 2185 (Part 3): 1984",
+      "IS 9142: 1979",
+      "IS 4832 (Part 3): 1968"
     ],
     "details": [
       {
@@ -379,20 +379,6 @@
         "title": "Masonry Cement",
         "category": "Cement and Concrete",
         "score": 1.45,
-        "matched_section": "Scope"
-      },
-      {
-        "standard_id": "IS 2185 (Part 2): 1983",
-        "title": "Concrete Masonry Units",
-        "category": "Cement and Concrete",
-        "score": 0.6326,
-        "matched_section": "Classification"
-      },
-      {
-        "standard_id": "IS 2185 (Part 1): 1979",
-        "title": "Concrete Masonry Units",
-        "category": "Cement and Concrete",
-        "score": 0.6269,
         "matched_section": "Scope"
       },
       {
@@ -406,11 +392,25 @@
         "standard_id": "IS 2185 (Part 3): 1984",
         "title": "Concrete Masonry Units",
         "category": "Cement and Concrete",
-        "score": 0.496,
+        "score": 0.4961,
+        "matched_section": "Scope"
+      },
+      {
+        "standard_id": "IS 9142: 1979",
+        "title": "Artificial Lightweight Aggregates For Concrete Masonry Units",
+        "category": "Cement and Concrete",
+        "score": 0.4089,
+        "matched_section": "Scope"
+      },
+      {
+        "standard_id": "IS 4832 (Part 3): 1968",
+        "title": "Chemical Resistant Mortars",
+        "category": "Floor, Wall, Roof Coverings and Finishes",
+        "score": 0.3989,
         "matched_section": "Scope"
       }
     ],
-    "latency_seconds": 0.0198,
+    "latency_seconds": 0.0182,
     "expected_standards": [
       "IS 3466: 1988"
     ]
@@ -444,7 +444,7 @@
         "standard_id": "IS 6163: 1978",
         "title": "Centrifugally Cast (Spun) Iron Low Pressure Pipes For Water, Gas And Sewage",
         "category": "Sanitary Appliances and Water Fittings",
-        "score": 0.4632,
+        "score": 0.4635,
         "matched_section": "Scope"
       },
       {
@@ -458,11 +458,11 @@
         "standard_id": "IS 4984: 1995",
         "title": "High Density Polyethylene Pipes For Water Supply",
         "category": "Sanitary Appliances and Water Fittings",
-        "score": 0.4288,
+        "score": 0.4285,
         "matched_section": "Composition"
       }
     ],
-    "latency_seconds": 0.0207,
+    "latency_seconds": 0.019,
     "expected_standards": [
       "IS 6909: 1990"
     ]
@@ -489,7 +489,7 @@
         "standard_id": "IS 8112: 1989",
         "title": "43 Grade Ordinary Portland Cement",
         "category": "Cement and Concrete",
-        "score": 1.0222,
+        "score": 1.022,
         "matched_section": "Scope"
       },
       {
@@ -503,18 +503,18 @@
         "standard_id": "IS 12269: 1987",
         "title": "53 Grade Ordinary Portland Cement",
         "category": "Cement and Concrete",
-        "score": 0.8451,
+        "score": 0.8453,
         "matched_section": "Scope"
       },
       {
         "standard_id": "IS 455: 1989",
         "title": "Portland Slag Cement",
         "category": "Cement and Concrete",
-        "score": 0.7569,
+        "score": 0.757,
         "matched_section": "Delivery"
       }
     ],
-    "latency_seconds": 0.0162,
+    "latency_seconds": 0.0176,
     "expected_standards": [
       "IS 8042: 1989"
     ]

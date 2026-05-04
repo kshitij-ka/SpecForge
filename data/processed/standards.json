@@ -312,7 +312,7 @@
   },
   {
     "standard_id": "IS 2185 (Part 1): 1979",
-    "title": "Concrete Masonry Units",
+    "title": "Concrete Masonry Units (Hollow And Solid Normal Weight)",
     "category": "Cement and Concrete",
     "summary": "Covers the following lightweight concrete masonry building units which are used in the construction of load-bearing and non-load bearing walls: a) Hollow (open and closed cavity) load bearing concrete blocks, b) Hollow (open and closed cavity) non-load bearing concrete blocks, c) Solid load-bearing concrete blocks, and d) Solid non-load bearing concrete blocks",
     "keywords": [
@@ -322,7 +322,11 @@
       "bearing",
       "hollow",
       "concrete",
-      "closed"
+      "closed",
+      "normal",
+      "dense",
+      "weight",
+      "solid"
     ],
     "key_sections": {
       "Classification": "see Table 2 4.1 Hollow (Open and Closed Cavity) Concrete Blocks — a) Grade A b) Grade B (see Table 2) c) Grade C 4.2 Solid Concrete Blocks — Grade D (See Table 2). 5. Physical Requirement 5.1 General — All units shall be sound and free of cracks or other defects. 5.2 Blocks Density and Compressive Strength – Shall be as given in Table 2. 5.3 Water Absorption — Average value of three units shall be not more than 10 percent by mass. 5.4 Drying Shrinkage — Average value of three units shall not exceed 0.1 percent. 5.5 Moisture Movement —Average value of three units shall not exceed 0.09 percent. ± Note 1 — For requirements regarding materials, surface texture, texture and finish, refer to the standard. Note 2 — For methods of tests, refer to Appendices A to F of the standard. For detailed inf",
@@ -332,7 +336,7 @@
   },
   {
     "standard_id": "IS 2185 (Part 2): 1983",
-    "title": "Concrete Masonry Units",
+    "title": "Concrete Masonry Units (Hollow And Solid Lightweight)",
     "category": "Cement and Concrete",
     "summary": "Requirements for lightweight hollow and solid concrete masonry units (blocks) with density up to 1800 kg/m3. Part 2 covers lightweight blocks including density around 1200 kg/m3 for load-bearing and non-load-bearing walls.",
     "keywords": [
@@ -345,7 +349,11 @@
       "1200",
       "1000",
       "walls",
-      "partition"
+      "partition",
+      "aerated",
+      "low",
+      "light",
+      "1500"
     ],
     "key_sections": {
       "Scope": "Covers the requirements of autoclaved cellular (aerated) concrete blocks having density up to 1 000 kg/ m3. Note — Autoclaved means team curing of concrete products, sandlime bricks, asbestos cement products, hydrous calcium silicate insulation products, or cement in an autoclave at maximum ambient temperatures generally between 170 and 215oC. 2. Dimensions and Tolerances 2.1 Nominal Dimensions Length 400, 500 or 600 mm Height 200, 250 or 300 mm Width 100, 150, 200 or 250 mm Note 1— Actual dimensions shall be 10mm short of the nominal dimensions (or 6 mm short in special cases where finer jointing is specified). Note 2 — In addition, block shall be manufactured in half lengths of 200, 250 or 300 mm to correspond to the full lengths. 2.2 Tolerance — Not more than 5 mm in length and 3 mm in ",
@@ -742,7 +750,14 @@
       "bursting",
       "sockets",
       "cowl",
-      "overall"
+      "overall",
+      "roofing",
+      "sheets",
+      "ridges",
+      "corrugated",
+      "asbestos",
+      "cement",
+      "gutters"
     ],
     "key_sections": {},
     "content": "IS 1626 (Part 1): 1994 Asbestos Cement Building Pipes And Pipe Fittings, Gutters, And Gutter Fittings\nAND ROOF FITTINGS PART 1 PIPES AND PIPE FITTINGS\n(Second Revision)\n3.2.2 Overall Length — The overall length is the sum of nominal length and length of socket.\n3.3 Tolerances\n3.3.1 Internal diameter of plain ends and sockets: The ratio of the actual diameter (maximum or minimum bore\nof pipes, pipe fittings or sockets measured over a given section) and the nominal diameter (bore of pipes, pipe\nfittings or sockets) should lie between 0.95 and 1.05 for all diameters of pipes and pipe fittings.\n3.3.2 The nominal length— The tolerances on nominal length of pipes and pipe fittings shall be ± 10 mm and\n± 5 mm respectively.\n3.3.3 The overall length— The tolerances on the overall lengths of pipes shall be ± 10 mm.\n3.3.4 The depth of socket — The tolerances on the depth of the sockets of pipe fittings shall be ± 5 mm.\n4.\nPhysical Requirements\n4.1 The deviation in straightness of pipes shall not\nexceed the following—\nNominal Diameter\nDeviation m m m m\n50 to 60 5.5l\n80 to 150 4.5l where l is the nominal length of the pipe in metres\n4.2 Hydraulic Pressure Test — To be carried out on all\npipes and fittings except on cone cap cowl, slotted vent cowl and pipe fittings provided with access doors.\n4.2.1 Pipes and fittings shall show no fissure or visible sweating on outside surface when subjected to internal\nhydraulic pressure of 0.1 MN/m 2 maintained for 30 seconds. 4.2.2 Hydraulic bursting test — (optional for pipes only) the pipe shall indicate a minimum bursting stress\nof 5 MN/m2\n4.2.3 Longitudinal bursting test — The unit longitudinal bending stress shall not be less than\n12.5 MN/m2.\n4.2.4 Transverse crushing test — The unit transverse crushing stress of pipes at failure shall not be less than\n14 MN/m2.\n4.2.5 Water absorption test— The mean water absorption of speciment shall not be more than\n28 percent of the dry mass of the material.\nNote— For methods of tests, refer to IS 5913:1989 Method of tests for asbestos cement products (first revision)\nFor detailed information refer to IS 1626 (Part 1):1984 Specification for asbestos cement building pipes and pipe fittings, gutters and gutter fittings and roof fittings: Part 1 Pipes and pipe fittings\n(second revision)."
@@ -2068,7 +2083,10 @@
       "pats",
       "popping",
       "set",
-      "pitting"
+      "pitting",
+      "building",
+      "casting",
+      "regular"
     ],
     "key_sections": {
       "Scope": "Covers the classification and chemical and physical requirements for gypsum building plasters which possess a definite set due to hydration of calcium sulphate, anhydrous or hemihydrate, to form gypsum and are used in the manufacture of gypsum building products. Premixed lightweight building plasters are not included. 2. Classification a) Plaster of paris, b) Retarded hemihydrate gypsum plaster PART 1 EXCLUDING PREMIXED LIGHTWEIGHT PLASTERS (First Revision) TABLE 2 PHYSICAL REQUIREMENT Requirements S.LNo. Particulars Plaster of Paris Anhydrous Keene’s Plaster Gypsum Plaster Type A (short) Type B (long time setting time setting (1) (2) (3) (4) (5) (6) i) Setting time – – – – minutes: a)Plaster sand 45-120 120-900 – – mixture b)Neat 20-40 60-180 20-360 20-360 plaster ii) Transverse 5 4* – – ",
@@ -2088,7 +2106,10 @@
       "gypsum",
       "plaster",
       "relevant",
-      "products"
+      "products",
+      "interior",
+      "wall",
+      "finishing"
     ],
     "key_sections": {},
     "content": "IS 2547 (Part 2): 1976 Gypsum Building Plaster\nPART 2 PREMIXED LIGHTWEIGHT PLASTERS\n(First Revision)\nNote—For methods of tests, refer to Appendices A and B of the standard and relevant parts of IS 2542 Methods of test for Gypsum\nplaster, Concrete and Products.\nFor detailed information, refer to IS 2547 (Part 2): 1976 Specification for gypsum building plasters: Part 2 Premixed lightweight plasters ."
@@ -2862,7 +2883,8 @@
       "silicate",
       "resin",
       "resins",
-      "type"
+      "type",
+      "mortar"
     ],
     "key_sections": {
       "Scope": "Requirements of resin type chemical resistant mortars for bonding chemical resistant masonry units. Such mortars have good resistance to non-oxidizing mineral acid and poor resistance to oxidizing mineral acid. Fairly resistant to inorganic alkalis. Resistant to water; hence give impermeable joints. Used for joining acid-proof bricks and tiles. 2. Materials 2.1 Resins — Penolic, furane, epoxy, polyester. 2.2 Fillers— Siliceous or other inert fillers. Shall be graded so as to permit 1.5 mm joints. 2.3 Catalyst — May be incorporated in fillers",
@@ -2884,7 +2906,13 @@
       "type",
       "furane",
       "resin",
-      "fail"
+      "fail",
+      "chemical",
+      "resistant",
+      "mortar",
+      "acid",
+      "joint",
+      "flooring"
     ],
     "key_sections": {},
     "content": "IS 4832 (Part 2): 1969 Chemical Resistant Mortars\nPART 2 RESIN TYPE\nTABLE 1 PHYSICAL REQUIREMENTS OF RESIN TYPE CHEMICAL RESISTANT\nMORTARS\nSl No.\nParticular\nRequirements for Type of Mortar Phenolic\nFurane\nEpoxy\nPolyester Type\nType\nType\nType\n(1)\n(2)\n(3)\n(4)\n(5) (6)\ni) Working time at 27 ± 2°C, Min minutes 20 20 20 20 ii) Flexural strength at 7 days, Min, kgf/cm2 75 75\n150 150 iii) Compressive strength at 7 days, Min, kgf/cm2 350\n350\n500 500 iv) Bond strength, Max, kgf/cm2 10 10 12 12 v) Absorption, Max, Percent by weight\n1.0 1.0 1.0 1.0\nNote— In the test for bond strength the joint shall not fail at or below the value specified."
@@ -4210,7 +4238,12 @@
       "pvc",
       "toxic",
       "supplies",
-      "opacity"
+      "opacity",
+      "general",
+      "requirements",
+      "solvent",
+      "cement",
+      "injection"
     ],
     "key_sections": {
       "Scope": "General requirements regarding materials, manufacture, methods of test, inspection and marking of all types of injection moulded PVC socket fittings intended for connection, by using solvent cement, to PVC pipes covered by IS 4985 : 1988 [Specification for unplasticized PVC pipes for potable water supplies (second revision) for water supplies.",
@@ -4305,7 +4338,8 @@
       "union",
       "supplies",
       "moulded",
-      "pvc"
+      "pvc",
+      "solvent"
     ],
     "key_sections": {
       "Scope": "Requirements for manufacture, dimensions, tolerances and marking for union made of injections moulded PVC for water supplies. 2. Requirements 2.1 The laying length Z and tolerances there on shall comply with those given in Table 1. TABLE 1 DIMENSIONS FOR LAYING LENGTH OF UNION Size Socket Elbow Laying Length mm mm 16 13.5 ± 1 20 13.5 ± 1 25 13.5 ± 1.2 – 1 32 13.5 + 1.6 – 1 40 15+ 2 – 1 50 17 + 2.5 – 1 63 21±3.2 – 1 Note— For typical illustration of unions, see fig. 1 of the standard For detailed information, refer to IS 7834 (Part 7) : 1987 Specification for injection moulded PVC socket fittings with solvent cement joints for water supplies ; Part 7 Specific requirements for unions (first revision). * General requirements"
@@ -4361,7 +4395,10 @@
       "moulded",
       "polyethylene",
       "fittings",
-      "portable"
+      "portable",
+      "general",
+      "requirements",
+      "sockets"
     ],
     "key_sections": {
       "Scope": "Requirements for manufacture, dimensions and tolerances, and marking for injection moulded andh macined HOPE 90° bends for portable water supplies. 2. Requirements 2.1 Laying lengths and tolerances thereon shall be as follows : Nominal Diameter Laying Length mm mm 20 35 ± 1 25 40 ± 2 32 50 ± 2 40 60 ± 2 Note — For general requirements regarding material, manufacture, methods of test, etc, refer to IS 8008 (Part 1) : 2003 injection moulded high density polyethylene (HDPE) fittings for portable water supplies: Part I general requirements, for fittings. For detailed information, refer to IS 8008 (Part 2):2003. Specification for injection moulded high density polyethylene (HDPE) fittings for potable water supplies : Part 2 Specific requirements for 90° bends (first revision) 50 70 ± 2 63 80 ± "
@@ -4380,7 +4417,9 @@
       "supplies",
       "moulded",
       "laying",
-      "tees"
+      "tees",
+      "equal",
+      "branch"
     ],
     "key_sections": {
       "Scope": "Requirements for manufacture, dimensions and tolerances, and marking for injection moulded and machined HDPE 90° tees for portable water supplies. 2. Requirements 2.1 Overall laying lengths and tolerances thereon shall be as follows : Nominal Diameter Laying Length mm mm 20 36.5 ± 1 25 39 ± 1 32 46 ± 1 Note — For general requirements, regarding material, manufacture, methods of test, etc.refer toIS 8008 (Part1):2003. Injection moulded high density polyethylene (HDPE) fittings for portable water supplies : PART 1General requirements for fittings. For detailed information, refer to IS 8008 (Part 3 ) :2003 Specification for injection moulded high density polyethylene (HDPE) fittings for potable water supplies : Part3 specific requirements for 90° tees."
@@ -4435,7 +4474,9 @@
       "collar",
       "polyethylene",
       "potable",
-      "moulded"
+      "moulded",
+      "pipe",
+      "ends"
     ],
     "key_sections": {},
     "content": "IS 8008 (Part 6): 2003 Injection Moulded High Density\nIS 8008 (PART 5) : 2003 INJECTION MOULDED HIGH DENSITY\nPOLYETHYLENE (HDPE) FITTINGS FOR POTABLE WATER SUPPLIES\nPART 5 SPECIFIC REQUIREMENTS FOR FERRULE REDUCERS\n(First Revision) 1. Scope\n1.1 Requirements for manufacture, dimensions and\ntolerances, and marking for injection moulded and machined HDPE pipe ends for potable water supplies.\nPOLYETHYLENE (HDPE) FITTINGS FOR POTABLE WATER SUPPLIES\nPART 6 SPECIFIC REQUIREMENTS FOR PIPE ENDS\n(First Revision)\nNote —For general requirements regarding material, manufacture, methods of test, etc, refer to IS 8008 (Part 1) : 2003.\nInjection moulded high density polyethylene (HDPE) fittings for portable water supplies : Part 1 General requirements for fittings\nFor detailed information, refer to IS 8008 (Part 6 ) : 2003 Specification for injection moulded high density polyethylene (HDPE) fittings for potable water supplies : Part 6 Specific requirements\nfor pipe ends.\n2.\nDimensions and Tolerances\n2.1\nOverall dimensions and tolerances there on shall be as follows :\nTable 1 Dimensions for Injectino and Machined Pipe Ends\nSl.\nNominal\nDiameter for\nCollar\nPN6\nPN 10\nNo.\nDiameter\nManufacturing Diameter\nLaying\nCollar\nWelding\nLaying\nCollar\nWelding\nLength\nHeight\nLength\nLength\nHeight\nLength\nD\nD3\nD4\nZ\nH\nL\nZ\nH\nL\n(1)\n(2)\n(3)\n(4)\n(5)\n(6)\n(7)\n(8)\n(9)\n(10)\ni)\n20\n28\n47\n50\n–\n–\n50\n7\n28 ii)\n25\n34\n57\n50\n9\n28\n50\n9\n27 iii)\n32\n40\n67\n50\n10\n27\n50\n10\n27 iv)\n40\n49\n78\n50\n11\n24\n50\n11\n24 v)\n50\n60\n88\n50\n12\n23\n50\n12\n23 vi)\n63\n72\n103\n50\n14\n16\n50\n14\n16 vii)\n75\n84\n123\n50\n16\n14\n50\n16\n14 viii)\n90\n99\n138\n80\n17\n43\n80\n17\n43 ix)\n110\n119\n158\n80\n18\n37\n80\n18\n17 x)\n125\n134\n188\n80\n18\n42\n80\n25\n35 xi)\n140\n150\n188\n80\n18\n34\n80\n25\n27 xii)\n160\n170\n214\n80\n18\n34\n80\n25\n27 xiii)\n180\n190\n214\n80\n20\n30\n80\n30\n20 xiv)\n200\n210\n269\n100\n24\n36\n100\n32\n28 xv)\n225\n235\n269\n100\n24\n46\n100\n32\n38 xvi)\n250\n261\n320\n100\n25\n35\n100\n35\n35 xvii)\n280\n291\n320\n100\n25\n45\n100\n35\n35 xviii)\n315\n327\n370\n100\n25\n35\n100\n35\n35 xix)\n355\n373\n430\n120\n30\n50\n120\n40\n40 xx)\n400\n427\n482\n120\n33\n42\n120\n46\n29 xxi)\n450\n514\n585\n120\n46\n14\n130\n60\n10 xxii)\n500\n530\n585\n120\n46\n24\n120\n60\n10 xxiii)\n560\n615\n685\n120\n50\n10\n130\n60\n10 xxiv)\n630\n642\n685\n120\n50\n30\n120\n60\n20 xxv)\n710\n737\n800\n120\n50\n20\n120\n–\n–\nxxvi)\n800\n840\n905\n120\n52\n18\n120\n–\n–\nxxii)\n900\n944\n1 005\n120\n55\n15\n120\n–\n–\nxxviii)\n1 000\n1 047\n1 110\n140\n60\n10\n140\n–\n–\nNote 1 — For typical illustration of pipe end see Fig.1 of the standard.\nNote 2 — Outside diameter and wall thickness of the end to be welded to pipe shall complywith the requirements given in IS 8008\n(Part 1) : 2003."
@@ -4545,7 +4586,11 @@
       "terms",
       "intended",
       "reducers",
-      "portable"
+      "portable",
+      "sockets",
+      "socket",
+      "reducer",
+      "straight"
     ],
     "key_sections": {
       "Scope": "Requirements of manufacture, dimensions and marking for fabricated PVC straight reducers for portable water supplies.",
@@ -4605,7 +4650,10 @@
       "pvc",
       "tee",
       "socket",
-      "fabricated"
+      "fabricated",
+      "equal_tee",
+      "branch",
+      "junction"
     ],
     "key_sections": {
       "Scope": "Requirements of manufacture, dimensions and marking for fabricated PVC tees for potable water supplies.",
@@ -4647,7 +4695,11 @@
       "class",
       "portion",
       "bends",
-      "fabricated"
+      "fabricated",
+      "thread",
+      "metal",
+      "fittings",
+      "connect"
     ],
     "key_sections": {
       "Scope": "Requirements of manufacture, dimensions and marking for fabricated PVC 90 o bends for potable water supplies.",
@@ -7483,7 +7535,16 @@
       "resistance",
       "hours",
       "perpendicular",
-      "delamination"
+      "delamination",
+      "pre-laminated",
+      "laminated",
+      "mdf",
+      "decorative",
+      "surface",
+      "fibre",
+      "board",
+      "medium",
+      "density"
     ],
     "key_sections": {},
     "content": "IS 14587: 1998 Pre-Laminated Medium Density Fibre Board\nTABLE 1 PHYSICAL AND MECHANICAL PROPERTIES\nPROPERTY\nREQUIREMENT\nGrade I\nGrade II 1.1\nDensity variation Max, percent\n±10\n±10 1.2\nWater absorption Max, percent:\na) 2 hours\n6\n9 b) 24 hours\n12 18 1.3\nThickness swelling Max, percent, 2 hours\n4\n7 1.4\nModulus of rupture Min, N/mm2:\na) Up to 20mm thickness 28\n28 b) Above 20mm thickness 25 25 1.5\nTensile strength perpendicular to surface Min, N/mm2:\na) Up to 20mm thickness\n0.8\n0.7 b) Above 20mm thickness 0.7\n0.6 1.6\nTensile strength perpendicular to surface Min, N/mm.2:\na) After cyclic test 0.4\n__ b) After acceleratedwater resistance test\n0.25\n__ 1.7\nScrew withdrawal strength(Min),N:\na) Face\n1500\n1500 b) Edge\n1250\n1250 1.8\nAbrasion resistance (Min) in number of revolutions:\na) Type I\n1000\n1000 b) Type II\n450\n450 c) Type III\n250\n250 d) Type IV\n75\n75 6.1 Density – 500 to 900 kg/m3\n6.2 Moisture Content – 5 to 15 percent.\n6.3 Resistance to Steam — Shall not show any sign of\nblister, delamination or change in surface finish. There many be slight colour change in dark colour/patterns.\n6.4 Crack Resistance – Shall not show any sign of\ncracks or delamination.\n6.5 Resistance to Cigarette Burn — Shall not leave\nany mark or stain on the specimen after cleaning with water or solvent.\n6.6 Resistance to Stain — Shall not leave any stain on\nthe specimen after cleaning with water , solvent or detergent.\n6.7 For Other Tests – See Table 1 Note: For methods of tests, refer to various parts of IS 2380 : 1977 Methods of tests for wood particle boards and boards from other lignocellulsic materials (first revision).\nFor detailed Information, refer to IS 14587:1998 Specification for prelaminated medium density fibre board."
@@ -7724,7 +7785,8 @@
       "face",
       "outdoor",
       "BWR",
-      "weather"
+      "weather",
+      "external"
     ],
     "key_sections": {},
     "content": "IS 2202 (Part 2): 1983 Wooden Flush Door Shutters\n(SOLID CORE TYPE)\nPART 2 PARTICLE BOARD AND HARDBOARD FACE PANELS\n(Third Revision)\nFor detailed information, refer to IS 2202 (Part 2) :1983 Specification for wooden flush door shutters (solid core type) : Part 2 Particle board and har board face panels (third revision).\n2.1\n0\n3 ±\n−\n+"
@@ -9147,7 +9209,15 @@
       "bend",
       "flange",
       "tolerance",
-      "angle"
+      "angle",
+      "slotted",
+      "sections",
+      "hot",
+      "rolled",
+      "steel",
+      "dimensions",
+      "beams",
+      "columns"
     ],
     "key_sections": {
       "Tolerance Of Dimensions": "7.1 Flange Sectional Dimensions – The tolerance on sum of the dimensions of all flanges shall not exceed the following: Nominal Size Tolerance Over Up to and Percent Including mm mm – 40 ± 5 40 50 ± 4 50 75 ± 3 75 – ± 2 7.2 Flange Thickness – The tolerances on the thickness of the section, for steel and for aluminium section shall conform to the respective specification as appropriate. 7.3 Internal Radius of Bend – The internal radius of bend shall have a tolerance of 1.00 mm on the nominal radius. 7.4 Angle of Bend – The angle of bend shall be ± 20 throughout the width of the flange. 7.5 Size of Holes –The tolerance on size of holes shall be ± 0.1 mm. 7.6 Pitch of Holes – The deviation in the pitch of holes shall be ± 0.1 mm. 7.7 Overall Length 7.7.1 Standard Length – The tolerance on sta"
@@ -11332,7 +11402,15 @@
       "remote",
       "delay",
       "way",
-      "current"
+      "current",
+      "accessories",
+      "rigid",
+      "steel",
+      "conduits",
+      "electrical",
+      "wiring",
+      "boxes",
+      "bends"
     ],
     "key_sections": {
       "General Requirements": "Switches and boxes shall be so designed and constructed, that in normal use, their performance is reliable and without danger to the user or surroundings.",
@@ -11828,5 +11906,119 @@
       "Scope": "Requirements for bamboo mat veneer composite boards used in furniture manufacture and general construction panel applications."
     },
     "content": "IS 14588: 1999 Bamboo Mat Veneer Composite Board\nScope - Covers bamboo mat veneer composite boards combining bamboo mat and veneer materials. Used for furniture, panelling, and construction panel applications as eco-friendly engineered wood substitute."
+  },
+  {
+    "standard_id": "IS 3443: 1980",
+    "title": "Crane Rail Sections",
+    "category": "Structural Shapes",
+    "summary": "Dimensions and section properties of crane rails for overhead traveling cranes and gantry cranes used in industrial buildings.",
+    "keywords": [
+      "crane",
+      "rail",
+      "section",
+      "overhead",
+      "gantry",
+      "traveling",
+      "industrial",
+      "sections",
+      "dimensions"
+    ],
+    "key_sections": {
+      "Scope": "Dimensions and tolerances for crane rail sections used for overhead traveling cranes, gantry cranes, and similar industrial crane installations in building construction."
+    },
+    "content": "IS 3443: 1980 Crane Rail Sections\n1. Scope - Requirements for dimensions, tolerances and mass of crane rail sections for overhead traveling cranes, gantry cranes and similar industrial applications."
+  },
+  {
+    "standard_id": "IS 1395: 1982",
+    "title": "Low And Medium Alloy Steel Covered Electrodes For Manual Metal Arc Welding",
+    "category": "Welding Electrodes and Wires",
+    "summary": "Requirements for low and medium alloy steel covered electrodes used in manual metal arc welding of low and medium alloy steels in structural applications.",
+    "keywords": [
+      "electrodes",
+      "alloy",
+      "steel",
+      "welding",
+      "manual",
+      "arc",
+      "low",
+      "medium",
+      "covered",
+      "structural"
+    ],
+    "key_sections": {
+      "Scope": "Requirements for low and medium alloy steel covered electrodes for manual metal arc welding, including classification, chemical composition, mechanical properties and testing."
+    },
+    "content": "IS 1395: 1982 Low And Medium Alloy Steel Covered Electrodes For Manual Metal Arc Welding\n1. Scope - Requirements for covered electrodes used in manual metal arc welding of low and medium alloy steels."
+  },
+  {
+    "standard_id": "IS 808: 1989",
+    "title": "Dimensions For Hot Rolled Steel Beam, Column, Channel And Angle Sections",
+    "category": "Structural Shapes",
+    "summary": "Standard dimensions and section properties for hot rolled steel beams, columns, channels, and angles used in structural steel construction.",
+    "keywords": [
+      "beams",
+      "columns",
+      "channels",
+      "angles",
+      "sections",
+      "hot",
+      "rolled",
+      "dimensions",
+      "sectional",
+      "properties",
+      "ISMB",
+      "ISMC",
+      "ISWA",
+      "structural"
+    ],
+    "key_sections": {
+      "Scope": "Nominal dimensions, mass and sectional properties of hot rolled steel beam, column, channel and angle sections for structural use."
+    },
+    "content": "IS 808: 1989 Dimensions For Hot Rolled Steel Beam, Column, Channel And Angle Sections\n1. Scope - Standard specifies the nominal dimensions, mass per metre run and sectional properties of hot rolled steel I-beams, column sections, channels and angles for structural use."
+  },
+  {
+    "standard_id": "IS 3513 (Part 1)",
+    "title": "Resin Treated Compressed Wood Laminates Part 1 For Electrical Purpose",
+    "category": "Wood Products",
+    "summary": "Requirements for resin treated compressed wood laminates for electrical insulation purposes including physical and electrical properties.",
+    "keywords": [
+      "resin",
+      "compressed",
+      "wood",
+      "laminates",
+      "electrical",
+      "insulation",
+      "laminate",
+      "veneers",
+      "treated"
+    ],
+    "key_sections": {
+      "Scope": "Requirements for resin treated compressed wood laminates (compreg) used for electrical insulation purposes."
+    },
+    "content": "IS 3513 (Part 1) Resin Treated Compressed Wood Laminates Part 1 For Electrical Purpose\n1. Scope - Requirements for resin treated compressed wood laminates intended for electrical insulation purposes."
+  },
+  {
+    "standard_id": "IS 8008 (Part 5): 2003",
+    "title": "Injection Moulded High Density Polyethylene (Hdpe) Fittings For Potable Water Supplies Part 5 Specific Requirements For 90 Degree Elbows",
+    "category": "Pipes and Fittings",
+    "summary": "Requirements for manufacture, dimensions and tolerances, and marking for injection moulded HDPE 90 degree elbow fittings for potable water supply pipelines.",
+    "keywords": [
+      "hdpe",
+      "elbow",
+      "elbows",
+      "injection",
+      "moulded",
+      "polyethylene",
+      "potable",
+      "water",
+      "fittings",
+      "90",
+      "degree",
+      "supplies"
+    ],
+    "key_sections": {
+      "Scope": "Requirements for manufacture, dimensions and tolerances, and marking for injection moulded HDPE 90 degree elbows for potable water supplies."
+    },
+    "content": "IS 8008 (Part 5): 2003 Injection Moulded High Density Polyethylene (Hdpe) Fittings For Potable Water Supplies Part 5 Specific Requirements For 90 Degree Elbows\n1. Scope - Requirements for manufacture, dimensions and tolerances, and marking for injection moulded and machined HDPE ferrule reducers and 90 degree elbows for potable water supplies."
   }
 ]
