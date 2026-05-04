@@ -177,7 +177,7 @@ No other external APIs, databases, or paid services are used.
 ### Step 1 — Clone
 
 ```bash
-git clone https://github.com/kshitij-ka/SpecForge
+git clone https://github.com/kshitij-ka/SpecForge.git
 cd SpecForge
 ```
 
