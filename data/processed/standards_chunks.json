@@ -213,7 +213,7 @@
     "category": "Cement and Concrete",
     "section": "Scope",
     "chunk_id": "IS123301988_2",
-    "text": "IS 12330: 1988 Sulphate Resisting Portland Cement [Scope]\nRequirements for the following concrete masonry building units which are used in construction of loadbearing and partition walls: a) Hollow (open and closed cavity) load bearing concrete blocks. b) Hollow (open and closed cavity) non-load bearing concrete blocks, and c) Solid load-bearing concrete blocks. Note—Concrete masonry units are used for both load-bearing and non-load bearing walls, for partitions and panel walls, as backing for other types of facing materials, for piers, pilasters and columns, for retaining walls, garden walls, chimneys and fire places, as fillers in concrete joist floor construction and as shuttering for beams, columns and lintels. 2. Terminology 2.1Hollow (Open or Closed Cavity) Block—A block having one or more large holes or cavities which either pass through t"
+    "text": "IS 12330: 1988 Sulphate Resisting Portland Cement [Scope]\nRequirements for sulphate resisting Portland cement used in concrete construction subject to sulphate attack from aggressive soils and groundwater. Limits C3A content to resist chemical deterioration in sulphate environments."
   },
   {
     "standard_id": "IS 2185 (Part 1): 1979",
@@ -253,7 +253,7 @@
     "category": "Cement and Concrete",
     "section": "Scope",
     "chunk_id": "IS2185Part31984_1",
-    "text": "IS 2185 (Part 3): 1984 Concrete Masonry Units [Scope]\nRequirements for reinforced concrete fence posts for general purposes. Recommendations for the provisions of wire holes and their spacing, as well as the erection of post-and-wire fence have also been included. Reinforced lightweight concrete fence posts and prestressed concrete fence posts are not covered. 2. Classification a) Line Posts— Line posts are intermediate posts forming the majority in a post-and-wire system and are intended to carry the fencing wire between the strainer posts. b) Strainer Posts— Posts notched on three sides and used with struts or braces as strainers at the corners or ends, or at intermediate positions in a line of fence. c) Strut or Brace— Member used in inclined position for supporting the strainer post. 3. Shape and Dimension 3.1 Shall be square, rectangular"
+    "text": "IS 2185 (Part 3): 1984 Concrete Masonry Units [Scope]\nRequirements for autoclaved aerated concrete (AAC) masonry blocks used in external wall construction. Density approximately 500-600 kg/m3. Part 3 specifically for AAC blocks, not slabs, not roofing elements."
   },
   {
     "standard_id": "IS 4996: 1984",
@@ -1237,7 +1237,7 @@
     "category": "Wood Products for Building",
     "section": "Scope",
     "chunk_id": "IS26911988_1",
-    "text": "IS 2691: 1988 Burnt Clay Facing Bricks [Scope]\nCovers dimensions, quality and strength, and methods of sampling and test for burnt clay paving bricks for use in construction of pavements.\n[General] shall be mechanically shaped and not hand moulded. when broken, bricks show a uniformly dense structure free from lime, large voids and marked laminations. Shall have smooth rectangular faces and sharp corners. 3. Dimensions 190 mm × 90 mm × 90 mm and 190 mm × 90 mm × 40 mm Note — The bricks shall not be provided with frogs. 4. Tolerances Dimensions Total Tolerance for 20 Bricks mm mm 190 ± 80 90,40 ± 40 5. Physical properties 5.1 Average compressive strength shall be not less than 40 N/mm2 5.2 Average water absorption shall be not more than 5 percent 5.3 Efforescence shall be ‘nil’. Note — For methods of tests, refer to relevant parts of IS 3495:1992 Method of test for burnt clay building bricks (third revision). For detailed information, refer to IS 3583:1988 Specification for clay pavin"
+    "text": "IS 2691: 1988 Burnt Clay Facing Bricks [Scope]\nRequirements for burnt clay facing bricks with high-quality external appearance and uniformity for exposed decorative brickwork. Distinguished from common bricks by superior finish and appearance."
   },
   {
     "standard_id": "IS 3583: 1988",
@@ -1341,7 +1341,7 @@
     "category": "Wood Products for Building",
     "section": "Scope",
     "chunk_id": "IS75561988_1",
-    "text": "IS 7556: 1988 Burnt Clay Jallies [Scope]\nCovers the machine-pressed clay interlocking roofing tiles of the ‘Mangalore Pattern.’\n[Classification] Class AA and Class A with characteristics given in Table 1. TABLE 1 CLASSIFICATION OF ROOFING TILES Sl.no. Characteristic Requirement Class AA Class A i) Water absorption percent, Max 18 20 ii) Breaking load, kN, Min a)Average 1.0 (for 410 × 235 mm) 0.80(for 410 × 235 mm) 1.10 (for 420 × 250 mm 0.90 (for 420 × 250 mm and 425 × 260 mm) and 425 × 260 mm) b) Individual 0.90 (for 410 × 235 mm) 0.68 (for 410 × 235 mm) 1.00 (for 420 × 250 mm 0.78 (for 420 × 250 mm and 425 × 260 mm) and 425 × 260 mm) 3. General Quality. 3.1. Shall be free from irregularities, such as twists, bends, cracks and laminations. The roofing tile shall be free from impurities like particles of stone, lime or other foreign materials. When struck, the tile shall give a characteristic ringing soud and when broken the fractu\n[Shape] Placed on either face on a plane surface, gap at corners shall not exceed 6 mm."
+    "text": "IS 7556: 1988 Burnt Clay Jallies [Scope]\nCovers burnt clay jalli elements — decorative lattice screens used on building facades for ventilation. Different from roofing tiles. Used for ornamental screen walls and jali screens in architectural applications."
   },
   {
     "standard_id": "IS 7556: 1988",
@@ -1461,7 +1461,7 @@
     "category": "Wood Products for Building",
     "section": "Scope",
     "chunk_id": "IS2690Part21992_1",
-    "text": "IS 2690 (Part 2): 1992 Burnt Clay Flat Terracing Tiles [Scope]\nCovers machine-pressed, wire-cut, or hand-made rectangular burnt clay tiles used for lining irrigation canals and for drainage channels (other than sewage works).\n[General] Shall be uniform in size, shape and free from irregulatities, such as cracks and laminations. Shall be free from impurities like particles of stone, lime and other foreign materials. 3. Dimensions and Tolerances. 3.1 Dimensions — 300 mm × 150 mm × 50 mm. 3.2 Tolerances — ± 10 mm in length, ± 5 mm in width, and ± 1.5 mm in thickness."
+    "text": "IS 2690 (Part 2): 1992 Burnt Clay Flat Terracing Tiles [Scope]\nRequirements for burnt clay flat terracing tiles used as flooring on roof terraces. Part 2 covers flat terracing tiles, distinct from Part 1."
   },
   {
     "standard_id": "IS 2690 (Part 2): 1992",
@@ -2309,7 +2309,7 @@
     "category": "Floor, Wall, Roof Coverings and Finishes",
     "section": "Scope",
     "chunk_id": "IS137531993_1",
-    "text": "IS 13753: 1993 Dust– Pressed Ceramic Tiles With Water [Scope]\nSpecifies sizes, dimensional tolerances, mechanical, physical and chemical requirements, surface quality requirements and marking of ceramic tiles. 1.1It is applicable only to dust-pressed ceramic glazed tiles first quality, with a water absorption (E>10%) according to Group B III of IS 13712 : 1993* for use as both wall and floor coverings. Tiles in this group are mainly used in areas not subject to severe mechanical load. They are not intended for applications where conditions of frost may apply. 1.2There is a small production of dust-pressed ceramic unglazed tiles with a water absorption greater than 10% that is not covered by this standard."
+    "text": "IS 13753: 1993 Dust-Pressed Ceramic Tiles With Water [Scope]\nRequirements for dust-pressed ceramic tiles with HIGH water absorption - greater than 10 percent. For interior wall tiling applications only. Not suitable for exterior use."
   },
   {
     "standard_id": "IS 13753: 1993",
@@ -5909,7 +5909,7 @@
     "category": "Builder's Hardware",
     "section": "Scope",
     "chunk_id": "IS149122001_1",
-    "text": "IS 14912: 2001 Door Closers - Concealed Type [Scope]\nCovers the dimensions, such as length, measurement for wood based panel materials. The wood based panels considered are plywood, blockboard, hardboard, fibre insulation board, particle board, veneered particle board, particle board for insulation and high density particle board. 2. Dimensions 2.1 Plywood 2.1.1 Size– Plywood panels shall be of the sizes specified below Length Width mm mm 2400 × 1200 2100 × 1200 2100 × 900 1800 × 1200 1800 × 900 2.1.2 Thickness–The thickness shall be as given in the specification. 2.2 Hardboard 2.2.1 Size– Hardboards shall be of the sizes specified bel ow: Length Width mm mm 4800 × 1200 3600 × 1200 3000 × 1200 2400 × 1200 2100 × 1200 2100 × 900 1800 × 1200 1800 × 900 1200 × 1200 2.2.2 Thickness –The thicknesses shall be as given in the specification. 2.3 Blo"
+    "text": "IS 14912: 2001 Door Closers - Concealed Type [Scope]\nRequirements for hydraulically operated concealed door closers for automatic door closing. Concealed overhead type."
   },
   {
     "standard_id": "IS 849: 1994",
@@ -9886,5 +9886,336 @@
     "section": "Store And Miscellaneous Materials",
     "chunk_id": "IS875Part11987_4",
     "text": "IS 875 (Part 1): 1987 Code Of Practice For Design Loads [Store And Miscellaneous Materials]\nUnit weights of the following store and miscellaneous materials are given in Appendix A of the standard. Agricultural and Chemicals and allied food products materials For detailed information, refer to IS 875 (Part 1) : 1987 Code of practice for design loads (other than earth quake) for building and structures. Part 1 Dead codes - Unit weight of building materials and stread materials. Fuels Metals and alloys Ores Textiles paper and allied materials Manures Miscellaneous materials"
+  },
+  {
+    "standard_id": "IS 277: 1992",
+    "title": "Galvanized Steel Sheets",
+    "category": "Structural Steels",
+    "section": "Tests",
+    "chunk_id": "IS2772003_1",
+    "text": "IS 277: 2003 Galvanized Steel Sheets [Tests]\nSamples of galvanized steel sheets shall withstand bending through 180º around a mandrel having diameter specified in Table 3 of the Standard without peeling or flaking of zinc coating. Crack or fracture of base metal, shall not be permitted. However, Cracks of the base metal developing at the edge of the specimen or coarse grain developing at the line of the bend shall be disregarded. 5. Coating Test 5.1 Determination of Mass of Zinc Coating – The average masses of zinc coating shall conform to both the values specified in Table 2."
+  },
+  {
+    "standard_id": "IS 277: 1992",
+    "title": "Galvanized Steel Sheets",
+    "category": "Structural Steels",
+    "section": "Freedom From Defects",
+    "chunk_id": "IS2772003_2",
+    "text": "IS 277: 2003 Galvanized Steel Sheets [Freedom From Defects]\nGalvanized plain sheets, corrugated sheets and coils shall be reasonably flat and free from bare spots, holes, tears and other harmful defects. 6.1 Coils, however, may contain some abnormal imperfections which render a portion of the coil unusable since the imperfections in the coil cannot be removed as in the case with cut length."
+  },
+  {
+    "standard_id": "IS 277: 1992",
+    "title": "Galvanized Steel Sheets",
+    "category": "Structural Steels",
+    "section": "Mass",
+    "chunk_id": "IS2772003_3",
+    "text": "IS 277: 2003 Galvanized Steel Sheets [Mass]\nSee Table 4 of the Standard. 8. Dimensions and Tolerances of Plain Sheets/Coils. 8.1 Sizes of Plain Sheets a) Length - 1 800, 2 200, 2 500, 2 800 and 3 000 mm b) Width - 750, 900, 1 000 and 1 200 mm c) Thickness - 0.18, 0.22, 0.25, 0.28, 0.32, (uncoated 0.40, 0.45, 0.50, 0.55, 0.63, sheets) 0.70, 0.80, 0.90, 1.00, and 1.60 mm. Note : Sheets for other sizes (length, width and thickness) may also be supplied subject tothe mutual agreement between the purchaser and the manufacturer. 8.2 Unless other wire agreed, the internal diameter of sheet supplied coil shall be 450, 510 or 610 mm. 8.3 Tolerances 8.3.1 No sheet shall be smaller in length than that specified. Tolerances on length on plus side shall be 15 mm or 0.5 percent of length whichever is greater. 8.3.2 The diagonal distance between o"
+  },
+  {
+    "standard_id": "IS 2721: 2003",
+    "title": "Galvanized Steel Chain Link Fence Fabric",
+    "category": "Wire Ropes and Wire Products",
+    "section": "Scope",
+    "chunk_id": "IS27211979_1",
+    "text": "IS 2721: 1979 Galvanized Steel Chain Link Fence Fabric [Scope]\nRequirements for galvanized steel chain fence fabric intended for various purposes. This standard does not cover the requirements pertaining to straining posts, struts, base plates and other fittings. *Mild steel wire for general engineering purposes (third revision)"
+  },
+  {
+    "standard_id": "IS 2721: 2003",
+    "title": "Galvanized Steel Chain Link Fence Fabric",
+    "category": "Wire Ropes and Wire Products",
+    "section": "Dimensions",
+    "chunk_id": "IS27211979_2",
+    "text": "IS 2721: 1979 Galvanized Steel Chain Link Fence Fabric [Dimensions]\nSee Table 2.1 Mesh Size – Shall be determined by measuring the minimum clear distance between the wires forming the parallel sizes of the mesh when measured in normal structured condition. 2.2 Width – Shall be the overall dimension from one extreme line wire to other extreme line wire and shall be checked in fully stretched condition. The tolerance on the width shall be ± 0.7 of the mesh size. 2.3 Length – Shall be supplied in rolls of 5, 10, 15,20, and 25m or as per the requirements of the purchaser The supplied length shall not be less than the above values when measured in fully stretched condition. 2.4 Tolerances – As per IS 280 *"
+  },
+  {
+    "standard_id": "IS 2721: 2003",
+    "title": "Galvanized Steel Chain Link Fence Fabric",
+    "category": "Wire Ropes and Wire Products",
+    "section": "Materials",
+    "chunk_id": "IS27211979_3",
+    "text": "IS 2721: 1979 Galvanized Steel Chain Link Fence Fabric [Materials]\nThe mesh wire and the line wire of the fabric shall be manufactured from galvanized steel conforming to IS 280* having a tensile strength within the range of 400 to 550 MPa.\n[Galvanizing] The chain link fence fabric shall have zinc coating of type ‘ heavy’ as given in the prescribed standards."
+  },
+  {
+    "standard_id": "IS 2721: 2003",
+    "title": "Galvanized Steel Chain Link Fence Fabric",
+    "category": "Wire Ropes and Wire Products",
+    "section": "Workmanship And Finish",
+    "chunk_id": "IS27211979_4",
+    "text": "IS 2721: 1979 Galvanized Steel Chain Link Fence Fabric [Workmanship And Finish]\nEach roll shall be warranted to contain no weld joint or splice whatever. The wire shall be circular and shall be free from scales, irregularities, imperfections, flaws, sand splits and other defects. The zinc coating shall be smooth, even and bright. 5.1 The fabric shall be manufactured in widths of 0.90 m, 1.20m, 1.50 m, 1.80 m, 2.00 m, 2.50, and 3.00 m, or as per the requirements of the purchaser. Table 1 Dimensions and Tolerances Mesh Nominal Line Wire Size Dia of Mesh Wire Diameter Number of wires mm mm mm Up to and Above 2 m including width 2 m width (1) (2) (3) (4) (5) 2.00 2.50 2 3 25 ± 3 2.50 3.15 2 3 3.15 4.00 2 5 2.00 2.50 2 3 40 ± 4 2.50 3.15 2 3 3.15 4.00 2 3 4.00 4.50 2 3 2.00 2.50 2 3 50 ± 4 2.50 3.15 2 3 3.15 4.00 2 3 4.00 4.50 2 3 3.15 4.00 2 3 63 ± 4 4.00 4.50 2 3 4.50 5."
+  },
+  {
+    "standard_id": "IS 2721: 2003",
+    "title": "Galvanized Steel Chain Link Fence Fabric",
+    "category": "Wire Ropes and Wire Products",
+    "section": "Tests",
+    "chunk_id": "IS27211979_5",
+    "text": "IS 2721: 1979 Galvanized Steel Chain Link Fence Fabric [Tests]\n6.1 Tensile Test – Tensile strength shall be within the range of 400 to 550 N/mm2. 6.2 Wrapping Test – Wires shall not break or split when wrapped eight times round its own diameter and subsequently straightened. 6.3 Twist Test – Mesh and line wires shall withstand not less than 18 twists on a length equal to 100 diameters between rices. 6.4 Bend test– Mesh wire and line wire of 5 mm diameter and above shall be subjected to this test. The wire shall withstand being bent through an angle of 900 round a former of diameter equal to twice its own diameter without breaking or splitting. 6.5 Galvanizing Test – Shall be up to 10 percent less than the minimum mass of zinc coating specified in the prescribed standard and withstand one dip of half minute duration less than specified. For detailed in"
+  },
+  {
+    "standard_id": "IS 9968 (Part 1): 1988",
+    "title": "Elastomer Insulated Cables,",
+    "category": "Adhesives",
+    "section": "Scope",
+    "chunk_id": "IS9968Part11998_1",
+    "text": "IS 9968 (Part 1): 1998 Elastomer Insulated Cables, [Scope]\nRequirements of elastomeric insulated cables for fixed wiring, flexible cables and flexible cords for electric power and lighting for operation at voltages up to and including 1100 volts. 1.1 The following types of cables and cords are covered in this standard. 1.1.1 Cables for fixed wiring a) Braided and compounded/varnished, b) Elastomer sheathed (normal duty), and c) Elastomer sheathed (normal duty) with earth continuity conductor. 1.1.2 Flexible cables a) Braided and varnished, and b) Elastomer sheathed (heavy duty). 1.1.3 Flexible cords a) Braided b) Elastomer sheathed (normal duty), c) Unkinkable flexible cords – braided and compounded (workshop type), and d) Unkinkable flexible cords – braided and compounded. 1.2 The cables covered in this standard are suitable for use on single-pha"
+  },
+  {
+    "standard_id": "IS 9968 (Part 1): 1988",
+    "title": "Elastomer Insulated Cables,",
+    "category": "Adhesives",
+    "section": "Identification",
+    "chunk_id": "IS9968Part11998_2",
+    "text": "IS 9968 (Part 1): 1998 Elastomer Insulated Cables, [Identification]\nCables or cords shall be identified throughout the length of the cable or cords by the legends shown below, either printed or indented or embossed on the cable. Type of Cable Insulation Legend Heat resisting rubber HR 90 Silicon rubber HR 150 The following code shall be used for designating the cable : Constituent Code Letter Aluminium conductor A Elastomer insulation R Braiding, compounding or B varnishing Elastomer sheath R Earth continuity conductor ECC SECTION 26 WIRING ACCESSORIES CONTENTS Title Page"
+  },
+  {
+    "standard_id": "IS 2202 (Part 1): 1991",
+    "title": "Wooden Flush Door Shutters",
+    "category": "Doors, Windows and Shutters",
+    "section": "Scope",
+    "chunk_id": "IS2202Part11999_1",
+    "text": "IS 2202 (Part 1): 1999 Wooden Flush Door Shutters [Scope]\nRequirements regarding types, sizes, material, consttruction, workmanship and finish, and tests, of solid core wooden flush door shutters with face panels of plywood or cross-band and face veneers. 2. Type and Construction Sl.No. Core Type Abbreviation (1) (2) (3) (4) i) Blockboard Decorative BD Non-decorative BN ii) Particle board Decorative PD with or without Non-decorative PN blockboard iii) Medium density Decorative MD fibreboard with Non-decorative MN or without blockboard 3. Sizes Sl. Designation of Width Height No. doors mm mm i) 8 DS 20 700 1905 (1945) ii) 8 DS 21 700 2005 ( 2045) iii) 9 DS 20 800 1905 (1945) iv) 9 DS 21 800 2005 ( 2045) v) 10 DS 20 900 1905 (1945) vi) 10 DS 21 900 2005 ( 2045) vii) 12 DT 20 1100* 1905 (1945) viii) 12 DT 21 1100* 2005 ( 2045) Note 1 – D–Doors, S –\n[Workmanship And Finish] All the four edges of the door shutter shall be square. Both faces of the door shutter shall be sanded to a smooth even texture."
+  },
+  {
+    "standard_id": "IS 2202 (Part 1): 1991",
+    "title": "Wooden Flush Door Shutters",
+    "category": "Doors, Windows and Shutters",
+    "section": "Tests",
+    "chunk_id": "IS2202Part11999_2",
+    "text": "IS 2202 (Part 1): 1999 Wooden Flush Door Shutters [Tests]\nFlush door shutters shall be subjected to the following tests – i) Dimensions and squareness test ii) General flatness test iii) Local planeness test iv) Impact indentation test v) Flexure test vi) Edge loading test vii) Shock resistance test viii) Buckling test ix) Slamming test x) Misuse test xi) Varying humidity test xii) End immersion test xiii) Knife test xiv) Glue adhesion test xv) Screw withdrawal test. Note - For details of requirements please refer 11 of the standard. Note — For methods of test, refer to IS 4020 (Part 1 to 16) : 1998 Door shutters - methods of test. For detailed information, refer to IS 2202 : 1999 Specification for wooden flush door shutters (solid core type) Part 1 Plywood face panels (sixth revision)."
+  },
+  {
+    "standard_id": "IS 9537 (Part 2): 1981",
+    "title": "Conduits For Electrical Installations",
+    "category": "Adhesives",
+    "section": "External Influences",
+    "chunk_id": "IS9537Part11980_1",
+    "text": "IS 9537 (Part 1): 1980 Conduits For Electrical Installations [External Influences]\nConduits shall have adequate protection against external influences. The influences included here are ingress of water or oil or building materials, low or high temperatures and polluting substances and solar radiation.\n[Scope] Requirements and methods of test of threaded/threadable plain rigid steel conduits."
+  },
+  {
+    "standard_id": "IS 9537 (Part 2): 1981",
+    "title": "Conduits For Electrical Installations",
+    "category": "Adhesives",
+    "section": "General Requirements",
+    "chunk_id": "IS9537Part11980_2",
+    "text": "IS 9537 (Part 1): 1980 Conduits For Electrical Installations [General Requirements]\nConduits shall be so designed and constructed that they ensure reliable mechanical protection to conductors and/or cables contained therein. Conduit shall withstand stresses likely to occur during transport, storage, recommended practice and usage. 3. Classification 3.1 According to Resistance against Corrosiv or Polluting substances : a) Conduits with low protection, b) Conduits with medium protection, c) Conduits with high protection, d) Conduits with high protection on the outside and low protection inside, e) Conduits with medium protection outside and low protection inside, and f) Conduits with high protection outside and medium protection inside. Note 1 – Normally, protection mentioned at (b) and (c) are commonly used. Note 2– Typical examples of medium protection are stove enamellin"
+  },
+  {
+    "standard_id": "IS 9537 (Part 2): 1981",
+    "title": "Conduits For Electrical Installations",
+    "category": "Adhesives",
+    "section": "Construction",
+    "chunk_id": "IS9537Part11980_3",
+    "text": "IS 9537 (Part 1): 1980 Conduits For Electrical Installations [Construction]\nThe inside and outside surfaces of conduits shall be reasonably smooth and free from burrs, flash and similar defects. The conduits shall be solid drawn or seam joined by welding. 6. Mechanical Properties 6.1 Bending Test – After the test, basic material or protective coating of conduits shall not show any cracks visible by normal or corrected vision without magnification. Seams, if any, shall not have opened, and section of conduit shall not have distored unduly. 6.2 Compression Test – The difference between the initial diameter and diameter of flattened samples shall not exceed 10 percent of outside diameter measured before the test."
+  },
+  {
+    "standard_id": "IS 9537 (Part 3): 1983",
+    "title": "Conduits For Electrical Installations",
+    "category": "Adhesives",
+    "section": "External Influences",
+    "chunk_id": "IS9537Part11980_1",
+    "text": "IS 9537 (Part 1): 1980 Conduits For Electrical Installations [External Influences]\nConduits shall have adequate protection against external influences. The influences included here are ingress of water or oil or building materials, low or high temperatures and polluting substances and solar radiation.\n[Scope] Requirements and methods of test of threaded/threadable plain rigid steel conduits."
+  },
+  {
+    "standard_id": "IS 9537 (Part 3): 1983",
+    "title": "Conduits For Electrical Installations",
+    "category": "Adhesives",
+    "section": "General Requirements",
+    "chunk_id": "IS9537Part11980_2",
+    "text": "IS 9537 (Part 1): 1980 Conduits For Electrical Installations [General Requirements]\nConduits shall be so designed and constructed that they ensure reliable mechanical protection to conductors and/or cables contained therein. Conduit shall withstand stresses likely to occur during transport, storage, recommended practice and usage. 3. Classification 3.1 According to Resistance against Corrosiv or Polluting substances : a) Conduits with low protection, b) Conduits with medium protection, c) Conduits with high protection, d) Conduits with high protection on the outside and low protection inside, e) Conduits with medium protection outside and low protection inside, and f) Conduits with high protection outside and medium protection inside. Note 1 – Normally, protection mentioned at (b) and (c) are commonly used. Note 2– Typical examples of medium protection are stove enamellin"
+  },
+  {
+    "standard_id": "IS 9537 (Part 3): 1983",
+    "title": "Conduits For Electrical Installations",
+    "category": "Adhesives",
+    "section": "Construction",
+    "chunk_id": "IS9537Part11980_3",
+    "text": "IS 9537 (Part 1): 1980 Conduits For Electrical Installations [Construction]\nThe inside and outside surfaces of conduits shall be reasonably smooth and free from burrs, flash and similar defects. The conduits shall be solid drawn or seam joined by welding. 6. Mechanical Properties 6.1 Bending Test – After the test, basic material or protective coating of conduits shall not show any cracks visible by normal or corrected vision without magnification. Seams, if any, shall not have opened, and section of conduit shall not have distored unduly. 6.2 Compression Test – The difference between the initial diameter and diameter of flattened samples shall not exceed 10 percent of outside diameter measured before the test."
+  },
+  {
+    "standard_id": "IS 13620: 1993",
+    "title": "Fusion Bonded Epoxy Coated Reinforcing Bars",
+    "category": "Structural Steels",
+    "section": "Scope",
+    "text": "IS 13620: 1993 Fusion Bonded Epoxy Coated Reinforcing Bars [Scope]\nRequirements for fusion-bonded epoxy coated reinforcing bars for corrosion-resistant reinforced concrete construction.",
+    "keywords": [
+      "epoxy",
+      "coated",
+      "reinforcing",
+      "bars",
+      "rebars",
+      "fusion",
+      "bonded",
+      "corrosion",
+      "marine",
+      "coastal"
+    ]
+  },
+  {
+    "standard_id": "IS 1785 (Part 1): 1983",
+    "title": "Plain Hard Drawn Steel Wire For Prestressed Concrete",
+    "category": "Structural Steels",
+    "section": "Scope",
+    "text": "IS 1785 (Part 1): 1983 Plain Hard Drawn Steel Wire For Prestressed Concrete [Scope]\nRequirements for plain hard drawn steel wire for use as prestressing tendons in prestressed concrete structural applications.",
+    "keywords": [
+      "prestressing",
+      "wire",
+      "hard",
+      "drawn",
+      "cold",
+      "tendon",
+      "prestressed",
+      "concrete",
+      "high-tensile",
+      "steel"
+    ]
+  },
+  {
+    "standard_id": "IS 15476: 2004",
+    "title": "Bamboo Mat Corrugated Roofing Sheets",
+    "category": "Wood Products for Building",
+    "section": "Scope",
+    "text": "IS 15476: 2004 Bamboo Mat Corrugated Roofing Sheets [Scope]\nRequirements for bamboo mat corrugated sheets for roofing applications as an eco-friendly alternative to asbestos and metal sheets.",
+    "keywords": [
+      "bamboo",
+      "mat",
+      "corrugated",
+      "roofing",
+      "sheets",
+      "eco-friendly",
+      "green",
+      "natural",
+      "woven"
+    ]
+  },
+  {
+    "standard_id": "IS 15491: 2004",
+    "title": "Medium Density Coir Fibre Board",
+    "category": "Wood Products for Building",
+    "section": "Scope",
+    "text": "IS 15491: 2004 Medium Density Coir Fibre Board [Scope]\nRequirements for medium density boards made from coir fibres used for general construction panel applications.",
+    "keywords": [
+      "coir",
+      "fibre",
+      "board",
+      "medium",
+      "density",
+      "panel",
+      "coirboard",
+      "natural",
+      "coconut"
+    ]
+  },
+  {
+    "standard_id": "IS 14842: 2000",
+    "title": "Coir Veneer Board",
+    "category": "Wood Products for Building",
+    "section": "Scope",
+    "text": "IS 14842: 2000 Coir Veneer Board [Scope]\nRequirements for coir veneer boards consisting of coir mat bonded to a wood core for wall panelling applications.",
+    "keywords": [
+      "coir",
+      "veneer",
+      "board",
+      "timber",
+      "core",
+      "panelling",
+      "wall",
+      "coconut",
+      "bonded"
+    ]
+  },
+  {
+    "standard_id": "IS 14588: 1999",
+    "title": "Bamboo Mat Veneer Composite Board",
+    "category": "Wood Products for Building",
+    "section": "Scope",
+    "text": "IS 14588: 1999 Bamboo Mat Veneer Composite Board [Scope]\nRequirements for bamboo mat veneer composite boards used in furniture manufacture and general construction panel applications.",
+    "keywords": [
+      "bamboo",
+      "mat",
+      "veneer",
+      "composite",
+      "board",
+      "furniture",
+      "construction",
+      "panel",
+      "woven"
+    ]
+  },
+  {
+    "standard_id": "IS 6073: 1971",
+    "title": "Autoclaved Reinforced Cellular Concrete Floor And Roof Slabs",
+    "category": "Cement and Concrete",
+    "section": "Scope",
+    "text": "IS 6073: 1971 Autoclaved Reinforced Cellular Concrete Floor And Roof Slabs [Scope]\nCovers autoclaved reinforced cellular concrete SLABS for floor and ROOFING construction. Slab elements are planar structural units for roof applications, reinforced with steel. Distinct from cellular concrete BLOCKS (IS 2185 Part 3) and WALL PANELS (IS 6072).",
+    "keywords": [
+      "autoclaved",
+      "reinforced",
+      "cellular",
+      "concrete",
+      "slab",
+      "roofing",
+      "floor",
+      "roof",
+      "structural",
+      "planar"
+    ]
+  },
+  {
+    "standard_id": "IS 12823: 1990",
+    "title": "Wood Products-Prelaminated Particles Boards",
+    "category": "Wood Products",
+    "section": "Scope",
+    "text": "IS 12823: 1990 Wood Products-Prelaminated Particles Boards [Scope]\nRequirements for pre-laminated particle boards - particle boards with factory-applied decorative surface laminate (melamine, phenolic resin). Distinguished from plain particle boards, veneered particle boards, and pre-laminated MDF. The decorative surface is applied at the factory before sale.",
+    "keywords": [
+      "prelaminated",
+      "pre-laminated",
+      "particle",
+      "board",
+      "decorative",
+      "laminate",
+      "factory",
+      "melamine",
+      "phenolic",
+      "surface"
+    ]
+  },
+  {
+    "standard_id": "IS 13755: 1993",
+    "title": "Dust-Pressed Ceramic Tiles",
+    "category": "Clay and Ceramic Products",
+    "section": "Scope",
+    "text": "IS 13755: 1993 Dust-Pressed Ceramic Tiles [Scope]\nRequirements for dust-pressed ceramic tiles with low water absorption - less than 3 percent. Dense ceramic floor tiles for exterior use. Water absorption between 0.5 and 3 percent. Category BIb dense ceramic tiles.",
+    "keywords": [
+      "ceramic",
+      "tile",
+      "dust-pressed",
+      "low",
+      "water",
+      "absorption",
+      "three",
+      "percent",
+      "exterior",
+      "floor",
+      "dense"
+    ]
+  },
+  {
+    "standard_id": "IS 1038: 1983",
+    "title": "Steel Door, Windows And Ventilators",
+    "category": "Doors, Windows and Allied Products",
+    "section": "Scope",
+    "text": "IS 1038: 1983 Steel Door, Windows And Ventilators [Scope]\nThe principal BIS standard for steel doors, windows AND ventilators for residential and general building construction. Covers combined steel door+window frame units with shutters, dimensions, sections, materials and performance. IS 1038 covers the complete system of steel doors and windows for buildings.",
+    "keywords": [
+      "steel",
+      "door",
+      "window",
+      "ventilator",
+      "frame",
+      "residential",
+      "pressed",
+      "building",
+      "shutters",
+      "domestic"
+    ]
   }
 ]
