@@ -193,8 +193,11 @@
     "keywords": [
       "cement",
       "portland",
-      "hardening",
       "rapid",
+      "hardening",
+      "early",
+      "strength",
+      "quick",
       "setting",
       "physical",
       "chemical"
@@ -291,15 +294,15 @@
     "standard_id": "IS 12330: 1988",
     "title": "Sulphate Resisting Portland Cement",
     "category": "Cement and Concrete",
-    "summary": "Requirements for the following concrete masonry building units which are used in construction of loadbearing and partition walls: a) Hollow (open and closed cavity) load bearing concrete blocks. b) Hollow (open and closed cavity) non-load bearing concrete blocks, and c) Solid load-bearing concrete blocks. Note—Concrete masonry units are used for both load-bearing and non-load bearing walls, for partitions and panel walls, as backing for other types of facing materials, for piers, pilasters and c",
+    "summary": "Requirements for sulphate resisting Portland cement for use in concrete subject to attack by sulphate soils and water. Covers chemical and physical requirements including C3A content.",
     "keywords": [
-      "cavity",
-      "block",
-      "walls",
-      "bearing",
-      "closed",
-      "calculated",
-      "concrete"
+      "sulphate",
+      "cement",
+      "portland",
+      "resisting",
+      "chemical",
+      "physical",
+      "tricalcium"
     ],
     "key_sections": {
       "Delivery": "Packed in specified bags of 50 kg net or in bulk with tolerances specified in the standard. TABLE1 CHEMICAL REQUIREMENTS FOR SULPHATE RESISTING PORTLAND CEMENT Sl No. Characteristic Requirement (1) (2) (3) i) Ratio of percentage if lime to percentages of silica, alumina Not greater than 1.02 and and iron oxide when calculated by the formula not less than 0.66 ii) Insoluble residue, percent by mass Not more than 4 iii) Magmesia, percent by mass Not more than 6 iv) Total sulphur content calculated as sulphuric anhydride (SO3) percent by mass Not more than 2.5 v) Tricalcium aluminate (C3A), percent by mass Not more than 5 vi) Tetracalcium alumino ferrite phase twice the tricalcium aluminate Not mor ethan 25 (C4AF+2C3A), percent by mass vii) Total loss on ignition, percent by mass Not more tha",
@@ -331,15 +334,18 @@
     "standard_id": "IS 2185 (Part 2): 1983",
     "title": "Concrete Masonry Units",
     "category": "Cement and Concrete",
-    "summary": "Covers the requirements of autoclaved cellular (aerated) concrete blocks having density up to 1 000 kg/ m3. Note — Autoclaved means team curing of concrete products, sandlime bricks, asbestos cement products, hydrous calcium silicate insulation products, or cement in an autoclave at maximum ambient temperatures generally between 170 and 215oC.",
+    "summary": "Requirements for lightweight hollow and solid concrete masonry units (blocks) with density up to 1800 kg/m3. Part 2 covers lightweight blocks including density around 1200 kg/m3 for load-bearing and non-load-bearing walls.",
     "keywords": [
-      "units",
-      "bearing",
-      "hollow",
-      "walls",
       "lightweight",
       "concrete",
-      "grade"
+      "block",
+      "hollow",
+      "masonry",
+      "density",
+      "1200",
+      "1000",
+      "walls",
+      "partition"
     ],
     "key_sections": {
       "Scope": "Covers the requirements of autoclaved cellular (aerated) concrete blocks having density up to 1 000 kg/ m3. Note — Autoclaved means team curing of concrete products, sandlime bricks, asbestos cement products, hydrous calcium silicate insulation products, or cement in an autoclave at maximum ambient temperatures generally between 170 and 215oC. 2. Dimensions and Tolerances 2.1 Nominal Dimensions Length 400, 500 or 600 mm Height 200, 250 or 300 mm Width 100, 150, 200 or 250 mm Note 1— Actual dimensions shall be 10mm short of the nominal dimensions (or 6 mm short in special cases where finer jointing is specified). Note 2 — In addition, block shall be manufactured in half lengths of 200, 250 or 300 mm to correspond to the full lengths. 2.2 Tolerance — Not more than 5 mm in length and 3 mm in ",
@@ -351,15 +357,19 @@
     "standard_id": "IS 2185 (Part 3): 1984",
     "title": "Concrete Masonry Units",
     "category": "Cement and Concrete",
-    "summary": "Requirements for reinforced concrete fence posts for general purposes. Recommendations for the provisions of wire holes and their spacing, as well as the erection of post-and-wire fence have also been included. Reinforced lightweight concrete fence posts and prestressed concrete fence posts are not covered.",
+    "summary": "Requirements for autoclaved aerated concrete (AAC) masonry blocks with density around 500-600 kg/m3. Part 3 covers aerated blocks for external walls. NOT for slabs or roofing.",
     "keywords": [
-      "posts",
-      "fence",
-      "strainer",
       "autoclaved",
+      "aerated",
       "concrete",
-      "post",
-      "cellular"
+      "block",
+      "masonry",
+      "unit",
+      "lightweight",
+      "AAC",
+      "cellular",
+      "wall",
+      "external"
     ],
     "key_sections": {
       "Scope": "Requirements for reinforced concrete fence posts for general purposes. Recommendations for the provisions of wire holes and their spacing, as well as the erection of post-and-wire fence have also been included. Reinforced lightweight concrete fence posts and prestressed concrete fence posts are not covered. 2. Classification a) Line Posts— Line posts are intermediate posts forming the majority in a post-and-wire system and are intended to carry the fencing wire between the strainer posts. b) Strainer Posts— Posts notched on three sides and used with struts or braces as strainers at the corners or ends, or at intermediate positions in a line of fence. c) Strut or Brace— Member used in inclined position for supporting the strainer post. 3. Shape and Dimension 3.1 Shall be square, rectangular"
@@ -448,15 +458,15 @@
     "standard_id": "IS 6072: 1971",
     "title": "Autoclaved Reinforced Cellular Concrete Wall Slabs",
     "category": "Cement and Concrete",
-    "summary": "Requirements for autoclaved reinforced cellular concrete floor and roof having density above 450 and up to 1 000 kg/m3",
+    "summary": "Requirements for autoclaved reinforced cellular concrete wall panels used in building construction. Distinct from floor/roof slabs (IS 6073).",
     "keywords": [
-      "cellular",
       "autoclaved",
-      "over",
+      "reinforced",
+      "cellular",
       "concrete",
-      "compressive",
-      "groove",
-      "kgf"
+      "wall",
+      "panel",
+      "external"
     ],
     "key_sections": {
       "Finish": "Tongue at one side and groove on the other side. Alternatively groove on both sides for filling with cement mortar. Longitudinal edges shall be chamfered. 7. Physical Properties 7.1Density — Range as specified in 3. 7.2Dry Shrinkage — Not more than 0.09 percent. 7.3Residual water content at the time of delivery shall be declared by the manufacturer. 7.4Fire Resistance — Not less than 2 hours. 7.5Compressive Strength and Thermal Conductivity— Class Compressive Thermal Strength, Conductivity Min Max (kgf/cm2) (kcal/m/h/oC) A 70 0.36 B 60 0.32 C 50 0.26 D 35 0.21 E 20 0.18 Note 1 — For methods of tests, refer to IS 3809 1979 Specification for fire resistance test for structures (first revision) and relevant partsof IS 6441 Methods of test for autoclaved cellular concrete products . Note 2 — F",
@@ -471,15 +481,18 @@
     "standard_id": "IS 6073: 1971",
     "title": "Autoclaved Reinforced Cellular Concrete Floor And Roof Slabs",
     "category": "Cement and Concrete",
-    "summary": "5.2Tolerances — For 500 mm and below, ± 2 mm over 500 mm, ± 5 mm. Note — For form tolerances for wall slabs, refer to Table 1 of the standard. 6. Finish — Tongue at one side and groove on the other side. Alternatively groove on both sides for filling with cement mortar. Longitudinal edges shall be chamfered. 7. Physical Properties 7.1 Density — Range as specified in 3. 7.2 Dry Shrinkage — Not more than 0.09 percent. 7.3 Residual water content at the time of delivery shall be declared by the manu",
+    "summary": "Requirements for autoclaved reinforced cellular concrete SLABS for floor and roof construction. Slab elements, not blocks or wall panels. Different from IS 6072 wall panels.",
     "keywords": [
-      "cellular",
       "autoclaved",
-      "groove",
-      "slabs",
-      "conductivity",
-      "fire",
-      "concrete"
+      "reinforced",
+      "cellular",
+      "concrete",
+      "slab",
+      "floor",
+      "roof",
+      "roofing",
+      "structural",
+      "precast"
     ],
     "key_sections": {
       "Finish": "Tongue at one side and groove on the other side. Alternatively groove on both sides for filling with cement mortar. Longitudinal edges shall be chamfered. 7. Physical Properties 7.1 Density — Range as specified in 3. 7.2 Dry Shrinkage — Not more than 0.09 percent. 7.3 Residual water content at the time of delivery shall be declared by the manufacturer. 7.4 Fire Resistance — Not less than 2 hours. 7.5 Compressive Strength and Thermal Conductivity— Class Compressive Thermal Strength, Min Conductivity Max (kgf/cm2) (kcal/m/h/oC) A 70 0.36 B 60 0.32 C 50 0.26 D 35 0.21 E 20 0.18 Note 1 — For methods of tests, refer to IS 3809 : 1979 Specification for fire resistance test for structures (first revision), and relevant parts of IS 6441 Part 1 to 9 Methods of test for autoclaved cellular concrete "
@@ -1375,15 +1388,16 @@
     "standard_id": "IS 1128: 1974",
     "title": "Limestone (Slab And Tiles)",
     "category": "Stones",
-    "summary": "(First Revision) TABLE 1 STANDARD SIZES OF LIMESTONE SLABS AND TILES Length Breadth Thickness (1) (2) (3) 15 to 60 cm in stages of 5 cm 15 to 60 cm in stages of 5 cm 15 to 95 mm in stages of 10mm 60 to 100 cm in stages of 10 cm 30 to 100 cm in stages of 10 cm - do- 100 to 150 cm in stages of 10 cm 30 to 100 cm in stages of 10 cm 25 to 95 mm in stages of 10 mm Sl.No. Characteristics Requirements (1) (2) (3) i) Water absorption 0.15 percent by weight ii) Transverse strength 70 kgf/cm2 iii) Durabil",
+    "summary": "Requirements for polished limestone slabs and tiles used for flooring and cladding in building construction.",
     "keywords": [
-      "stages",
-      "stones",
-      "natural",
-      "durability",
-      "determination",
-      "transverse",
-      "building"
+      "limestone",
+      "slab",
+      "tile",
+      "polished",
+      "flooring",
+      "cladding",
+      "building",
+      "stone"
     ],
     "key_sections": {},
     "content": "IS 1128: 1974 Limestone (Slab And Tiles)\n(First Revision)\nTABLE 1 STANDARD SIZES OF LIMESTONE SLABS AND TILES Length\nBreadth\nThickness\n(1)\n(2)\n(3)\n15 to 60 cm in stages of 5 cm\n15 to 60 cm in stages of 5 cm\n15 to 95 mm in stages of 10mm\n60 to 100 cm in stages of 10 cm\n30 to 100 cm in stages of 10 cm - do-\n100 to 150 cm in stages of 10 cm\n30 to 100 cm in stages of 10 cm\n25 to 95 mm in stages of 10 mm\nSl.No.\nCharacteristics\nRequirements\n(1)\n(2)\n(3)\ni)\nWater absorption\n0.15 percent by weight ii)\nTransverse strength\n70 kgf/cm2 iii)\nDurability\nShall not develop signs of spalling, disintegration of cracks.\nNote — For methods of tests, refer to IS 1121(Part 2):1974 Methods of test for determination of strength properties of natural\nbuilding stones.Part 2 Transverse strength (first revision), IS 1124:1974 Method of test for determination for water absorption, apparent specific gravity and porosity of natural building stones (first revision) and IS 1126:1974 Method of test for determination\nof durability of natural building stones (first revision)"
@@ -1626,15 +1640,18 @@
     "standard_id": "IS 2691: 1988",
     "title": "Burnt Clay Facing Bricks",
     "category": "Wood Products for Building",
-    "summary": "Covers dimensions, quality and strength, and methods of sampling and test for burnt clay paving bricks for use in construction of pavements.",
+    "summary": "Requirements for burnt clay facing bricks with high quality external appearance used for exposed decorative brickwork on building facades.",
     "keywords": [
-      "bricks",
-      "paving",
-      "clay",
-      "nil",
+      "facing",
+      "brick",
       "burnt",
-      "average",
-      "pavements"
+      "clay",
+      "appearance",
+      "exposed",
+      "brickwork",
+      "decorative",
+      "quality",
+      "finish"
     ],
     "key_sections": {
       "Scope": "Covers dimensions, quality and strength, and methods of sampling and test for burnt clay paving bricks for use in construction of pavements.",
@@ -1669,14 +1686,16 @@
     "standard_id": "IS 3952: 1988",
     "title": "Burnt Clay Hollow Bricks For Walls And Partitions",
     "category": "Wood Products for Building",
-    "summary": "(Second Revision)",
+    "summary": "Requirements for burnt clay hollow bricks used for non-load-bearing partition walls in buildings. Different from solid load-bearing bricks.",
     "keywords": [
-      "burnt",
-      "clay",
       "hollow",
-      "bricks",
-      "walls",
-      "partitions"
+      "clay",
+      "brick",
+      "partition",
+      "non-load-bearing",
+      "wall",
+      "burnt",
+      "lightweight"
     ],
     "key_sections": {},
     "content": "IS 3952: 1988 Burnt Clay Hollow Bricks For Walls And Partitions\n(Second Revision)"
@@ -1765,18 +1784,20 @@
     "standard_id": "IS 7556: 1988",
     "title": "Burnt Clay Jallies",
     "category": "Wood Products for Building",
-    "summary": "Covers the machine-pressed clay interlocking roofing tiles of the ‘Mangalore Pattern.’",
+    "summary": "Covers burnt clay jalli (lattice/screen) units used decoratively on building facades for ventilation and aesthetic purposes.",
     "keywords": [
-      "lugs",
-      "tile",
-      "eave",
-      "batten",
-      "roofing",
-      "class",
-      "soud"
+      "jalli",
+      "screen",
+      "lattice",
+      "clay",
+      "perforated",
+      "ventilation",
+      "facade",
+      "decorative",
+      "burnt"
     ],
     "key_sections": {
-      "Scope": "Covers the machine-pressed clay interlocking roofing tiles of the ‘Mangalore Pattern.’",
+      "Scope": "Covers burnt clay jalli elements — decorative lattice screens used on building facades for ventilation and ornamentation.",
       "Classification": "Class AA and Class A with characteristics given in Table 1. TABLE 1 CLASSIFICATION OF ROOFING TILES Sl.no. Characteristic Requirement Class AA Class A i) Water absorption percent, Max 18 20 ii) Breaking load, kN, Min a)Average 1.0 (for 410 × 235 mm) 0.80(for 410 × 235 mm) 1.10 (for 420 × 250 mm 0.90 (for 420 × 250 mm and 425 × 260 mm) and 425 × 260 mm) b) Individual 0.90 (for 410 × 235 mm) 0.68 (for 410 × 235 mm) 1.00 (for 420 × 250 mm 0.78 (for 420 × 250 mm and 425 × 260 mm) and 425 × 260 mm) 3. General Quality. 3.1. Shall be free from irregularities, such as twists, bends, cracks and laminations. The roofing tile shall be free from impurities like particles of stone, lime or other foreign materials. When struck, the tile shall give a characteristic ringing soud and when broken the fractu",
       "Shape": "Placed on either face on a plane surface, gap at corners shall not exceed 6 mm.",
       "Lugs": "At least 2 batten lugs and 2 eave lugs of thickness not less than 15 mm at bottom and 10 mm at top shall be provided. Projection shall be 7 to 12 mm for batten lugs and not less than 10 mm for eave lugs.",
@@ -1815,15 +1836,16 @@
     "standard_id": "IS 1464: 1992",
     "title": "Clay Ridge And Ceiling Tiles",
     "category": "Wood Products for Building",
-    "summary": "Requirements for dimensions, quality and strength for clay flooring tiles.",
+    "summary": "Requirements for clay ridge tiles and ceiling tiles used at ridge junctions and overhead in building construction.",
     "keywords": [
-      "thick",
-      "tiles",
-      "class",
-      "flooring",
-      "individual",
-      "along",
-      "fluted"
+      "clay",
+      "ridge",
+      "tile",
+      "ceiling",
+      "roofing",
+      "junction",
+      "burnt",
+      "overhead"
     ],
     "key_sections": {
       "General Quality": "shall be free from irregularities, such as twists, bends, cracks, flaws, laminations and imperfections. Faces of tiles shall be plain, grooved fluted or figured as specified and the edges shall be square. 4. Dimensions i) 150 × 150 × 15 mm ii) 150 × 150 × 20 mm iii) 200 × 200 × 20 mm iv) 200 × 200 × 25 mm v) 250 × 250 × 30 mm Depth of the grooves or frogging on the underside shall not exceed 3 mm.",
@@ -1884,15 +1906,17 @@
     "standard_id": "IS 2690 (Part 2): 1992",
     "title": "Burnt Clay Flat Terracing Tiles",
     "category": "Wood Products for Building",
-    "summary": "Covers machine-pressed, wire-cut, or hand-made rectangular burnt clay tiles used for lining irrigation canals and for drainage channels (other than sewage works).",
+    "summary": "Requirements for burnt clay flat terracing tiles used as flooring on roof terraces. Part 2 of IS 2690.",
     "keywords": [
-      "burnt",
       "clay",
-      "hand",
-      "tiles",
-      "lining",
-      "drainage",
-      "class"
+      "flat",
+      "terracing",
+      "tile",
+      "roof",
+      "terrace",
+      "flooring",
+      "burnt",
+      "part2"
     ],
     "key_sections": {
       "Scope": "Covers machine-pressed, wire-cut, or hand-made rectangular burnt clay tiles used for lining irrigation canals and for drainage channels (other than sewage works).",
@@ -1973,15 +1997,17 @@
     "standard_id": "IS 13317: 1992",
     "title": "Clay Roofing Country Tiles, Half Round And Flat Tiles",
     "category": "Wood Products for Building",
-    "summary": "For detailed information, refer to IS 13317:1992 Specification for clay roofing country tiles, half round and flat tiles. Half Round Tiles Flat Tiles",
+    "summary": "Requirements for country pattern clay roofing tiles (half-round and flat pattern) as distinct from Mangalore pattern tiles covered by IS 654.",
     "keywords": [
-      "plaster",
-      "gypsum",
-      "boards",
-      "tiles",
-      "premixed",
-      "half",
-      "round"
+      "country",
+      "pattern",
+      "clay",
+      "roofing",
+      "tile",
+      "half-round",
+      "flat",
+      "non-Mangalore",
+      "traditional"
     ],
     "key_sections": {},
     "content": "IS 13317: 1992 Clay Roofing Country Tiles, Half Round And Flat Tiles\nFor detailed information, refer to IS 13317:1992 Specification for clay roofing country tiles, half round and flat tiles.\nHalf Round Tiles\nFlat Tiles 2.1\nSECTION 5\nGYPSUM BUILDING\nMATERIALS CONTENTS\nTitle\nPage\nIS\n2095\nGypsum plaster boards\n(Part I) : 1996\nPlain gypsum plaster boards (second revision)\n5.3\n(Part 3) : 1996\nReinforced gypsum plaster boards (second revision)\n5.5\nIS\n2547\nGypsum building plaster\n(Part I) : 1976\nExcluding premixed light weight plaster (first revision)\n5.7\n(Part 2) : 1976\nPremixed light weight plaster (first revision)\n5.9\nIS\n2849 : 1983\nNon load bearing gypsum partition blocks\n5.10\n(Solid and hollow types)\nIS\n8272 : 1984\nGypsum plaster for use in the manufacture of fibrous\n5.11 plaster boards (first revision)"
@@ -2095,15 +2121,15 @@
     "standard_id": "IS 8272: 1984",
     "title": "Gypsum Plaster For Use In The",
     "category": "Gypsum Building Materials",
-    "summary": "Details of the zonal distribution of common commercial timbers of India, classified according to their various uses, and information on the availability of these timbers and on some of their important properties.",
+    "summary": "Requirements for gypsum plaster specifically used in the manufacture of fibrous plaster products for ornamental and architectural applications. Different from building plaster.",
     "keywords": [
-      "pradesh",
-      "timber",
-      "north",
-      "zone",
-      "coniferous",
-      "west",
-      "poles"
+      "gypsum",
+      "plaster",
+      "fibrous",
+      "manufacture",
+      "casting",
+      "fibrous-plaster",
+      "ornamental"
     ],
     "key_sections": {
       "Scope": "Details of the zonal distribution of common commercial timbers of India, classified according to their various uses, and information on the availability of these timbers and on some of their important properties.",
@@ -2225,15 +2251,16 @@
     "standard_id": "IS 1331: 1971",
     "title": "Cut Sizes Of Timbers",
     "category": "Timber",
-    "summary": "Covers the species, grades, requirements and treatments for timber used in the construction of cooling towers.",
+    "summary": "Preferred cut sizes and dimensions of timber for joinery and furniture applications.",
     "keywords": [
       "timber",
-      "pinus",
-      "chrome",
-      "rot",
-      "prohibited",
-      "radiata",
-      "fir"
+      "cut",
+      "sizes",
+      "sawn",
+      "joinery",
+      "furniture",
+      "standard",
+      "dimensions"
     ],
     "key_sections": {
       "Scope": "Covers the species, grades, requirements and treatments for timber used in the construction of cooling towers.",
@@ -2752,15 +2779,17 @@
     "standard_id": "IS 1237: 1980",
     "title": "Cement Concrete Flooring Tiles",
     "category": "Floor, Wall, Roof Coverings and Finishes",
-    "summary": "Requirements of naturally occurring sands and crushed gravel sands used in mortars for internal wall and ceiling plastering, and external plastering using mixes of lime, cement, composite lime-cement, activated lime pozzolana mixture (ALMP) or gypsum with or without admixtures and sand.",
+    "summary": "Requirements for cement concrete flooring tiles used in industrial and commercial floor applications.",
     "keywords": [
-      "sands",
-      "sand",
-      "grading",
-      "wear",
-      "crushed",
-      "organic",
-      "impurities"
+      "cement",
+      "concrete",
+      "flooring",
+      "tile",
+      "floor",
+      "industrial",
+      "commercial",
+      "plain",
+      "terrazzo"
     ],
     "key_sections": {
       "Scope": "Requirements of naturally occurring sands and crushed gravel sands used in mortars for internal wall and ceiling plastering, and external plastering using mixes of lime, cement, composite lime-cement, activated lime pozzolana mixture (ALMP) or gypsum with or without admixtures and sand. 2. Quality of sand 2.1 General — The sand shall be hard, durable, clean and free from adherent coatings and organic matter and shall not contain clay, silt and dust more than specified. 2.2 Deleterious Materials 2.2.1 The sand shall not contain any harmful impurities, such as, iron pyrites, alkalis, salts, coal, mica, shale or similar laminated materials, soft fragments, sea shells and organic impurities in such quantities as to affect adversely the hardening , the strength, the durability or the appearance"
@@ -2907,15 +2936,19 @@
     "standard_id": "IS 13753: 1993",
     "title": "Dust– Pressed Ceramic Tiles With Water",
     "category": "Floor, Wall, Roof Coverings and Finishes",
-    "summary": "Specifies sizes, dimensional tolerances, mechanical, physical and chemical requirements, surface quality requirements and marking of ceramic tiles. 1.1It is applicable only to dust-pressed ceramic glazed tiles first quality, with a water absorption (E>10%) according to Group B III of IS 13712 : 1993* for use as both wall and floor coverings. Tiles in this group are mainly used in areas not subject to severe mechanical load. They are not intended for applications where conditions of frost may app",
+    "summary": "Requirements for dust-pressed ceramic wall tiles with water absorption greater than 10% (high absorption). For interior wall tiling only.",
     "keywords": [
-      "tiles",
-      "spacer",
-      "lugs",
-      "work",
       "ceramic",
-      "related",
-      "group"
+      "tile",
+      "dust-pressed",
+      "high",
+      "water",
+      "absorption",
+      "ten",
+      "10percent",
+      "wall",
+      "interior",
+      "greater"
     ],
     "key_sections": {
       "Scope": "Specifies sizes, dimensional tolerances, mechanical, physical and chemical requirements, surface quality requirements and marking of ceramic tiles. 1.1It is applicable only to dust-pressed ceramic glazed tiles first quality, with a water absorption (E>10%) according to Group B III of IS 13712 : 1993* for use as both wall and floor coverings. Tiles in this group are mainly used in areas not subject to severe mechanical load. They are not intended for applications where conditions of frost may apply. 1.2There is a small production of dust-pressed ceramic unglazed tiles with a water absorption greater than 10% that is not covered by this standard.",
@@ -2928,15 +2961,17 @@
     "standard_id": "IS 13754: 1993",
     "title": "Dust – Pressed Ceramic Tiles With",
     "category": "Floor, Wall, Roof Coverings and Finishes",
-    "summary": "Specifies the sizes, dimensional tolerances, mechanical, physical and chemical requirements, surface quality requirements and marking of ceramic tiles. It is applicable only to dust-pressed ceramic tiles of first quality, including tiles premounted on sheets, with a water absorption of 3%<E 6% according to Group B IIa of IS 13712 : 1993* for interior and exterior use on both floors floors and walls.",
+    "summary": "Test methods and dimensional requirements for dust-pressed ceramic tiles with medium water absorption range.",
     "keywords": [
-      "tiles",
-      "work",
+      "ceramic",
       "tile",
-      "deviation",
-      "related",
-      "unglazed",
-      "glazed"
+      "dust-pressed",
+      "medium",
+      "water",
+      "absorption",
+      "testing",
+      "dimensional",
+      "tolerances"
     ],
     "key_sections": {
       "Scope": "Specifies the sizes, dimensional tolerances, mechanical, physical and chemical requirements, surface quality requirements and marking of ceramic tiles. It is applicable only to dust-pressed ceramic tiles of first quality, including tiles premounted on sheets, with a water absorption of 3%<E 6% according to Group B IIa of IS 13712 : 1993* for interior and exterior use on both floors floors and walls.",
@@ -2949,15 +2984,21 @@
     "standard_id": "IS 13755: 1993",
     "title": "Dust– Pressed Ceramic Tiles",
     "category": "Floor, Wall, Roof Coverings and Finishes",
-    "summary": "WITH WATER ABSORPTION OF 3% < E ≤ 6% (GROUP – B II A) *Ceramictiles— definitions,classification, characteristics and marking TABLE 1 REQUIREMENTS Characteristics Surface S of the Product (cm2) A) Dimensions and Surface Quality S< 90 - 90<S< 190 1 90 < S < 410 S>410 i) Length and width— The deviation in % of the average size of each tile (2 of 4 sides) from the work size ±1.2 ± 1.0 ±0.75 ±0.6 The deviation in % of the average size of each tile(2or4 sides) from the averge size ofthe 10 test specim",
+    "summary": "Requirements for dust-pressed ceramic tiles with water absorption less than 3% (low absorption). Suitable for exterior flooring. Vitrified/dense ceramic tiles category.",
     "keywords": [
-      "tiles",
-      "work",
+      "ceramic",
       "tile",
-      "related",
-      "deviation",
-      "glazed",
-      "sides"
+      "dust-pressed",
+      "low",
+      "water",
+      "absorption",
+      "three",
+      "3percent",
+      "exterior",
+      "floor",
+      "vitrified",
+      "dense",
+      "impervious"
     ],
     "key_sections": {},
     "content": "IS 13755: 1993 Dust– Pressed Ceramic Tiles\nWITH WATER ABSORPTION OF 3% < E ≤ 6%\n(GROUP – B II A)\n*Ceramictiles— definitions,classification, characteristics and marking TABLE 1 REQUIREMENTS Characteristics Surface S of the Product (cm2)\nA) Dimensions and Surface Quality S< 90 - 90<S< 190 1 90 < S < 410 S>410 i) Length and width— The deviation in % of the average size of each tile (2 of 4 sides) from the work size ±1.2 ± 1.0 ±0.75 ±0.6 The deviation in % of the average size of each tile(2or4 sides) from the averge size ofthe 10 test specimens (20 or 40 sides) ± 0.75 ±0.5 ± 0.5 ±05 ii) Thickness— The deviation in % of the average thickness of each tile from the work size thickness ± 10 ± 10 ± 5 ±5 iii) Straightness of sides1) (facial sides)— The maximum diviation from straightness in % related to the corresponding work size. ± 0.75 ±0.5 ± 0.5 ± 0.5 iv) Rectangularity1)— The maximum deviation from rectangularity in % related to the corresponding work size ±1.0 ±0.6 ± 0.6 ±0.6\n≤ Characteristics Surface S of the Product (cm2)\nTest According to\nIS 13630\nS ≤ 90\n90 < S ≤ 190\n190 < S ≤ 410\ns > 410\n(A) Dimensions and surface Quality i) Lenght and width\nPart 1 e\nThe deviation in % of the\n± 1.2\n± 1.0\n± 0.75\n± 0.6 average size of each tile (2\nor 4 sides) from the work size (W) f\nThe deviation in % of the\n±0.75\n±0.5\n±0.5\n±0.5 average size of each tile (2\nor 4 sides) from the average size of the 10 test specimens\n(20 or 40 sides)\nii) Thickness\nPart 1\nThe deviation in % of the\n±10\n±10\n±5\n±5 average thickness of each tile\nfrom the work size thickness iii) Straightness of sides1 (facial sides)\nPart 1\nThe maximum deviation from\n± 0.75\n± 0.5\n±0.5\n±0.5 straightness in % related to\nthe corresponding work sizes iv) Rectangularity1)\nPart 1\nThe maximum deviation from rectangularity in % related to\nthe corresponding work sizes v) Surface flatness\nPart 1\nThe maximum deviation from flatness in:\na) centre curvature, related to\n± 1.0\n± 0.5\n±0.5\n±0.5 diagonal calculated from\nthe work sizes b) Edge curvature, related to the\n±1.0\n±0.5\n±0.5\n±0.5 corresponding work size\nc) Warpage, related to diagonal\n± 1.0\n± 0.5\n± 0.5\n± 0.5 calculated from the work sizes\nvi) Surface quality2)\nMin 95% of tiles shall be free from visible defects that would Part 1 impair the appearance of a major area of tiles\nB Physical Properties i) Water absorption % by weight\nAverage 3 <E ≤ 6 Individual Max 11.0\nPart 2 ii) Modulus of rupture in N/mm2\nAverage ≤ 22, Individual Min 20\nPart 6 iii) Scratch hardness of surface (Mohs’ scale) a) Glazed tiles\nMin 5 b) Unglazed tiles\nMin 6 iv) Abrasion resistance: a) Resistance to deep abrasion\nMax 345\nPart 12 of unglazed tiles, removed volume in mm3 b) Resistance of abrasion of\nAccording to the abrasion class indicated by\nPart 11 glazed tiles Class I-IV\nThe manufacturer v) co-efficient of linear thermal\nMax 9 × 10–6\nPart 4 expansion from ambient temperature to 1000ºC (K–1)\nvi) Thermal shock resistance\nRequired\nPart 5 vii) Crazing resistance3) glazed tiles\nRequired\nPart 9 viii) Frost resistance\nRequired, if agreed\nPart 10 ix) Moisture expansion unglazed\nMax 0.6\nPart 3 tiles mm/m C) Chemical Properties i) Resistance to staining of glazed\nMin Class2\nPart 8 tiles Class 1 - 3\nii) REsistance to household chemicals and swimming pool water\ncleansers, except to cleansing agents containing hydrofluoric acid and its\ncompounds a) Glazed tiles Class AA-D\nMin Class B\nPart 8 b) Unglazed tiles\nRequired\nPart 7 iii) Resistance to acids and alkalis\n(with the exception of hydrofluoric acid its comounds)\na) Glazed tiles Class AA-D\nRequired if agreed according to the chemical ersistance class indicated by the manufacturer\nPart 8 b) Unglazed tiles Required 4)\npart 7\n1.\nNot applicalbe for tiles having curved shapes.\n2.\nBecause of firing, slight variations fromthe standard colour are unavoidable. This does not apply to intentional irregularities of colour variation of the face of dust pressed tiles of low water absorption( which can be unglazed, glazed\nor partly glazed) or to the colour variation over a tile area, which is characteristic for this type of tile and desirable.\nSpots or coloured dots which are introduced for decorative purposes are not considered defect.\n3.\nCertain decorative effects may have a tendency to craze. These shall be identified by the manufacturer, in which case the crazing test in not applicable.\n4.\nIf the hue becomes slightly different this is not considered to be chemical attack,\nFor detailed information refer to IS 13755:1993 Dust-pressed ceramic tiles with water absorption of 3%<E≤ 6% (Group—BII a)"
@@ -2966,15 +3007,18 @@
     "standard_id": "IS 13756: 1993",
     "title": "Dust – Pressed Ceramic Tiles With Low",
     "category": "Floor, Wall, Roof Coverings and Finishes",
-    "summary": "Specifies the sizes,dimensional tolerances, mechanical, physical and chemical requirements, surface quality requirements and marking of ceramic tiles. It is applicable only to dust-pressed ceramic tiles including tiles premounted on sheets of first quality, with a low water absorption (E ≤ 3%) according to Group BI of IS 13712 : 1993 Ceramic tiles– Efinitions, Classifications, Characteristics and marking. For interior and exterior use on both floors and walls.",
+    "summary": "Requirements for dust-pressed ceramic tiles with very low water absorption (less than 0.5%), fully vitrified porcelain tiles.",
     "keywords": [
-      "tiles",
-      "work",
-      "related",
-      "deviation",
+      "ceramic",
       "tile",
-      "glazed",
-      "sides"
+      "dust-pressed",
+      "very-low",
+      "absorption",
+      "impervious",
+      "vitrified",
+      "less",
+      "porcelain",
+      "half-percent"
     ],
     "key_sections": {
       "Scope": "Specifies the sizes,dimensional tolerances, mechanical, physical and chemical requirements, surface quality requirements and marking of ceramic tiles. It is applicable only to dust-pressed ceramic tiles including tiles premounted on sheets of first quality, with a low water absorption (E ≤ 3%) according to Group BI of IS 13712 : 1993 Ceramic tiles– Efinitions, Classifications, Characteristics and marking. For interior and exterior use on both floors and walls. 2. Shapes and Sizes 2.1 The modular preferred coordinating sizes (work size + joint width) in cm are M 10×10, M15×15, M20×10, M20×15, M20×20 and M 30×30. The manufacturer shall chose the work size (dimensions of the visible faces, length and width) in order to allow a nominal joint width between 2 and 5 mm. 2.2 The most common non-do",
@@ -3105,15 +3149,15 @@
     "standard_id": "IS 13026: 1991",
     "title": "Bitumen Mastic For Flooring For Industries Handling Lpg And Other Light Hydrocarbon Products",
     "category": "Floor, Wall, Roof Coverings and Finishes",
-    "summary": "Requirements of linoleum manufactured as sheets or tiles on a hessian backing and used as floor covering. Note — This standard does not include jute canvas as backing material.",
+    "summary": "Requirements for mastic asphalt for use in flooring and damp-proof course applications in building construction.",
     "keywords": [
-      "linoleum",
-      "backing",
-      "wearing",
-      "tiles",
-      "hessian",
-      "cork",
-      "rolls"
+      "mastic",
+      "asphalt",
+      "flooring",
+      "damp-proof",
+      "course",
+      "waterproofing",
+      "industrial"
     ],
     "key_sections": {
       "Scope": "Requirements of linoleum manufactured as sheets or tiles on a hessian backing and used as floor covering. Note — This standard does not include jute canvas as backing material. 2. Materials 2.1 The wearing surface of the linoleum shall be made from the following material: a) Oxidized or polymerized linseed oil (conforming to IS 75 : 1973) * or other suitable drying oil, with necessary driers; b) Rosin or resin or their combination: c) Cork flour or wood flour or both: d) Mineral fillers; and e) Colouring material or pigments Note — The material shall be mixed and pressed to a specially smooth surface on the backing (see 2.2). The backing material shall be securely bonded to the wearing surface. 2.2 The type of hessian used for backing is dependent on the type of conform method of manufactu",
@@ -3592,15 +3636,15 @@
     "standard_id": "IS 13983: 1994",
     "title": "Stainless Steelsinks For Domestic Purposes",
     "category": "Sanitary Appliances and Water Fittings",
-    "summary": "Requirements for the panels of glass fibre reinforced polyesrter resin (GRP) sectional tanks meant for storing potable water under pressure not exceeding the static head correspondinbg to the depth of the tanks and temperature of exceeding 50°C. GRP panels used in manufacturing tanks as covered in this standard are not compression moulded, using sheet moulding compound (SMC).",
+    "summary": "Requirements for stainless steel sinks for domestic kitchen use including dimensions and grade requirements.",
     "keywords": [
-      "resin",
-      "tap",
-      "sinks",
-      "polyester",
-      "tanks",
-      "shade",
-      "overflow"
+      "stainless",
+      "steel",
+      "sink",
+      "kitchen",
+      "domestic",
+      "inset",
+      "drainer"
     ],
     "key_sections": {
       "Finish": "Sinks maybe supplied with a bright or dull finish. ° ° °",
@@ -3690,13 +3734,19 @@
     "category": "Sanitary Appliances and Water Fittings",
     "summary": "(Third Revision) 1. Scope 1.1 General requirements for cast iron fittings for pressure pipes for water, gas and sewage. 1.2 Applicable to all cast iron fittings having spigots, sockets or flanges as specified in this standard and also to fittings with other type of joints, the general dimensions of which, except those relating to the joints, conform to this standard. 2. General Requirements 2.1 Material —The metal used for the manufacture of pipes shall be of a quality not less than that of the ",
     "keywords": [
-      "branch",
-      "diameter",
+      "cast",
+      "iron",
+      "fittings",
+      "bends",
+      "tees",
+      "reducers",
+      "pressure",
+      "pipes",
       "flanged",
-      "nominal",
-      "sockets",
-      "double",
-      "lead"
+      "socket",
+      "water",
+      "gas",
+      "sewage"
     ],
     "key_sections": {
       "Coating": "Where coating material has tar or similar base, it shall be smooth and tenacious and hard enough not to flow when exposed to a temperature of 65°C but not so brittle at a temperature of 0°C as to chip off when scribed lightly with a pen knife. 6. Dimensions 6.1 Sockets and Spigots of Pipes (Lead Joints) Nominal Barrel Internal Diameter Diameter Dia of Socket (DN) (DE) (DI) (mm) (mm) (mm) 80 98 116 100 118 137 125 114 163 150 170 189 200 222 241 250 274 294 300 326 346 350 378 398 400 429 449 450 480 501 500 532 553 600 635 657 700 738 760 750 790 813 800 842 865 900 945 968 1000 1048 1072 1050 1124 1143 1100 1152 1177 1200 1256 1281 1500 1567 1594 Note — Intenal diameter of sockets (DI) given above is applicable to sockets of fittings (lead joint) also. 6.2 Flanges of pipes and fitting inc"
@@ -4770,15 +4820,17 @@
     "standard_id": "IS 12818: 1992",
     "title": "Unplasticised Pvc Screen And Casing Pipes For Bore/Tube Well",
     "category": "Sanitary Appliances and Water Fittings",
-    "summary": "(First Revision) TABLE 1 DIMENSIONS OF SCREEN PIPES WITH RIBS Nominal Mean Outer OuterDiameter Outer Wall Thickness ,s (Under Ribs) Diameter Diameter of pipe of Pipe at any Diameter Over DN d Point Connection, ds Min Min Max Min Max (1) (2) (3) (4) (5) (6) 40 52.0 51.9 56.0 3.5 4.0 50 64.0 63.9 69.0 4.0 4.6 80 92.0 91.8 98.0 4.0 4.6 100 117.0 116.8 124.0 5.0 5.7 125 144.0 143.7 154.0 6.5 7.3 150 169.0 168.6 182.0 7.5 8.5 175 204.0 203.6 219.0 8.8 9.8 200 229.0 228.5 247.0 10.0 11.2 250 284.0 283",
+    "summary": "Requirements for unplasticised PVC screen and casing pipes used for borewells and tubewells for groundwater extraction.",
     "keywords": [
+      "upvc",
+      "pvc",
       "screen",
       "casing",
       "pipe",
-      "outer",
-      "segmental",
-      "threads",
-      "diameter"
+      "borewell",
+      "tubewell",
+      "groundwater",
+      "well"
     ],
     "key_sections": {
       "Threading Of Screen And Casing Pipes": "The screen and casing pipe shall have male threads at spigot end and female threads at the socket end. Screen and casing pipe of nominal diameter from 40 to 80 mm shall have threads in accordance with IS 554 : 1985*. Screen and casing pipes of nominal diameters of 100 to 400 mm shall have threads in accordance with basic profile for metric trapezoidal threads. Rubber element should be used with the trapezoidal threads shall be of shore hardnes 165±5 7. Tests 7.1 Visual Appearance —The internal and external surfaces of each pipe shall be smooth, clean and free from any defects. The ends shall be clean and square with the axis of the pipe. 7.2 Internal Dia —Test mandrel of diameter as specified below of 100 mm length shall pass smoothly through the pipe. 7.3 Specific gravity — Between 1.4 to"
@@ -6863,15 +6915,16 @@
     "standard_id": "IS 12817: 1997",
     "title": "Stainless Steel Butt Hinges",
     "category": "Builder's Hardware",
-    "summary": "Covers the dimensions and requirements for PVC handrail covers for use on metal strip handrails.",
+    "summary": "Requirements for stainless steel butt hinges as a corrosion-resistant alternative to mild steel hinges.",
     "keywords": [
-      "handrail",
-      "covers",
-      "handrails",
-      "pvc",
-      "exudation",
-      "strip",
-      "desired"
+      "stainless",
+      "steel",
+      "butt",
+      "hinge",
+      "corrosion",
+      "resistant",
+      "marine",
+      "coastal"
     ],
     "key_sections": {
       "Scope": "Covers the dimensions and requirements for PVC handrail covers for use on metal strip handrails.",
@@ -6905,15 +6958,15 @@
     "standard_id": "IS 14912: 2001",
     "title": "Door Closers - Concealed Type",
     "category": "Builder's Hardware",
-    "summary": "Covers the dimensions, such as length, measurement for wood based panel materials. The wood based panels considered are plywood, blockboard, hardboard, fibre insulation board, particle board, veneered particle board, particle board for insulation and high density particle board.",
+    "summary": "Requirements for hydraulically operated concealed type door closers for automatic door closing applications.",
     "keywords": [
-      "particle",
-      "plywood",
-      "boards",
-      "board",
-      "wood",
-      "bamboo",
-      "fibre"
+      "door",
+      "closer",
+      "concealed",
+      "hydraulic",
+      "operated",
+      "overhead",
+      "automatic"
     ],
     "key_sections": {
       "Scope": "Covers the dimensions, such as length, measurement for wood based panel materials. The wood based panels considered are plywood, blockboard, hardboard, fibre insulation board, particle board, veneered particle board, particle board for insulation and high density particle board. 2. Dimensions 2.1 Plywood 2.1.1 Size– Plywood panels shall be of the sizes specified below Length Width mm mm 2400 × 1200 2100 × 1200 2100 × 900 1800 × 1200 1800 × 900 2.1.2 Thickness–The thickness shall be as given in the specification. 2.2 Hardboard 2.2.1 Size– Hardboards shall be of the sizes specified bel ow: Length Width mm mm 4800 × 1200 3600 × 1200 3000 × 1200 2400 × 1200 2100 × 1200 2100 × 900 1800 × 1200 1800 × 900 1200 × 1200 2.2.2 Thickness –The thicknesses shall be as given in the specification. 2.3 Blo"
@@ -6989,13 +7042,16 @@
     "category": "Wood Products",
     "summary": "(Third Revision) * Synthetic resin adhesives for plywood(phenolic and amino plastic) (first revision). + Extruders for use in synthetic resin adhesive (Urea formaldehyde) for plywood (first revision). and the total length not more than length not more 1000 mm/m2 300 mm/m2 iii) Discolo Nil 5 percent ration iv) Dote 5cm/m2 15cm/m2 v) Insect Scattered up to Scattered up to hole 12 holes/ m2 24 holes/ m2 vi) Joints One joint for No Restriction every multiple of 200 mm provided no individual piece is",
     "keywords": [
-      "restriction",
-      "ply",
       "plywood",
-      "mar",
-      "patches",
-      "filled",
-      "they"
+      "general",
+      "purpose",
+      "ordinary",
+      "furniture",
+      "construction",
+      "grade",
+      "BWR",
+      "MR",
+      "veneer"
     ],
     "key_sections": {
       "Dimensions And Tolerances": "6.1 The dimension of plyboards shall be as follows 2400 mm × 1200 mm 2100 mm × 1200 mm 1800 mm × 1200 mm 2100 mm × 900 mm 1800 mm × 1200 mm Note – Any other dimension as agreed to between the manufactuer and the purcheser may also be used. 6.2 Thickness — See Table 3. TABLE 3 THICKNESS OF PLYWOOD BOARDS BOARD THICKNESS mm (1) (2) 3 ply 3,4,5,6, 5 ply 5, 6, 8, 9 7ply 9,12,15,16, 9 ply 12, 15, 16, 16 11 ply 19, 22, 25 Above 11 ply As ordered The thickness shall be measured up to one place of decimal. 6.3 Tolerances Dimensions Tolerance a) Length : + 6 mm : – 0 mm b) Width : + 3 mm – 0 mm c) Thickness (1) Less than 6 mm : ± 10% (2) 6 mm and above : ± 5% d) Squareness : 0.2% e) Edge straightness : 0.2% 7. Tests 7.1 Glue adhesion — Shall have an average and minimum shear strength not less than "
@@ -7228,15 +7284,15 @@
     "standard_id": "IS 3097: 1980",
     "title": "Veneered Particle Boards",
     "category": "Wood Products",
-    "summary": "Requirements, such as, grades and types, material, manufacture, dimensions and tests for veneered particle boards.",
+    "summary": "Requirements for veneered particle boards - particle boards faced with wood veneer for furniture and general use. NOT pre-laminated boards.",
     "keywords": [
-      "core",
-      "tubular",
-      "boards",
-      "decorative",
-      "purpose",
-      "grade",
-      "solid"
+      "veneered",
+      "particle",
+      "board",
+      "veneer",
+      "wood",
+      "furniture",
+      "faced"
     ],
     "key_sections": {
       "Scope": "Requirements, such as, grades and types, material, manufacture, dimensions and tests for veneered particle boards.",
@@ -7248,15 +7304,14 @@
     "standard_id": "IS 3129: 1985",
     "title": "Low Density Particle Boards",
     "category": "Wood Products",
-    "summary": "Essential requirments of low density particle boards having specific grativity not exceeding 0.4",
+    "summary": "Requirements for low density particle boards for insulation and lightweight applications. Not pre-laminated boards.",
     "keywords": [
-      "boards",
+      "low-density",
       "particle",
-      "mix",
-      "retardant",
-      "fire",
-      "density",
-      "like"
+      "board",
+      "light",
+      "insulation",
+      "fire-retardant"
     ],
     "key_sections": {
       "Scope": "Essential requirments of low density particle boards having specific grativity not exceeding 0.4 2. Material 2.1 Timber and Other Ligno-Cellulosic Material — Timber and other ligno-cellulosic matrerial like bagasse, solapith, jute sticks, rice husk, pea-nut shells, etc, may be used for the manufacture of these boards. These shall be light weight materials of bulk density preferably not exceeding 400 kg/m3 and shall be free from exttraneous matter and dust. 2.2 Adhesive— Shall be BWR or BWP type conforming to IS 848 : 1974*. and shall be either a phenolformaldehyde or urea-formaldehyde type fortified with melamine. 3. Dimensions and Tolerances 3.1 The sizes of insulation particle boards shall be as given below : Length in mm : 3650,3000,2700,2400, 2100,1800, 1500, 1200, 1000, 900, 600, 450,",
@@ -7351,15 +7406,18 @@
     "standard_id": "IS 12823: 1990",
     "title": "Wood Products-Prelaminated Particles Boards",
     "category": "Wood Products",
-    "summary": "3.3 Impregnated Overlay—An absorbent tissue paper having a weight of 18-40 g/m2 impregnated in a suitable synthetic resin and dried to a volatile content of 4-8 percent. 4. Finish —The finish of the paper overlaid board depends on the surface of caul plates used. 5. Dimensions and Tolerances —Dimensions and tolerances shall conform to IS 12049:1987.* 6. Tests 6.1 Density — 500 to 900 kg/m3 6.2 Moisture Content — 5 to 15 percent 6.3 Resistance to Steam – Shall not show any sign of blister, delami",
+    "summary": "Requirements for pre-laminated particle boards - particle boards with factory-applied decorative laminate surface finish. Distinguished from plain veneered particle boards.",
     "keywords": [
-      "stain",
-      "boards",
-      "leave",
+      "pre-laminated",
+      "prelaminated",
       "particle",
-      "cleaning",
-      "resistance",
-      "wood"
+      "board",
+      "laminate",
+      "factory-applied",
+      "decorative",
+      "surface",
+      "finish",
+      "resin"
     ],
     "key_sections": {
       "Finish": "The finish of the paper overlaid board depends on the surface of caul plates used.",
@@ -7655,15 +7713,18 @@
     "standard_id": "IS 2202 (Part 2): 1983",
     "title": "Wooden Flush Door Shutters",
     "category": "Doors, Windows and Shutters",
-    "summary": "(SOLID CORE TYPE) PART 2 PARTICLE BOARD AND HARDBOARD FACE PANELS (Third Revision) For detailed information, refer to IS 2202 (Part 2) :1983 Specification for wooden flush door shutters (solid core type) : Part 2 Particle board and har board face panels (third revision). 2.1 0 3 ± − +",
+    "summary": "Requirements for wooden flush door shutters with plywood face for exterior and moisture-resistant applications. Part 2 covers exterior-grade flush doors.",
     "keywords": [
-      "board",
-      "panels",
-      "core",
-      "particle",
-      "har",
-      "solid",
-      "face"
+      "flush",
+      "door",
+      "exterior",
+      "moisture",
+      "resistant",
+      "plywood",
+      "face",
+      "outdoor",
+      "BWR",
+      "weather"
     ],
     "key_sections": {},
     "content": "IS 2202 (Part 2): 1983 Wooden Flush Door Shutters\n(SOLID CORE TYPE)\nPART 2 PARTICLE BOARD AND HARDBOARD FACE PANELS\n(Third Revision)\nFor detailed information, refer to IS 2202 (Part 2) :1983 Specification for wooden flush door shutters (solid core type) : Part 2 Particle board and har board face panels (third revision).\n2.1\n0\n3 ±\n−\n+"
@@ -7756,15 +7817,18 @@
     "standard_id": "IS 1038: 1983",
     "title": "Steel Door, Windows And Ventilators",
     "category": "Doors, Windows and Shutters",
-    "summary": "(Fifth Revision) * Symbolic designation of directions of closing and faces of doors, windows and shutters. 10 HF 6 / 10 HF 6 10 HS 12 / 10 HS 12",
+    "summary": "The main BIS standard for steel doors, windows AND ventilators for residential buildings. Covers dimensions, sections and performance of combined steel door+window+ventilator systems.",
     "keywords": [
-      "projecting",
-      "hinges",
-      "doors",
-      "windows",
-      "hung",
-      "weather",
-      "shutter"
+      "steel",
+      "door",
+      "window",
+      "ventilator",
+      "frame",
+      "residential",
+      "building",
+      "combined",
+      "shutters",
+      "standard"
     ],
     "key_sections": {
       "Finish": "Painting or phosphating and painting or hot dipped galvanizing."
@@ -7840,15 +7904,15 @@
     "standard_id": "IS 4351: 2003",
     "title": "Steel Door Frames",
     "category": "Doors, Windows and Shutters",
-    "summary": "Requirements regarding material, dimensions and construction of steel door frames for internal and external use.",
+    "summary": "Requirements for steel door FRAMES only (without shutters/doors). For internal and external use. Does not cover windows or ventilators.",
     "keywords": [
-      "jamb",
-      "strike",
-      "ties",
       "door",
-      "frames",
-      "fan",
-      "lugs"
+      "frame",
+      "steel",
+      "jamb",
+      "internal",
+      "external",
+      "frame-only"
     ],
     "key_sections": {
       "Scope": "Requirements regarding material, dimensions and construction of steel door frames for internal and external use.",
@@ -8232,15 +8296,19 @@
     "standard_id": "IS 2062: 1999",
     "title": "Steel For General Structural Purposes",
     "category": "Structural Steels",
-    "summary": "Requirements of steel plates, strips, sections, flats, bars, etc, for use in structural work. 1.1 The steels are suitable for welded, bolted and riveted’ structures, and for general engineering purposes. 1.2 Where welding is employed for fabriction and guaranteed-weldability is required, welding procedure should be as specified in IS 9595 : 1996 `Metal are welding of carbon and carbon manganese steels - Recommendations (first Revision):.",
+    "summary": "Requirements of steel plates, strips, sections (angles, channels, beams), flats, bars for structural use. The general-purpose structural steel standard.",
     "keywords": [
-      "crackability",
-      "products",
-      "groove",
-      "welding",
-      "rolling",
-      "cutting",
-      "steels"
+      "steel",
+      "structural",
+      "general",
+      "angles",
+      "channels",
+      "beams",
+      "plates",
+      "sections",
+      "bars",
+      "hot-rolled",
+      "IS2062"
     ],
     "key_sections": {
       "Scope": "Requirements of steel plates, strips, sections, flats, bars, etc, for use in structural work. 1.1 The steels are suitable for welded, bolted and riveted’ structures, and for general engineering purposes. 1.2 Where welding is employed for fabriction and guaranteed-weldability is required, welding procedure should be as specified in IS 9595 : 1996 `Metal are welding of carbon and carbon manganese steels - Recommendations (first Revision):.",
@@ -11497,5 +11565,268 @@
       "Store And Miscellaneous Materials": "Unit weights of the following store and miscellaneous materials are given in Appendix A of the standard. Agricultural and Chemicals and allied food products materials For detailed information, refer to IS 875 (Part 1) : 1987 Code of practice for design loads (other than earth quake) for building and structures. Part 1 Dead codes - Unit weight of building materials and stread materials. Fuels Metals and alloys Ores Textiles paper and allied materials Manures Miscellaneous materials"
     },
     "content": "IS 875 (Part 1): 1987 Code Of Practice For Design Loads\n(OTHERTHAN EARTHQUAKE)FORBUILDINGSANDSTRUCTURES,\nPART-1 DEAD LOADS – UNIT WEIGHTS OF BUILDING\nMATERIALS AND STORED MATERIALS.\n1.\nScope – Covers unit weight mass of materials, and parts or components in a building that apply to the\ndetermination of dead loads in the design of buildings.\nThe unit weight mass of materials that are likely to be stored in a building are also specified in the standard\nfor the purpose of load calculations along with angles internal friction as appropriate.\n2.\nBuilding Materials – Table 1 of the standard gives the unit weight mass of the following materials used in\nbuilding construction:\nAcoustical materials\nAggregate, coarse\nAggregate, organic\nAsbestos\nAsbestos cement building pipes\nAsbestos cement gutters\nAsbestos cement pressure pipes\nAsbestos cement sheeting\nBitumen\nBlocks\nBoards\nBricks\nBrick chips and broken bricks\nBrick dust (SURKHI)\nCast iron, manhole covers\nCast iron, manhole frames\nCast iron pipes\nCement\nCement concrete, plain\nCement concrete, reinforced\nCement concrete pipes\nCement concrete, prestressed\nCement mortar\nCement plaster\nCork\nExpanded metal\nFelt, bituminous for water-proofing and damp-proofing\nFoam slag, foundry pumice\nGlass\nGutter, asbestos cement\nGypsum\nIron\nLime\nLinoleum\nMastic asphalt.\nMasonry brick\nMasonry stone\nMetal sheeting, protected galvanized steel sheets and plain.\nMortar\nPipes\nPlaster\nSheeting\nSlagwool\nSoil and gravels\nSteel sections\nStones\nTar, coal\nThermal Insulation\nTerra cotta\nTerrazzo\nTiles\nTimber\nWater\nWood-wool building slabs\n3.\nBuilding Parts and Components – Table 2 of the standard gives the unit weights of the following building\nparts or components:\nCeilings\nFinishing\nCement concrete, plain\nFlooring\nCement concrete, reinforced\nRoofing\nDamp-proofing\nWalling\nEarth filling 4.\nStore and Miscellaneous Materials – Unit weights of the following store and miscellaneous materials are\ngiven in Appendix A of the standard.\nAgricultural and\nChemicals and allied food products\nmaterials\nFor detailed information, refer to IS 875 (Part 1) : 1987 Code of practice for design loads (other than earth quake) for building and structures. Part 1 Dead codes - Unit weight of building materials and stread materials.\nFuels\nMetals and alloys\nOres\nTextiles paper and allied materials\nManures\nMiscellaneous materials"
+  },
+  {
+    "standard_id": "IS 277: 1992",
+    "title": "Galvanized Steel Sheets",
+    "category": "Structural Steels",
+    "summary": "(PLAIN AND CORRUGATED) (Sixth Revision) TABLE 2 MASS OF COATING Grade of Minimum Average Minimum Coating Coating Coating Triple Single Spot Spot Test Test g/m2 g/m2 (1) (2) (3) 600 600 510 450 450 380 350 350 300 275 275 235 220 220 190 200 200 170 180 180 155 120 120 100 4. Bend Test – Samples of galvanized steel sheets shall withstand bending through 180º around a mandrel having diameter specified in Table 3 of the Standard without peeling or flaking of zinc coating. Crack or fracture of base ",
+    "keywords": [
+      "corrugation",
+      "sheets",
+      "corrugated",
+      "corrugations",
+      "sheet",
+      "coil",
+      "coating"
+    ],
+    "key_sections": {
+      "Tests": "Samples of galvanized steel sheets shall withstand bending through 180º around a mandrel having diameter specified in Table 3 of the Standard without peeling or flaking of zinc coating. Crack or fracture of base metal, shall not be permitted. However, Cracks of the base metal developing at the edge of the specimen or coarse grain developing at the line of the bend shall be disregarded. 5. Coating Test 5.1 Determination of Mass of Zinc Coating – The average masses of zinc coating shall conform to both the values specified in Table 2.",
+      "Freedom From Defects": "Galvanized plain sheets, corrugated sheets and coils shall be reasonably flat and free from bare spots, holes, tears and other harmful defects. 6.1 Coils, however, may contain some abnormal imperfections which render a portion of the coil unusable since the imperfections in the coil cannot be removed as in the case with cut length.",
+      "Mass": "See Table 4 of the Standard. 8. Dimensions and Tolerances of Plain Sheets/Coils. 8.1 Sizes of Plain Sheets a) Length - 1 800, 2 200, 2 500, 2 800 and 3 000 mm b) Width - 750, 900, 1 000 and 1 200 mm c) Thickness - 0.18, 0.22, 0.25, 0.28, 0.32, (uncoated 0.40, 0.45, 0.50, 0.55, 0.63, sheets) 0.70, 0.80, 0.90, 1.00, and 1.60 mm. Note : Sheets for other sizes (length, width and thickness) may also be supplied subject tothe mutual agreement between the purchaser and the manufacturer. 8.2 Unless other wire agreed, the internal diameter of sheet supplied coil shall be 450, 510 or 610 mm. 8.3 Tolerances 8.3.1 No sheet shall be smaller in length than that specified. Tolerances on length on plus side shall be 15 mm or 0.5 percent of length whichever is greater. 8.3.2 The diagonal distance between o"
+    },
+    "content": "IS 277: 2003 Galvanized Steel Sheets\n(PLAIN AND CORRUGATED)\n(Sixth Revision)\nTABLE 2 MASS OF COATING\nGrade of\nMinimum Average\nMinimum Coating\nCoating\nCoating Triple\nSingle Spot Spot Test\nTest g/m2\ng/m2\n(1)\n(2) (3)\n600\n600\n510\n450\n450\n380\n350\n350\n300\n275\n275\n235\n220\n220\n190\n200\n200\n170\n180\n180\n155\n120\n120\n100\n4.\nBend Test – Samples of galvanized steel sheets shall withstand bending through 180º around a mandrel\nhaving diameter specified in Table 3 of the Standard without peeling or flaking of zinc coating. Crack or\nfracture of base metal, shall not be permitted.\nHowever, Cracks of the base metal developing at the edge of the specimen or coarse grain developing at the\nline of the bend shall be disregarded.\n5.\nCoating Test\n5.1 Determination of Mass of Zinc Coating – The\naverage masses of zinc coating shall conform to both the values specified in Table 2.\n6.\nFreedom from Defects – Galvanized plain sheets, corrugated sheets and coils shall be reasonably flat and\nfree from bare spots, holes, tears and other harmful defects.\n6.1 Coils, however, may contain some abnormal\nimperfections which render a portion of the coil unusable since the imperfections in the coil cannot be removed\nas in the case with cut length. 7.\nMass – See Table 4 of the Standard.\n8.\nDimensions and Tolerances of Plain Sheets/Coils.\n8.1 Sizes of Plain Sheets\na) Length\n- 1 800, 2 200, 2 500, 2 800 and 3 000 mm\nb) Width\n- 750, 900, 1 000 and 1 200 mm c) Thickness\n- 0.18, 0.22, 0.25, 0.28, 0.32, (uncoated 0.40, 0.45, 0.50, 0.55, 0.63, sheets) 0.70, 0.80, 0.90, 1.00, and 1.60 mm.\nNote : Sheets for other sizes (length, width and thickness)\nmay also be supplied subject tothe mutual agreement between the purchaser and the manufacturer.\n8.2 Unless other wire agreed, the internal diameter of\nsheet supplied coil shall be 450, 510 or 610 mm.\n8.3 Tolerances 8.3.1 No sheet shall be smaller in length than that specified. Tolerances on length on plus side shall be 15\nmm or 0.5 percent of length whichever is greater. 8.3.2 The diagonal distance between opposite corners of any sheet shall not differ by more than 20 mm. 8.3.3 No plain sheet shall be smaller in width than that specified. The positive tolerances on width shall\nbe 10 mm. 8.3.4 Thickness : The tolerance on thickness of sheet and coil shall be according to IS 1079+ or\nIS 513++. 8.3.5 Tolerance on Mass — The tolerance on mass of individual sheets calculated in accordance with Table\n4 of the Standard shall be within ±10 percent and tolerance on mass of each bundle of sheet shall be ±5\npercent.\n9.\nDimensions and Tolerances of Corrugated Sheets.\n9.1 Sizes of Corrugated Sheets\n9.1.1\nLength – The length of the corrugated sheets shall be as follows – 1 800, 2 200, 2 500, 2 800, 3 000 and\n3 050 mm\n9.1.2\nDepth and pitch of the corrugations: The depth and pitch of corrugation shall be as follows (see Fig. 1\nof the standard)\nGrade\nDepth of\nPitch of\nCorrugation\nCorrugation mm\nmm\nA\n17.5\n75\nB\n12.5\n75\n9.1.3 Number of corrugations – The number of corrugations shall be 8, 10, 11 and 13 depending on the\nwidth of the sheet. The overall width of the corrugated sheet before and after corrugation shall as shown in\nTable 3.\n9.1.3.1Sheets of sizes other than those specified above may be supplied, if agreed to between the contracting\nparties.\nTABLE 3 OVERALL WIDTHS AND\nCORRUGATIONS OF SHEETS\nNumber of\nGrade Overall Widths of Sheet\nCorrugations Before\nAfter\nCorrugation\nCorrugation mm mm\n(1)\n(2)\n(3)\n(4)\n8 A 750 660\n10 A 900 810 11 A 1 000 910 13 A 1 200\n1 110 8 B 750 680 10 B 900 830 11 B 1 000 930 13 B 1 200\n1 130\n9.2 Tolerances – See Table 4.\nTABLE 4 TOLERANCE ON DIMENSION OF\nCORRUGATED SHEETS\nDimensions Tolerance1 (1) (2)\nDepth of corrugation ± 2.5 mm\nPitch of corrugation ± 5 mm\nOverall width after corrugation ± 25 mm\n1) Average of 4 measurements + Cold rolled low carbon steel sheets and strips (fourth revision) ++ Hot-rolled carbon steel sheets and strip (fifth revision) Note : For test proceedures, see 8, 9 and 10 of the standard\nFor detailed information, refer to IS 277 : 2003 Specification for galvanized steel sheets (plain and corrugated)\n(fifth revision)."
+  },
+  {
+    "standard_id": "IS 2721: 2003",
+    "title": "Galvanized Steel Chain Link Fence Fabric",
+    "category": "Wire Ropes and Wire Products",
+    "summary": "Requirements for galvanized steel chain fence fabric intended for various purposes. This standard does not cover the requirements pertaining to straining posts, struts, base plates and other fittings. *Mild steel wire for general engineering purposes (third revision)",
+    "keywords": [
+      "mesh",
+      "fabric",
+      "wire",
+      "line",
+      "chain",
+      "glass",
+      "fence"
+    ],
+    "key_sections": {
+      "Scope": "Requirements for galvanized steel chain fence fabric intended for various purposes. This standard does not cover the requirements pertaining to straining posts, struts, base plates and other fittings. *Mild steel wire for general engineering purposes (third revision)",
+      "Dimensions": "See Table 2.1 Mesh Size – Shall be determined by measuring the minimum clear distance between the wires forming the parallel sizes of the mesh when measured in normal structured condition. 2.2 Width – Shall be the overall dimension from one extreme line wire to other extreme line wire and shall be checked in fully stretched condition. The tolerance on the width shall be ± 0.7 of the mesh size. 2.3 Length – Shall be supplied in rolls of 5, 10, 15,20, and 25m or as per the requirements of the purchaser The supplied length shall not be less than the above values when measured in fully stretched condition. 2.4 Tolerances – As per IS 280 *",
+      "Materials": "The mesh wire and the line wire of the fabric shall be manufactured from galvanized steel conforming to IS 280* having a tensile strength within the range of 400 to 550 MPa.",
+      "Galvanizing": "The chain link fence fabric shall have zinc coating of type ‘ heavy’ as given in the prescribed standards.",
+      "Workmanship And Finish": "Each roll shall be warranted to contain no weld joint or splice whatever. The wire shall be circular and shall be free from scales, irregularities, imperfections, flaws, sand splits and other defects. The zinc coating shall be smooth, even and bright. 5.1 The fabric shall be manufactured in widths of 0.90 m, 1.20m, 1.50 m, 1.80 m, 2.00 m, 2.50, and 3.00 m, or as per the requirements of the purchaser. Table 1 Dimensions and Tolerances Mesh Nominal Line Wire Size Dia of Mesh Wire Diameter Number of wires mm mm mm Up to and Above 2 m including width 2 m width (1) (2) (3) (4) (5) 2.00 2.50 2 3 25 ± 3 2.50 3.15 2 3 3.15 4.00 2 5 2.00 2.50 2 3 40 ± 4 2.50 3.15 2 3 3.15 4.00 2 3 4.00 4.50 2 3 2.00 2.50 2 3 50 ± 4 2.50 3.15 2 3 3.15 4.00 2 3 4.00 4.50 2 3 3.15 4.00 2 3 63 ± 4 4.00 4.50 2 3 4.50 5.",
+      "Tests": "6.1 Tensile Test – Tensile strength shall be within the range of 400 to 550 N/mm2. 6.2 Wrapping Test – Wires shall not break or split when wrapped eight times round its own diameter and subsequently straightened. 6.3 Twist Test – Mesh and line wires shall withstand not less than 18 twists on a length equal to 100 diameters between rices. 6.4 Bend test– Mesh wire and line wire of 5 mm diameter and above shall be subjected to this test. The wire shall withstand being bent through an angle of 900 round a former of diameter equal to twice its own diameter without breaking or splitting. 6.5 Galvanizing Test – Shall be up to 10 percent less than the minimum mass of zinc coating specified in the prescribed standard and withstand one dip of half minute duration less than specified. For detailed in"
+    },
+    "content": "IS 2721: 1979 Galvanized Steel Chain Link Fence Fabric\n(First Revision)\n1.\nScope – Requirements for galvanized steel chain fence fabric intended for various purposes. This\nstandard does not cover the requirements pertaining to straining posts, struts, base plates and other fittings.\n*Mild steel wire for general engineering purposes\n(third revision) 2. Dimensions – See Table\n2.1 Mesh Size – Shall be determined by measuring the\nminimum clear distance between the wires forming the parallel sizes of the mesh when measured in normal\nstructured condition.\n2.2 Width – Shall be the overall dimension from one\nextreme line wire to other extreme line wire and shall be checked in fully stretched condition. The tolerance on\nthe width shall be ± 0.7 of the mesh size.\n2.3 Length – Shall be supplied in rolls of 5, 10, 15,20,\nand 25m or as per the requirements of the purchaser\nThe supplied length shall not be less than the above values when measured in fully stretched condition.\n2.4 Tolerances – As per IS 280 *\n3.\nMaterial – The mesh wire and the line wire of the fabric shall be manufactured from galvanized steel\nconforming to IS 280* having a tensile strength within the range of 400 to 550 MPa.\n4.\nGalvanizing – The chain link fence fabric shall have zinc coating of type ‘ heavy’ as given in the prescribed\nstandards.\n5.\nWorkmanship and Finish – Each roll shall be warranted to contain no weld joint or splice whatever.\nThe wire shall be circular and shall be free from scales, irregularities, imperfections, flaws, sand splits and other\ndefects. The zinc coating shall be smooth, even and bright.\n5.1 The fabric shall be manufactured in widths of 0.90\nm, 1.20m, 1.50 m, 1.80 m, 2.00 m, 2.50, and 3.00 m, or as per the requirements of the purchaser.\nTable 1 Dimensions and Tolerances\nMesh\nNominal Line Wire\nSize\nDia of\nMesh Wire\nDiameter Number of wires mm\nmm mm\nUp to and Above 2 m including\nwidth\n2 m width\n(1)\n(2)\n(3)\n(4)\n(5)\n2.00\n2.50\n2\n3\n25 ± 3\n2.50\n3.15\n2\n3\n3.15\n4.00\n2\n5\n2.00\n2.50\n2\n3\n40 ± 4\n2.50\n3.15\n2\n3\n3.15\n4.00\n2\n3\n4.00\n4.50\n2\n3\n2.00\n2.50\n2\n3\n50 ± 4\n2.50\n3.15\n2\n3\n3.15\n4.00\n2\n3\n4.00\n4.50\n2\n3\n3.15\n4.00\n2\n3\n63 ± 4\n4.00\n4.50\n2\n3\n4.50\n5.00\n2\n3\n3.15\n4.00\n2\n3\n75 ± 4\n4.00\n4.50\n2\n3\n4.50\n5.00\n2\n3\n5.00\n5.50\n2\n3\n3.15\n4.00\n2\n3\n100 ± 5\n4.00\n4.50\n2\n3\n4.50\n5.00\n2\n3\n5.00\n5.50\n2\n3\n125 ± 5\n4.00\n4.50\n2\n3\n4.50\n5.00\n2\n3\n5.00\n5.50\n2\n3\n150 ± 5\n4.00\n4.50\n2\n3\n4.50\n5.00\n2\n3\n5.00\n5.50\n2\n3 Note – Sizes other than those mentinoed above shall be\nsupplied subject to agreement between the purchaser and the manufacturer. 6.\nTest –\n6.1 Tensile Test – Tensile strength shall be within the\nrange of 400 to 550 N/mm2.\n6.2 Wrapping Test – Wires shall not break or split when\nwrapped eight times round its own diameter and subsequently straightened.\n6.3 Twist Test – Mesh and line wires shall withstand\nnot less than 18 twists on a length equal to 100 diameters between rices.\n6.4 Bend test– Mesh wire and line wire of 5 mm diameter\nand above shall be subjected to this test. The wire shall withstand being bent through an angle of 900 round a\nformer of diameter equal to twice its own diameter without breaking or splitting.\n6.5 Galvanizing Test – Shall be up to 10 percent less\nthan the minimum mass of zinc coating specified in the prescribed standard and withstand one dip of half minute\nduration less than specified.\nFor detailed information, refer to IS 2721 : 1979 Specifications for galvanized steel chain link fence fabric (first revision).\nfor details of tests for fabric refer to cl.9. of the standard SECTION 21\nGLASS CONTENTS\nTitle\nPage\nIS 2553 : (Part 1):1990\nSafety Glass: Part 1– General purposes (third revision)\n21.3\nIS 2835 : 1987\nFlat transparent sheet glass (third revision)\n21.5\nIS 3438 : 1994\nSilvered glass mirror for General purposes (second revision)\n21.7\nIS 5437 : 1994\nFigured rolled and wired glass (first revision)\n21.8"
+  },
+  {
+    "standard_id": "IS 9968 (Part 1): 1988",
+    "title": "Elastomer Insulated Cables,",
+    "category": "Adhesives",
+    "summary": "Requirements of elastomeric insulated cables for fixed wiring, flexible cables and flexible cords for electric power and lighting for operation at voltages up to and including 1100 volts. 1.1 The following types of cables and cords are covered in this standard. 1.1.1 Cables for fixed wiring a) Braided and compounded/varnished, b) Elastomer sheathed (normal duty), and c) Elastomer sheathed (normal duty) with earth continuity conductor. 1.1.2 Flexible cables a) Braided and varnished, and b) Elasto",
+    "keywords": [
+      "cables",
+      "cords",
+      "flexible",
+      "elastomer",
+      "insulation",
+      "sheath",
+      "wiring"
+    ],
+    "key_sections": {
+      "Scope": "Requirements of elastomeric insulated cables for fixed wiring, flexible cables and flexible cords for electric power and lighting for operation at voltages up to and including 1100 volts. 1.1 The following types of cables and cords are covered in this standard. 1.1.1 Cables for fixed wiring a) Braided and compounded/varnished, b) Elastomer sheathed (normal duty), and c) Elastomer sheathed (normal duty) with earth continuity conductor. 1.1.2 Flexible cables a) Braided and varnished, and b) Elastomer sheathed (heavy duty). 1.1.3 Flexible cords a) Braided b) Elastomer sheathed (normal duty), c) Unkinkable flexible cords – braided and compounded (workshop type), and d) Unkinkable flexible cords – braided and compounded. 1.2 The cables covered in this standard are suitable for use on single-pha",
+      "Identification": "Cables or cords shall be identified throughout the length of the cable or cords by the legends shown below, either printed or indented or embossed on the cable. Type of Cable Insulation Legend Heat resisting rubber HR 90 Silicon rubber HR 150 The following code shall be used for designating the cable : Constituent Code Letter Aluminium conductor A Elastomer insulation R Braiding, compounding or B varnishing Elastomer sheath R Earth continuity conductor ECC SECTION 26 WIRING ACCESSORIES CONTENTS Title Page IS 371 : 1999 Ceiling Roses (third revision) 26.3 IS 1293 : 1988 Plugs and Socket Outlets of Rated Voltage upto and Including 250 Volts and Rated Current upto and Including 16 Amperes (second revision) 26.5 IS 2086 : 1993 Carriers and Bases Used in Rewirable Type Electric Fuses for Voltag"
+    },
+    "content": "IS 9968 (Part 1): 1998 Elastomer Insulated Cables,\nPART1 FOR WORKING VOLTAGES UPTO AND INCLUDING 1 100 VOLTS\n(First Revision)\n1.\nScope – Requirements of elastomeric insulated cables for fixed wiring, flexible cables and flexible cords\nfor electric power and lighting for operation at voltages up to and including 1100 volts.\n1.1 The following types of cables and cords are\ncovered in this standard.\n1.1.1 Cables for fixed wiring a) Braided and compounded/varnished,\nb) Elastomer sheathed (normal duty), and c) Elastomer sheathed (normal duty) with earth\ncontinuity conductor.\n1.1.2 Flexible cables a) Braided and varnished, and\nb) Elastomer sheathed (heavy duty).\n1.1.3 Flexible cords a) Braided\nb) Elastomer sheathed (normal duty), c) Unkinkable flexible cords – braided and\ncompounded (workshop type), and d) Unkinkable flexible cords – braided and\ncompounded.\n1.2 The cables covered in this standard are suitable for\nuse on single-phase or three-phase (earthed or unearthed) system for rated voltages up to and including\n1 100 volts. These cables may be used on dc system for rated voltages up to and including 1500 volts to earth.\n1.3 The cables covered in this standard are suitable for\nuse where the combination of ambient temperature and temperature rise due to load results in conductor\ntemperature not exceeding the following. Type of Insulation\nNormal\nShort-Circuit\nContinuous\nCondition\nOperation Insulation for general\n60ºC 200ºC service Heat resisting insulation\n90ºC 250ºC Silicone rubber insulation\n150ºC 350ºC\n2.\nMaterials\n2.1 Conductor\n2.1.1 Copper conductor – Shall be tinned annealed copper wires complying with the requirement of IS 8130\n: 1984*.\n2.1.2 Aluminium Conductor – The conductor shall be composed of aluminium wires complying with the\nrequirements of IS 8130: 1984*.\n2.2. Insulation\n2.2.1 Insulation for general services – The insulation shall be of elastomer compound conforming to Type IE\n2 of IS 6380 : 1984†.\n2.2.2 Heat resisting insulation – Shall be of elastomer compound conforming to Type IE 2 of IS 6380 : 1984.\n2.2.3 Silicone Rubber Insulation – The insulation shall be of silicone rubber conforming to Type IE 5 of\nIS 6380 : 1984.\n2.3 Tape\na) Proofed tape.\nb) Polyethylene terephthalate (PETP) tape or\nPlastic tape or any other suitable tape, and c) Glass tape.\n2.4 Fillers – Shall be of natural or synthetic fibres or\nelastomer.\n2.5 Braid\na) Textile Braid, and b) Grass braid\n2.6 Sheath\n*Condutors for insulated electric cables and flexible cords\n(first revision).\n† Elastomeric insulation and sheath of electric cables\n(first revision). 2.6.1 General service insulated cables and flexible cords – Cables for fixed wiring and flexible cords shall\ncosists sheath of elastomeric compounds of type SE1 of IS 6380 : 1984 Flexible cables sheath shall also be of\nelastomeric compound of type SE2 of IS 6380 : 1984.\n2.6.2 Heat resisting insulated cables – Cables for fixed wiring and flexible cords shall consist sheath of\nelastromeric compounds of Type SE3 of IS 6380 : 1984.\nFlexible cables sheath shall also be of elastomeric compound of Type SE4 of IS 6380: 1984.\n3.\nConstruction\n3.1 Conductors\n3.1.1 Cables for fixed wiring – Shall be as follows: Nominal Cross Sectional Solid / Flexiblitity Area ,mm2 Stranded class Copper Alluminium 1and 1.5 1.5 solid\nClass 1 2.5 to 6 2.5 to 10 solid/ stranded Class1 for solid Class2 for stranded 10 and above 16 and above stranded Class 2\n3.1.2\nFlexible cables and cords – Shall be according to class 5 of IS 8130 : 1984.\n3.2 Insulation – Shall have the average thickness not\nless than nominal value specified in respective tables of the standard.\n3.3 Core identfication – Shall be identified either by\ncolours or numbers using any one of the following methods:\na) Numbered tapes, b) Coloured insulation,\nc) Coloured tape, and d) Numbered printed on cores.\nNote— For details see 13 of the standard.\n3.4 Laying Up of Cores – Shall be laid together with a\nsuitable right hand lay. The value of lay for flexible cables and cords shall be maximum 18 times the pitch circle\ndiameter.\nNote – For method of test refer to IS 6380 : 1984 Elastomeric insulation and sheath of electric cables (first revision) and IS 8130\n: 1984 Conductors for insulated electric cables and flexible cords (first revision)\nFor detailed information, refer to IS 9968 (Part I) : 1988 Specification for elastomer insulated cables Part I -\nFor working voltages up to and including 1 100 volts (first revision).\n3.5 Sheath – Shall be applied by extrusion. The average\nthickness shall be not less than the nominal value specified in the respective tables in the standard.\n4.\nTests\n4.1 Type Tests\na) Tensile strength and elongation at break, b) Ageing in air oven ,\nc) Ageing in air bomb, d) Ageing in oxygen bomb,\ne) Hot set, f) Oil resistance, and\nh) Tear resistance,\nInsulation resistance\nHigh voltage (water immersion) test\nFlammability test (applicable to cables finished with\nSE 3 and SE 4 sheaths only)\nWater absorption test (for insulation as applicable)\nPersulphate test (for copper)\nAnnealing test (for copper)\nTensile test (for aluminium)\nWrapping test (for aluminium)\nConductor resistance test\nTest for thickness of insulation and sheath and overall diameter (where specified)\nNote – For acceptance, routine and optional tests, refer\nto the standard.\n5. Identification – Cables or cords shall be identified\nthroughout the length of the cable or cords by the legends shown below, either printed or indented or\nembossed on the cable. Type of Cable Insulation\nLegend Heat resisting rubber\nHR 90 Silicon rubber\nHR 150\nThe following code shall be used for designating the cable : Constituent\nCode Letter Aluminium conductor\nA Elastomer insulation\nR Braiding, compounding or\nB varnishing Elastomer sheath\nR Earth continuity conductor\nECC SECTION 26\nWIRING ACCESSORIES CONTENTS\nTitle Page\nIS\n371 : 1999\nCeiling Roses (third revision) 26.3\nIS\n1293 : 1988\nPlugs and Socket Outlets of Rated Voltage upto and Including 250 Volts and\nRated Current upto and Including 16 Amperes (second revision) 26.5\nIS\n2086 : 1993\nCarriers and Bases Used in Rewirable Type Electric Fuses for Voltages upto\n650 Volts (third revision)\n26.7\nIS\n2412 : 1975\nLink Clips for Electrical Wiring (first revision) 26.9\nIS\n2667 : 1988\nFittings for Rigid Steel Conduits for Electrical Wiring (first revision) 26.10\nIS\n3419 : 1989\nFittings for Rigid Non-Metallic Conduits (third revision) 26.12\nIS\n3480 : 1966\nFlexible Steel Conduits for Electrical Wiring\n26.13\nIS\n3837 : 1976\nAccessories for Rigid Steel Conduits for Electrical Wiring (first revision)\n26.14\nIS\n3854 : 1997\nSwitches for Domestic and Similar Purposes (second revision)\n26.15\nIS\n4160 : 1967\nInterlocking Switch Socket Outlet\n26.17\nIS\n4615 : 1968\nSwitch Socket Outlets (Non-Inter Locking Type)\n26.19\nIS\n4649 : 1968\nAdaptors for Flexible Steel Conduits\n26.21\nIS\n6538 : 1971\nThree Pin Plugs Made of Resilient Material\n26.22\nIS\n8828 : 1996\nIEC 898 (1995) Circuit Breakers for Over Current Protection for House-Hold and Similar Installations (second revision)\n26.24\nIS\n9537\nConduits for Electrical Installations\n(Part I) – 1980 General Requirements\n26.27\n(Part 2) – 1981 Rigid Steel Conduits\n26.29\n(Part 3) – 1983 Rigid Plain Conduits of Insulating Materials\n26.30\n(Part 4) – 1983 Pliable Self-Recovering Conduits of Insulating Materials\n26.31\n(Part 5) – 2000 Pliable conducts of Insulating material\n26.32\nIS\n14772 : 2000\nGeneral requirements for enclosure for accessories for household\n26.33 and similar fixed electrical installation."
+  },
+  {
+    "standard_id": "IS 2202 (Part 1): 1991",
+    "title": "Wooden Flush Door Shutters",
+    "category": "Doors, Windows and Shutters",
+    "summary": "Requirements for solid core and hollow core wooden flush door shutters for interior use. Part 1 covers non-moisture-resistant (interior) flush doors.",
+    "keywords": [
+      "flush",
+      "door",
+      "solid",
+      "core",
+      "hollow",
+      "interior",
+      "wood",
+      "plywood",
+      "shutter",
+      "internal"
+    ],
+    "key_sections": {
+      "Scope": "Requirements regarding types, sizes, material, consttruction, workmanship and finish, and tests, of solid core wooden flush door shutters with face panels of plywood or cross-band and face veneers. 2. Type and Construction Sl.No. Core Type Abbreviation (1) (2) (3) (4) i) Blockboard Decorative BD Non-decorative BN ii) Particle board Decorative PD with or without Non-decorative PN blockboard iii) Medium density Decorative MD fibreboard with Non-decorative MN or without blockboard 3. Sizes Sl. Designation of Width Height No. doors mm mm i) 8 DS 20 700 1905 (1945) ii) 8 DS 21 700 2005 ( 2045) iii) 9 DS 20 800 1905 (1945) iv) 9 DS 21 800 2005 ( 2045) v) 10 DS 20 900 1905 (1945) vi) 10 DS 21 900 2005 ( 2045) vii) 12 DT 20 1100* 1905 (1945) viii) 12 DT 21 1100* 2005 ( 2045) Note 1 – D–Doors, S – ",
+      "Workmanship And Finish": "All the four edges of the door shutter shall be square. Both faces of the door shutter shall be sanded to a smooth even texture.",
+      "Tests": "Flush door shutters shall be subjected to the following tests – i) Dimensions and squareness test ii) General flatness test iii) Local planeness test iv) Impact indentation test v) Flexure test vi) Edge loading test vii) Shock resistance test viii) Buckling test ix) Slamming test x) Misuse test xi) Varying humidity test xii) End immersion test xiii) Knife test xiv) Glue adhesion test xv) Screw withdrawal test. Note - For details of requirements please refer 11 of the standard. Note — For methods of test, refer to IS 4020 (Part 1 to 16) : 1998 Door shutters - methods of test. For detailed information, refer to IS 2202 : 1999 Specification for wooden flush door shutters (solid core type) Part 1 Plywood face panels (sixth revision)."
+    },
+    "content": "IS 2202 (Part 1): 1999 Wooden Flush Door Shutters\n(SOLID CORE TYPE)\nPART 1 PLYWOOD FACE PANELS\n(Sixth Revision)\n1.\nScope – Requirements regarding types, sizes, material, consttruction, workmanship and finish, and\ntests, of solid core wooden flush door shutters with face panels of plywood or cross-band and face veneers.\n2.\nType and Construction\nSl.No. Core\nType\nAbbreviation\n(1) (2)\n(3)\n(4)\ni) Blockboard\nDecorative\nBD\nNon-decorative\nBN\nii) Particle board\nDecorative\nPD with or without\nNon-decorative\nPN blockboard iii) Medium density\nDecorative\nMD fibreboard with\nNon-decorative\nMN or without blockboard\n3.\nSizes Sl.\nDesignation of\nWidth\nHeight No.\ndoors mm mm i) 8 DS 20 700\n1905 (1945)\nii)\n8 DS 21 700\n2005 ( 2045)\niii)\n9 DS 20 800\n1905 (1945)\niv) 9 DS 21 800\n2005 ( 2045)\nv)\n10 DS 20 900\n1905 (1945)\nvi)\n10 DS 21 900\n2005 ( 2045)\nvii)\n12 DT 20 1100*\n1905 (1945)\nviii)\n12 DT 21 1100*\n2005 ( 2045)\nNote 1 – D–Doors, S – Single shutter, and T– Double leaf shutter.\nNote 2 —The designation indicates the size of door openings.\nthe first number referring to width in modules of 100 mm and the last number, the height in modules of 100 mm.\n*Combined width of two shutters in closed position.\n3.1 Thickness – Nominal thickness shall be 25 mm, 30\nmm and 35 mm.\n4.\nMaterial\n4.1 Timber – Moisture content shall not exceed 12\npercent. Timber shall be free from decay and insect attack. Knots and knot holes less than half the width of\ncross section of the members in which they occur may be permitted. Pitch pockets, pitch streaks and harmless\npin holes shall be permissible except in the exposed edges of the core members where they shall be cut out\nand filled in with carefully fitted glued pieces of wood of similar species and character with their grain running\nin the same direction.\nNote 1 – For species of timber see Annex B of the standard.\nNote 2 – For details of materials see 6 of the standard.\nNote 3 – In arriving at the standard width and heights for\nflush door shutters an allowance of 60 mm has been made for door frames 40 mm for floor finish, 5 mm for clearance all\nround and 15 mm for rebate all round for shutter in to the frame.\nNote 4 – If modular height of door opening is taken from\nfinished floor level. The height of flush door shall be the one given in the brackets.\n5.\nConstruction\n5.1 Face Panels – Thickness of crossbands shall be\nbetween 1 mm and 3 mm. Thickness of face veneers shall be between 0.4 mm to 1.5 mm for commercial veneer\nand 0.35 mm to 1.0 mm for decorative veneers provided the combined thickness of both is not less than 2.2 mm.\n5.2 Stiles and Rails – Stiles shall be made with maximum\none finger or scarftype joint as per 7.3 of the standard\nThe rails Shall be made without any joint.\n5.3 Rebating – Shall be 8 mm to 10 mm in case of\ndouble leaved shutters. Note - for details of materials see 7 of the standard. 6.\nWorkmanship and Finish – All the four edges of the door shutter shall be square. Both faces of the door\nshutter shall be sanded to a smooth even texture.\n7.\nTests – Flush door shutters shall be subjected to the following tests –\ni)\nDimensions and squareness test ii)\nGeneral flatness test iii)\nLocal planeness test iv)\nImpact indentation test v)\nFlexure test vi)\nEdge loading test vii)\nShock resistance test viii)\nBuckling test ix)\nSlamming test x)\nMisuse test xi)\nVarying humidity test xii)\nEnd immersion test xiii)\nKnife test xiv)\nGlue adhesion test xv)\nScrew withdrawal test. Note - For details of requirements please refer 11 of the standard. Note — For methods of test, refer to IS 4020 (Part 1 to 16) : 1998 Door shutters - methods of test.\nFor detailed information, refer to IS 2202 : 1999 Specification for wooden flush door shutters (solid core type)\nPart 1 Plywood face panels (sixth revision)."
+  },
+  {
+    "standard_id": "IS 9537 (Part 2): 1981",
+    "title": "Conduits For Electrical Installations",
+    "category": "Adhesives",
+    "summary": "Requirements and methods of test of threaded/threadable plain rigid steel conduits. Part 2 covers rigid steel conduits for surface and concealed electrical wiring.",
+    "keywords": [
+      "conduit",
+      "steel",
+      "rigid",
+      "metallic",
+      "electrical",
+      "wiring",
+      "galvanized",
+      "threaded"
+    ],
+    "key_sections": {
+      "External Influences": "Conduits shall have adequate protection against external influences. The influences included here are ingress of water or oil or building materials, low or high temperatures and polluting substances and solar radiation.",
+      "Scope": "Requirements and methods of test of threaded/threadable plain rigid steel conduits.",
+      "General Requirements": "Conduits shall be so designed and constructed that they ensure reliable mechanical protection to conductors and/or cables contained therein. Conduit shall withstand stresses likely to occur during transport, storage, recommended practice and usage. 3. Classification 3.1 According to Resistance against Corrosiv or Polluting substances : a) Conduits with low protection, b) Conduits with medium protection, c) Conduits with high protection, d) Conduits with high protection on the outside and low protection inside, e) Conduits with medium protection outside and low protection inside, and f) Conduits with high protection outside and medium protection inside. Note 1 – Normally, protection mentioned at (b) and (c) are commonly used. Note 2– Typical examples of medium protection are stove enamellin",
+      "Construction": "The inside and outside surfaces of conduits shall be reasonably smooth and free from burrs, flash and similar defects. The conduits shall be solid drawn or seam joined by welding. 6. Mechanical Properties 6.1 Bending Test – After the test, basic material or protective coating of conduits shall not show any cracks visible by normal or corrected vision without magnification. Seams, if any, shall not have opened, and section of conduit shall not have distored unduly. 6.2 Compression Test – The difference between the initial diameter and diameter of flattened samples shall not exceed 10 percent of outside diameter measured before the test."
+    },
+    "content": "IS 9537 (Part 1): 1980 Conduits For Electrical Installations\nPART 1 - GENERAL REQUIREMENTS Note — For methods of Test, refer to the standard.\nFor detailed information, refer to IS 9537 (Part I) : 1980 Specification for conduits for electrical installations\n: Part I General requirements.\niii)\nConduits with high protection against radiation.\n4.\nMechanical Properties a) Conduits shall have adequate mechanical\nstrength.\nb) Bend Test – Values as per relevant conduit specifications.\nc) Compression Test – when tested as prescribed, the difference between the initial diameter and\ndiameter of flattened sample shall not exceed a specified percentage of the outside diameter\nmeasured before the test.\nd) Impact Test – There shall be no sign of disintegration, neither shall there be any cracks\nvisible to the naked eye when tested as prescribed.\ne) Collapse Test – Values of minimum internal diameter as per relevant conduits specifications)\nf) Resistance to Heat – (As per relevant conduit specifications).\ng) Resistance to Burning – Time of exposure as per relevant conduit specifications. If the sample\nburns it shall do so slowly and the flame shall not spread appreciably; any flame shall have died\nout in less than 30 seconds after removal of the burner.\n5.\nElectrical Characteristics a) Electrical Strength.\nb) Insulation Resistance.\n6.\nExternal Influences – Conduits shall have adequate protection against external influences. The influences\nincluded here are ingress of water or oil or building materials, low or high temperatures and polluting\nsubstances and solar radiation. 1.\nScope—Requirements and methods of test of threaded/threadable plain rigid steel conduits.\n2.\nGeneral Requirements – Conduits shall be so designed and constructed that they ensure reliable\nmechanical protection to conductors and/or cables contained therein. Conduit shall withstand stresses\nlikely to occur during transport, storage, recommended practice and usage.\n3.\nClassification\n3.1 According to Resistance against Corrosiv or\nPolluting substances :\na) Conduits with low protection, b) Conduits with medium protection,\nc) Conduits with high protection, d) Conduits with high protection on the outside\nand low protection inside, e) Conduits with medium protection outside and\nlow protection inside, and f) Conduits with high protection outside and\nmedium protection inside.\nNote 1 – Normally, protection mentioned at (b) and (c) are\ncommonly used.\nNote 2– Typical examples of medium protection are stove\nenamelling, air drying point and electrolytic deposits.\nNote 3 – Typical examples of high protection are hot-dip\ngalvanized coating and sherardizing.\n3.2 According to Mechanical Properties:\na) Conduits for very light mechanical stresses, b) Conduits for light mechanical stresses,\nc) conduits for medium mechanical stresses, d) Conduits for heavy mechanical stresses, and\ne) Conduits for very heavy mechanical stresses.\n4. Dimensions\nNominal Size\nTolerance Wall\nThickness of Conduit\non Outside of Conduits\n(Outside\nDiameter)\nmm mm\nmm\n16\n0\n1. 4 to 1.8\n–0.3\n20\n0\n1.4 to 1.8\n–0.3\n25\n0\n1.4 to 1.8\n–0.4\n32\n0\n1.4 to 1.8\n–0.4\n40\n0\n1.6 to 2.2\n–0.4\n50\n0\n1.6 to 2.2\n–0.5\n63\n0\n1.6 to 2.2\n–0.6\n4.1 Length – Conduits shall be supplied in straight\nlengths of 3 to 5 metres.\n5.\nConstruction –The inside and outside surfaces of conduits shall be reasonably smooth and free from burrs,\nflash and similar defects. The conduits shall be solid drawn or seam joined by welding.\n6.\nMechanical Properties\n6.1 Bending Test – After the test, basic material or\nprotective coating of conduits shall not show any cracks visible by normal or corrected vision without\nmagnification. Seams, if any, shall not have opened, and section of conduit shall not have distored unduly.\n6.2 Compression Test – The difference between the\ninitial diameter and diameter of flattened samples shall not exceed 10 percent of outside diameter measured\nbefore the test."
+  },
+  {
+    "standard_id": "IS 9537 (Part 3): 1983",
+    "title": "Conduits For Electrical Installations",
+    "category": "Adhesives",
+    "summary": "Requirements and methods of test of threaded/threadable plain rigid steel conduits. Part 3 covers rigid non-metallic (PVC) conduits for electrical wiring installations.",
+    "keywords": [
+      "conduit",
+      "pvc",
+      "nonmetallic",
+      "rigid",
+      "electrical",
+      "wiring",
+      "plastic",
+      "insulating"
+    ],
+    "key_sections": {
+      "External Influences": "Conduits shall have adequate protection against external influences. The influences included here are ingress of water or oil or building materials, low or high temperatures and polluting substances and solar radiation.",
+      "Scope": "Requirements and methods of test of threaded/threadable plain rigid steel conduits.",
+      "General Requirements": "Conduits shall be so designed and constructed that they ensure reliable mechanical protection to conductors and/or cables contained therein. Conduit shall withstand stresses likely to occur during transport, storage, recommended practice and usage. 3. Classification 3.1 According to Resistance against Corrosiv or Polluting substances : a) Conduits with low protection, b) Conduits with medium protection, c) Conduits with high protection, d) Conduits with high protection on the outside and low protection inside, e) Conduits with medium protection outside and low protection inside, and f) Conduits with high protection outside and medium protection inside. Note 1 – Normally, protection mentioned at (b) and (c) are commonly used. Note 2– Typical examples of medium protection are stove enamellin",
+      "Construction": "The inside and outside surfaces of conduits shall be reasonably smooth and free from burrs, flash and similar defects. The conduits shall be solid drawn or seam joined by welding. 6. Mechanical Properties 6.1 Bending Test – After the test, basic material or protective coating of conduits shall not show any cracks visible by normal or corrected vision without magnification. Seams, if any, shall not have opened, and section of conduit shall not have distored unduly. 6.2 Compression Test – The difference between the initial diameter and diameter of flattened samples shall not exceed 10 percent of outside diameter measured before the test."
+    },
+    "content": "IS 9537 (Part 1): 1980 Conduits For Electrical Installations\nPART 1 - GENERAL REQUIREMENTS Note — For methods of Test, refer to the standard.\nFor detailed information, refer to IS 9537 (Part I) : 1980 Specification for conduits for electrical installations\n: Part I General requirements.\niii)\nConduits with high protection against radiation.\n4.\nMechanical Properties a) Conduits shall have adequate mechanical\nstrength.\nb) Bend Test – Values as per relevant conduit specifications.\nc) Compression Test – when tested as prescribed, the difference between the initial diameter and\ndiameter of flattened sample shall not exceed a specified percentage of the outside diameter\nmeasured before the test.\nd) Impact Test – There shall be no sign of disintegration, neither shall there be any cracks\nvisible to the naked eye when tested as prescribed.\ne) Collapse Test – Values of minimum internal diameter as per relevant conduits specifications)\nf) Resistance to Heat – (As per relevant conduit specifications).\ng) Resistance to Burning – Time of exposure as per relevant conduit specifications. If the sample\nburns it shall do so slowly and the flame shall not spread appreciably; any flame shall have died\nout in less than 30 seconds after removal of the burner.\n5.\nElectrical Characteristics a) Electrical Strength.\nb) Insulation Resistance.\n6.\nExternal Influences – Conduits shall have adequate protection against external influences. The influences\nincluded here are ingress of water or oil or building materials, low or high temperatures and polluting\nsubstances and solar radiation. 1.\nScope—Requirements and methods of test of threaded/threadable plain rigid steel conduits.\n2.\nGeneral Requirements – Conduits shall be so designed and constructed that they ensure reliable\nmechanical protection to conductors and/or cables contained therein. Conduit shall withstand stresses\nlikely to occur during transport, storage, recommended practice and usage.\n3.\nClassification\n3.1 According to Resistance against Corrosiv or\nPolluting substances :\na) Conduits with low protection, b) Conduits with medium protection,\nc) Conduits with high protection, d) Conduits with high protection on the outside\nand low protection inside, e) Conduits with medium protection outside and\nlow protection inside, and f) Conduits with high protection outside and\nmedium protection inside.\nNote 1 – Normally, protection mentioned at (b) and (c) are\ncommonly used.\nNote 2– Typical examples of medium protection are stove\nenamelling, air drying point and electrolytic deposits.\nNote 3 – Typical examples of high protection are hot-dip\ngalvanized coating and sherardizing.\n3.2 According to Mechanical Properties:\na) Conduits for very light mechanical stresses, b) Conduits for light mechanical stresses,\nc) conduits for medium mechanical stresses, d) Conduits for heavy mechanical stresses, and\ne) Conduits for very heavy mechanical stresses.\n4. Dimensions\nNominal Size\nTolerance Wall\nThickness of Conduit\non Outside of Conduits\n(Outside\nDiameter)\nmm mm\nmm\n16\n0\n1. 4 to 1.8\n–0.3\n20\n0\n1.4 to 1.8\n–0.3\n25\n0\n1.4 to 1.8\n–0.4\n32\n0\n1.4 to 1.8\n–0.4\n40\n0\n1.6 to 2.2\n–0.4\n50\n0\n1.6 to 2.2\n–0.5\n63\n0\n1.6 to 2.2\n–0.6\n4.1 Length – Conduits shall be supplied in straight\nlengths of 3 to 5 metres.\n5.\nConstruction –The inside and outside surfaces of conduits shall be reasonably smooth and free from burrs,\nflash and similar defects. The conduits shall be solid drawn or seam joined by welding.\n6.\nMechanical Properties\n6.1 Bending Test – After the test, basic material or\nprotective coating of conduits shall not show any cracks visible by normal or corrected vision without\nmagnification. Seams, if any, shall not have opened, and section of conduit shall not have distored unduly.\n6.2 Compression Test – The difference between the\ninitial diameter and diameter of flattened samples shall not exceed 10 percent of outside diameter measured\nbefore the test."
+  },
+  {
+    "standard_id": "IS 13620: 1993",
+    "title": "Fusion Bonded Epoxy Coated Reinforcing Bars",
+    "category": "Structural Steels",
+    "summary": "Specification for fusion-bonded epoxy coated reinforcing bars (rebars) for use in reinforced concrete construction in corrosive and marine environments to improve corrosion resistance.",
+    "keywords": [
+      "epoxy",
+      "coated",
+      "reinforcing",
+      "bars",
+      "rebars",
+      "fusion",
+      "bonded",
+      "corrosion",
+      "marine",
+      "coastal"
+    ],
+    "key_sections": {
+      "Scope": "Requirements for fusion-bonded epoxy coated reinforcing bars for corrosion-resistant reinforced concrete construction."
+    },
+    "content": "IS 13620: 1993 Fusion Bonded Epoxy Coated Reinforcing Bars\nScope - Covers fusion-bonded epoxy coated reinforcing bars for use in corrosive and marine environments. Coating protects steel rebars from chloride attack and corrosion in aggressive concrete environments."
+  },
+  {
+    "standard_id": "IS 1785 (Part 1): 1983",
+    "title": "Plain Hard Drawn Steel Wire For Prestressed Concrete",
+    "category": "Structural Steels",
+    "summary": "Specification for plain hard drawn (cold drawn) steel wire used as prestressing tendons in prestressed concrete construction. Covers tensile strength, elongation and relaxation requirements.",
+    "keywords": [
+      "prestressing",
+      "wire",
+      "hard",
+      "drawn",
+      "cold",
+      "tendon",
+      "prestressed",
+      "concrete",
+      "high-tensile",
+      "steel"
+    ],
+    "key_sections": {
+      "Scope": "Requirements for plain hard drawn steel wire for use as prestressing tendons in prestressed concrete structural applications."
+    },
+    "content": "IS 1785 (Part 1): 1983 Plain Hard Drawn Steel Wire For Prestressed Concrete\nScope - Covers plain (unindented) hard drawn steel wire for prestressed concrete tendons. Part 1 covers stress-relieved wire. Used for post-tensioning and pre-tensioning in structural prestressed concrete elements."
+  },
+  {
+    "standard_id": "IS 15476: 2004",
+    "title": "Bamboo Mat Corrugated Roofing Sheets",
+    "category": "Wood Products for Building",
+    "summary": "Specification for bamboo mat corrugated sheets used as an eco-friendly alternative roofing material. Made from woven bamboo mats with polymer binder.",
+    "keywords": [
+      "bamboo",
+      "mat",
+      "corrugated",
+      "roofing",
+      "sheets",
+      "eco-friendly",
+      "green",
+      "natural",
+      "woven"
+    ],
+    "key_sections": {
+      "Scope": "Requirements for bamboo mat corrugated sheets for roofing applications as an eco-friendly alternative to asbestos and metal sheets."
+    },
+    "content": "IS 15476: 2004 Bamboo Mat Corrugated Roofing Sheets\nScope - Covers bamboo mat corrugated roofing sheets as eco-friendly sustainable roofing material. Bamboo mats are woven and formed into corrugated profile for roof cladding applications."
+  },
+  {
+    "standard_id": "IS 15491: 2004",
+    "title": "Medium Density Coir Fibre Board",
+    "category": "Wood Products for Building",
+    "summary": "Specification for medium density boards manufactured from coir fibres for use as general construction panels and interior applications.",
+    "keywords": [
+      "coir",
+      "fibre",
+      "board",
+      "medium",
+      "density",
+      "panel",
+      "coirboard",
+      "natural",
+      "coconut"
+    ],
+    "key_sections": {
+      "Scope": "Requirements for medium density boards made from coir fibres used for general construction panel applications."
+    },
+    "content": "IS 15491: 2004 Medium Density Coir Fibre Board\nScope - Covers medium-density coirboards manufactured using coir fibres for use as general construction panels. Eco-friendly board product using natural coconut coir fibre as raw material."
+  },
+  {
+    "standard_id": "IS 14842: 2000",
+    "title": "Coir Veneer Board",
+    "category": "Wood Products for Building",
+    "summary": "Specification for boards where coir mat is bonded to a timber or wood core for use in wall panelling and interior applications.",
+    "keywords": [
+      "coir",
+      "veneer",
+      "board",
+      "timber",
+      "core",
+      "panelling",
+      "wall",
+      "coconut",
+      "bonded"
+    ],
+    "key_sections": {
+      "Scope": "Requirements for coir veneer boards consisting of coir mat bonded to a wood core for wall panelling applications."
+    },
+    "content": "IS 14842: 2000 Coir Veneer Board\nScope - Covers coir veneer boards where coir mat facing is bonded to a timber core. Used for decorative wall panelling and interior surface applications. Eco-friendly product using natural coir fibre."
+  },
+  {
+    "standard_id": "IS 14588: 1999",
+    "title": "Bamboo Mat Veneer Composite Board",
+    "category": "Wood Products for Building",
+    "summary": "Specification for composite boards made from bamboo mat and veneer combinations for furniture and construction purposes.",
+    "keywords": [
+      "bamboo",
+      "mat",
+      "veneer",
+      "composite",
+      "board",
+      "furniture",
+      "construction",
+      "panel",
+      "woven"
+    ],
+    "key_sections": {
+      "Scope": "Requirements for bamboo mat veneer composite boards used in furniture manufacture and general construction panel applications."
+    },
+    "content": "IS 14588: 1999 Bamboo Mat Veneer Composite Board\nScope - Covers bamboo mat veneer composite boards combining bamboo mat and veneer materials. Used for furniture, panelling, and construction panel applications as eco-friendly engineered wood substitute."
   }
 ]
